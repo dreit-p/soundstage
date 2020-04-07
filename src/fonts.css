@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Proxima Nova';
+	font-display: swap;
+	src: local('Proxima Nova Black'), local('ProximaNova-Black'),
+		url('../fonts/ProximaNova-Black.woff2') format('woff2'),
+		url('../fonts/ProximaNova-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}

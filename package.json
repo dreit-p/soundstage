@@ -1,0 +1,70 @@
+{
+	"name": "soundstage.fm",
+	"version": "1.0.0",
+	"main": "src/index.pug",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dreit-p/soundstage.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dreit-p/soundstage/issues"
+	},
+	"browserslist": [
+		"last 2 Chrome versions",
+		"last 7 Firefox versions",
+		"> 1%",
+		"IE 11",
+		"Edge 16",
+		"last 5 iOS versions"
+	],
+	"homepage": "https://www.soundstage.fm/",
+	"description": "",
+	"devDependencies": {
+		"@babel/core": "^7.7.0",
+		"@babel/preset-env": "^7.7.1",
+		"autoprefixer": "^9.7.1",
+		"babel-loader": "^8.0.6",
+		"critical": "^1.3.7",
+		"css-mqpacker": "^7.0.0",
+		"cssnano": "^4.1.10",
+		"eslint-plugin-pug": "^1.2.2",
+		"gulp": "^4.0.2",
+		"gulp-clean": "^0.4.0",
+		"gulp-connect": "^5.7.0",
+		"gulp-if": "^3.0.0",
+		"gulp-livereload": "^4.0.2",
+		"gulp-notify": "^3.2.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^8.0.0",
+		"gulp-posthtml": "^3.0.4",
+		"gulp-rename": "^1.4.0",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-svg-sprite": "^1.5.0",
+		"postcss-color-function": "^4.1.0",
+		"postcss-flexbugs-fixes": "^4.1.0",
+		"postcss-focus": "^4.0.0",
+		"postcss-import": "^12.0.1",
+		"postcss-mixins": "^6.2.3",
+		"postcss-nested": "^4.2.0",
+		"postcss-object-fit-images": "^1.1.2",
+		"postcss-preset-env": "^6.7.0",
+		"postcss-reporter": "^6.0.1",
+		"postcss-scss": "^2.0.0",
+		"postcss-short": "^5.0.0",
+		"postcss-strip-inline-comments": "^0.1.5",
+		"posthtml-beautify": "^0.3.1",
+		"posthtml-pug": "^1.0.2",
+		"webpack-stream": "^5.2.1"
+	},
+	"dependencies": {
+		"normalize.css": "^8.0.1",
+		"object-fit-images": "^3.2.4",
+		"stickyfilljs": "^2.1.0"
+	}
+}

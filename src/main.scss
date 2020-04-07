@@ -1,0 +1,43 @@
+@import './modules.css';
+
+span,
+a,
+p,
+b,
+i {
+	color: inherit;
+	font-family: inherit;
+}
+
+.limit {
+	max-width: calc(920px + 20px*2);
+	overflow: hidden;
+	padding: 0 20px;
+	margin: auto;
+	width: 100%;
+	position: relative;
+}
+
+* {
+	font-family: var(--font-main);
+	line-height: 1.2;
+	box-sizing: border-box;
+	transition: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	min-width: 320px;
+}
+
+svg {
+	width: 100%;
+}
+
+.objfit {
+	object-fit: cover;
+	&.contain {
+		object-fit: contain;
+	}
+}

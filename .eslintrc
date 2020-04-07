@@ -1,0 +1,25 @@
+{
+	"root": true,
+	"env": {
+		"node": true,
+		"browser": true,
+		"es6": true
+	},
+	"extends": [
+		"eslint:recommended"
+	],
+	"plugins": [
+		"pug"
+	],
+	"rules": {
+		"indent": ["error", "tab"],
+		"no-console": ["warn", { "allow": ["warn", "error", "info"] } ],
+		"no-debugger": "error",
+		"no-irregular-whitespace": ["error", { "skipTemplates": true, "skipStrings": true }],
+	},
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 6,
+		"parser": "babel-eslint"
+	}
+}

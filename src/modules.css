@@ -1,0 +1,12 @@
+@import './fonts.css';
+@import 'normalize.css';
+
+
+/*==================================
+=            components            =
+==================================*/
+
+@import './components/header/header.scss';
+@import './components/footer/footer.scss';
+
+/*=====  End of components  ======*/
