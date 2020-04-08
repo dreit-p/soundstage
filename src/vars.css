@@ -1,7 +1,13 @@
 :root {
-	--dark-blue: 									#142D7F;
-	--blue: 											#19389F;
+	--accent-1: 									#4579F5;
+	--accent-2: 									#5D2DE1;
+	--accent-3: 									#00BBFF;
 
-	--font-main: 'Proxima Nova', 'PT Sans', 'Segoe UI', arial, sans-serif;
-	--font-second: 'Raleway', 'Uni Sans', 'Tahoma', 'Segoe UI', arial, sans-serif;
+	--bg-1: 											#27273E;
+	--bg-2: 											#202036;
+	--bg-3: 											#33334B;
+
+
+	--font-main: 'Montserrat', 'PT Sans', 'Segoe UI', arial, sans-serif;
+	--font-second: 'Averta', 'Uni Sans', 'Tahoma', 'Segoe UI', arial, sans-serif;
 }

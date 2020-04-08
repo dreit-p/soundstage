@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap');
+
 @font-face {
-	font-family: 'Proxima Nova';
+	font-family: 'Averta';
 	font-display: swap;
-	src: local('Proxima Nova Black'), local('ProximaNova-Black'),
-		url('../fonts/ProximaNova-Black.woff2') format('woff2'),
-		url('../fonts/ProximaNova-Black.woff') format('woff');
-	font-weight: 900;
+	src: local('Averta Bold'), local('Averta-Bold'),
+		url('../fonts/hinted-Averta-Bold.woff2') format('woff2'),
+		url('../fonts/hinted-Averta-Bold.woff') format('woff');
+	font-weight: bold;
 	font-style: normal;
 }
