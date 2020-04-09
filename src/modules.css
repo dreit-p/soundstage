@@ -9,4 +9,8 @@
 @import './components/header/header.scss';
 @import './components/footer/footer.scss';
 
+/*----------  UI elements  ----------*/
+
+@import './components/ui-elems/buttons.scss';
+
 /*=====  End of components  ======*/

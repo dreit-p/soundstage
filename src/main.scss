@@ -10,7 +10,7 @@ i {
 }
 
 .limit {
-	max-width: calc(920px + 20px*2);
+	max-width: calc(1110px + 20px*2);
 	overflow: hidden;
 	padding: 0 20px;
 	margin: auto;
@@ -20,6 +20,7 @@ i {
 
 * {
 	font-family: var(--font-main);
+	color: white;
 	line-height: 1.2;
 	box-sizing: border-box;
 	transition: none;
@@ -29,6 +30,7 @@ i {
 
 body {
 	min-width: 320px;
+	background-color: var(--bg-2);
 }
 
 svg {
