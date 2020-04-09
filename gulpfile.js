@@ -51,7 +51,6 @@ var autoprefixer = require('autoprefixer'),
 	nested = require('postcss-nested'), // вложенность
 	objfit = require('postcss-object-fit-images'),
 	mixins = require('postcss-mixins'), // миксины
-	focus = require('postcss-focus'), // всем ховерам добавляет фокус
 	color = require('postcss-color-function'), // scss цветовые функции
 	scss = require('postcss-scss'),
 	short = require('postcss-short'); // позволяет писать сокращенно
@@ -99,7 +98,6 @@ var processors = [
 	short(),
 	mixins(),
 	nested(),
-	focus(),
 	color(),
 	flexbugs,
 	objfit(),
