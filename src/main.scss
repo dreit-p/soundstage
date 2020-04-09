@@ -43,3 +43,25 @@ svg {
 		object-fit: contain;
 	}
 }
+
+.page-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+	img {
+		--original-size: 1920px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: auto;
+		width: calc(var(--original-size)*1.18 + (100% - var(--original-size)));
+		max-width: var(--original-size);
+	}
+}

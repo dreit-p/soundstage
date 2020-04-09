@@ -5,6 +5,11 @@ html(lang="en")
 	body
 		div(style="display: none")
 			include /assets/symbol/svg/sprite.symbol.svg
+		.page-bg
+			picture
+				source(type="image/webp" srcset="../assets/images/hero-bg.webp")
+				img.objfit(src="../assets/images/hero-bg.jpg")
+
 		include /components/header/header.pug
 
 		include /components/footer/footer.pug
