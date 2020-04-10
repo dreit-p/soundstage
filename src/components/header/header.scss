@@ -199,10 +199,32 @@ header.main-header {
 					margin: auto;
 					height: 100%;
 					width: 100%;
+					transition: opacity .2s;
+					transition-timing-function: ease-in;
 				}
 				svg.hamburger {
 					height: 18px;
 					width: 18px;
+				}
+				svg.arrow {
+					height: 15px;
+					width: 16px;
+				}
+				svg.cross {
+					height: 13px;
+					width: 13px;
+					opacity: 0;
+				}
+				&.active {
+					svg {
+						transition-timing-function: ease-out;
+					}
+					svg.hamburger {
+						opacity: 0;
+					}
+					svg.cross {
+						opacity: 1;
+					}
 				}
 			}
 			.logo .image {

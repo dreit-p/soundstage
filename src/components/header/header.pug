@@ -6,10 +6,14 @@ header.main-header
 				a.menu-btn(href="#")
 					svg.hamburger
 						use(href="#hamburger")
+					svg.cross
+						use(href="#arrow")
 			.element
 				.logo
 					.image
-						img(src='../assets/images/logo.png')
+						picture
+							source(type="image/webp" srcset="../assets/images/logo.webp")
+							img.objfit(src="../assets/images/logo.pngg")
 					.brand #[span.bold sound]stage
 			.element
 				a.sign-up(href="#") Sign Up
