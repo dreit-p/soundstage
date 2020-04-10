@@ -54,7 +54,7 @@ svg {
 	height: 100%;
 	z-index: -1;
 	overflow: hidden;
-	img {
+	img.desktop {
 		--original-size: 1920px;
 		position: absolute;
 		top: 0;
@@ -63,5 +63,22 @@ svg {
 		margin: auto;
 		width: calc(var(--original-size)*1.18 + (100% - var(--original-size)));
 		max-width: var(--original-size);
+	}
+	img.mobile {
+		display: none;
+	}
+	@media (max-width: 570px) {
+		img.desktop {
+			display: none;
+		}
+		img.mobile {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			margin: auto;
+		}
 	}
 }

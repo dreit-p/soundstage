@@ -8,7 +8,10 @@ html(lang="en")
 		.page-bg
 			picture
 				source(type="image/webp" srcset="../assets/images/hero-bg.webp")
-				img.objfit(src="../assets/images/hero-bg.jpg")
+				img.desktop.objfit(src="../assets/images/hero-bg.jpg")
+			picture
+				source(type="image/webp" srcset="../assets/images/hero-bg-mobile.webp")
+				img.mobile.objfit(src="../assets/images/hero-bg-mobile.jpg")
 
 		include /components/header/header.pug
 
