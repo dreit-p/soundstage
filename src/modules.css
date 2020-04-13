@@ -13,4 +13,9 @@
 
 @import './components/ui-elems/buttons.scss';
 
+/*----------  blocks  ----------*/
+
+@import './components/hero/hero.scss';
+
+
 /*=====  End of components  ======*/

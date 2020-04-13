@@ -10,12 +10,15 @@ i {
 }
 
 .limit {
-	max-width: calc(1110px + 20px*2);
-	overflow: hidden;
-	padding: 0 20px;
+	--offset: 20px;
+	max-width: calc(1110px + var(--offset)*2);
+	padding: 0 var(--offset);
 	margin: auto;
 	width: 100%;
 	position: relative;
+	@media (max-width: 570px) {
+		--offset: 32px;
+	}
 }
 
 * {

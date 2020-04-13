@@ -1,0 +1,126 @@
+section.main-hero {
+	margin: 4.5em 0;
+	.limit {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.image {
+		flex-basis: 50%;
+		margin-left: 20px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center 35%;
+		border-radius: 1.5em;
+		position: relative;
+		&:after {
+			display: block;
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 50%;
+			margin: auto;
+			background-image: linear-gradient(to top, rgba(32, 32, 54, 0.8), rgba(32, 32, 54, 0));
+		}
+		.info {
+			z-index: 1;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+		}
+		.date-badge {
+			padding: 0.625em;
+			border-radius: 0.75em;
+			background-color: var(--accent-2);
+			text-align: center;
+			min-width: 4.5em;
+			height: 4.5em;
+			margin: 1.5em;
+			.day {
+				font-family: var(--font-second);
+				font-size: 2.25em;
+				font-weight: bold;
+				letter-spacing: -1px;
+				line-height: 1;
+			}
+			.month {
+				font-size: 0.8125em;
+				font-weight: 600;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+			}
+		}
+		.caption {
+			max-width: 7em;
+			font-size: 1.5em;
+			font-weight: 600;
+			line-height: 1.33;
+			letter-spacing: -1px;
+		}
+	}
+	.text-side {
+		flex-basis: 50%;
+		.title {
+			font-size: 3em;
+			font-weight: bold;
+			line-height: 1;
+			letter-spacing: -2px;
+			max-width: 350px;
+		}
+		.description {
+			font-size: 1.25em;
+			font-weight: 500;
+			line-height: 1.8;
+			color: rgba(224, 224, 255, 0.6);
+			margin: 3em 0 2em;
+			max-width: 27.8125em;
+		}
+		.buttons {
+			display: flex;
+			margin: -0.75em;
+			.ui-btn {
+				margin: 0.75em;
+			}
+		}
+	}
+
+	@media (min-width: 450px) and (max-width: 750px) {
+		font-size: 2.13vw;
+		.text-side .buttons {
+			flex-direction: column;
+		}
+	}
+
+	@media (max-width: 450px) {
+		margin: 32px 0 16px;
+		.limit {
+			flex-direction: column;
+		}
+		.image {
+			flex-basis: auto;
+			width: 100%;
+			margin: 0;
+			height: 44vw;
+			.info {
+				font-size: 3.7vw;
+			}
+		}
+		.text-side {
+			margin: 32px 0;
+			font-size: 16px;
+			.title {
+				font-size: 36px;
+			}
+			.description {
+				font-size: 16px;
+				margin: 32px 0 24px 0;
+			}
+			.buttons {
+				flex-direction: column;
+			}
+		}
+	}
+}
