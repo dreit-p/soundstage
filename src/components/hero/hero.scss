@@ -58,7 +58,7 @@ section.main-hero {
 	@media (min-width: 450px) and (max-width: 750px) {
 		font-size: 2.13vw;
 		.text-side .buttons {
-			flex-direction: column;
+			flex-direction: column-reverse;
 		}
 	}
 
@@ -87,7 +87,7 @@ section.main-hero {
 				margin: 32px 0 24px 0;
 			}
 			.buttons {
-				flex-direction: column;
+				flex-direction: column-reverse;
 			}
 		}
 	}
