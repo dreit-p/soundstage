@@ -27,9 +27,9 @@
 
 		if (!mainHeader.classList.contains('opened')) {
 			toggleMenu(true);
-			window.setOutsideClickListener(mainHeader, ()=>{
+			mainHeader.querySelector('.veil').addEventListener('click', function (e) {
 				toggleMenu(false);
-			});
+			}, false);
 		} else {
 			toggleMenu(false);
 		}
