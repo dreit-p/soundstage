@@ -1,5 +1,6 @@
 @import './fonts.css';
 @import 'normalize.css';
+@import 'flickity';
 
 
 /*==================================
@@ -16,6 +17,11 @@
 /*----------  blocks  ----------*/
 
 @import './components/hero/hero.scss';
+
+/*----------  tiles-in-a-row  ----------*/
+
+@import './components/tiles-in-row/common.scss';
+@import './components/tiles-in-row/events.scss';
 
 
 /*=====  End of components  ======*/

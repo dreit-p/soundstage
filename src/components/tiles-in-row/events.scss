@@ -1,0 +1,32 @@
+.tiles-in-row.events {
+	.event-info {
+		margin: 0 0 * 0;
+		padding-right: 16px;
+	}
+	&:after {
+		content: '';
+		display: none;
+	}
+
+	@media (max-width: 950px) {
+		font-size: 13px;
+		&:after {
+			content: 'flickity';
+		}
+		.event-info .date-badge {
+			margin-right: 16px;
+		}
+	}
+	@media (max-width: 750px) {
+		.tile-wrapper {
+			width: 50%;
+			flex-basis: 50%;
+		}
+	}
+	@media (max-width: 570px) {
+		.tile-wrapper {
+			width: 100%;
+			flex-basis: 100%;
+		}
+	}
+}

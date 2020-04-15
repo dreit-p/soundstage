@@ -4,6 +4,11 @@ section.main-hero {
 		display: flex;
 		flex-direction: row-reverse;
 	}
+	.event-info {
+		position: absolute;
+		left: 24px;
+		bottom: 24px;
+	}
 	.image {
 		flex-basis: 50%;
 		margin-left: 20px;
@@ -22,43 +27,6 @@ section.main-hero {
 			height: 50%;
 			margin: auto;
 			background-image: linear-gradient(to top, rgba(32, 32, 54, 0.8), rgba(32, 32, 54, 0));
-		}
-		.info {
-			z-index: 1;
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			display: flex;
-			align-items: center;
-		}
-		.date-badge {
-			padding: 0.625em;
-			border-radius: 0.75em;
-			background-color: var(--accent-2);
-			text-align: center;
-			min-width: 4.5em;
-			height: 4.5em;
-			margin: 1.5em;
-			.day {
-				font-family: var(--font-second);
-				font-size: 2.25em;
-				font-weight: bold;
-				letter-spacing: -1px;
-				line-height: 1;
-			}
-			.month {
-				font-size: 0.8125em;
-				font-weight: 600;
-				letter-spacing: 1px;
-				text-transform: uppercase;
-			}
-		}
-		.caption {
-			max-width: 7em;
-			font-size: 1.5em;
-			font-weight: 600;
-			line-height: 1.33;
-			letter-spacing: -1px;
 		}
 	}
 	.text-side {
@@ -104,7 +72,7 @@ section.main-hero {
 			width: 100%;
 			margin: 0;
 			height: 44vw;
-			.info {
+			.event-info {
 				font-size: 3.7vw;
 			}
 		}
