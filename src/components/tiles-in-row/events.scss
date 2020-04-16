@@ -10,6 +10,7 @@
 
 	@media (max-width: 950px) {
 		font-size: 13px;
+		margin: 0 -20px;
 		&:after {
 			content: 'flickity';
 		}
@@ -19,13 +20,14 @@
 	}
 	@media (max-width: 750px) {
 		.tile-wrapper {
-			width: 50%;
+			width: calc(50% - 16px - 20px - 16px);
 			flex-basis: 50%;
 		}
 	}
 	@media (max-width: 570px) {
+		margin: 0 -36px;
 		.tile-wrapper {
-			width: 100%;
+			width: calc(100% - 16px - 20px - 16px);
 			flex-basis: 100%;
 		}
 	}

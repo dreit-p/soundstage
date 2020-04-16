@@ -4,16 +4,19 @@
 	justify-content: space-between;
 	margin: 0 -0.9375em;
 	.tile-wrapper {
-		padding: 0 0.9375em;
+		padding: 0 15px;
 		text-align: center;
 		flex-grow: 1;
 		flex-basis: 33%;
 		width: 33%;
+		@media (max-width: 570px) {
+			padding: 0 8px;
+		}
 	}
 	.tile {
 		text-align: left;
 		width: 100%;
-		max-width: 420px;
+		/* max-width: 420px; */
 		display: inline-flex;
 		flex-direction: column;
 		border-radius: 24px;
@@ -45,6 +48,11 @@
 	.flickity-viewport {
 		flex-grow: 1;
 		flex-basis: 100%;
+		transform: translateX(5px);
+		overflow: visible;
+		@media (max-width: 570px) {
+			transform: translateX(28px);
+		}
 	}
 	.flickity-page-dots {
 		bottom: -32px;
