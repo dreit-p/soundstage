@@ -163,21 +163,26 @@ header.main-header {
 			height: 100vh;
 			background-color: var(--bg-1);
 			opacity: 0;
+			transition: opacity .2s ease-out;
 			pointer-events: none;
 			}
 		&.opened {
 			box-shadow: 0 2px 4px -1px rgba(20, 16, 41, 0.24), 0 0 1px 0 rgba(20, 16, 41, 0.4);
 			background-color: var(--bg-1);
+			.veil,
+			.menu-wrapper {
+				pointer-events: all;
+				transition-duration: .1s;
+				transition-timing-function: ease-in;
+			}
 			.veil {
 				opacity: .8;
-				pointer-events: all;
-			}
-			&.unsticked .base-elements {
-				box-shadow: none;
 			}
 			.menu-wrapper {
 				opacity: 1;
-				pointer-events: all;
+			}
+			&.unsticked .base-elements {
+				box-shadow: none;
 			}
 		}
 		.limit {
@@ -267,6 +272,7 @@ header.main-header {
 			padding-top: 16px;
 			transition: opacity .1s;
 			opacity: 0;
+			transition: opacity .2s ease-out;
 			pointer-events: none;
 		}
 
