@@ -169,17 +169,18 @@ header.main-header {
 		&.opened {
 			box-shadow: 0 2px 4px -1px rgba(20, 16, 41, 0.24), 0 0 1px 0 rgba(20, 16, 41, 0.4);
 			background-color: var(--bg-1);
-			.veil,
-			.menu-wrapper {
-				pointer-events: all;
-				transition-duration: .1s;
-				transition-timing-function: ease-in;
-			}
 			.veil {
 				opacity: .8;
+				pointer-events: all;
+				transition-duration: .2s;
+				transition-timing-function: ease-out;
 			}
 			.menu-wrapper {
 				opacity: 1;
+				pointer-events: all;
+				transform: translateY(0);
+				transition-duration: .1s, .2s;
+				transition-timing-function: ease-in, ease-out;
 			}
 			&.unsticked .base-elements {
 				box-shadow: none;
@@ -270,9 +271,9 @@ header.main-header {
 			top: 100%;
 			width: 100vw;
 			padding-top: 16px;
-			transition: opacity .1s;
+			transform: translateY(-20px);
 			opacity: 0;
-			transition: opacity .2s ease-out;
+			transition: opacity .2s ease-out, transform .2s ease-out;
 			pointer-events: none;
 		}
 

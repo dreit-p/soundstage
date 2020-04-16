@@ -60,6 +60,10 @@ section.main-hero {
 		.text-side .buttons {
 			flex-direction: column-reverse;
 		}
+		.image .event-info {
+			left: 16px;
+			bottom: 16px;
+		}
 	}
 
 	@media (max-width: 450px) {
@@ -74,6 +78,8 @@ section.main-hero {
 			height: 44vw;
 			.event-info {
 				font-size: 3.7vw;
+				left: 16px;
+				bottom: 16px;
 			}
 		}
 		.text-side {
