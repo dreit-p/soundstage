@@ -30,6 +30,20 @@ html(lang="en")
 				.content
 					include /components/tiles-in-row/events.pug
 
+		section.titled-content
+			.limit
+				header
+					.category explore
+					.main-row
+						.title Featured Artists
+						a.ui-btn.primary.arrow(href="#")
+							.btn-caption View More Artists
+							span.btn-icon.arrow
+								svg
+									use(href="#arrow")
+				.content
+					include /components/tiles-in-row/artists.pug
+
 		p TExt 1
 		p TExt 2
 		p TExt 3

@@ -1,0 +1,49 @@
+-
+	var slides = [
+		{
+			image: 'artist-1.jpg',
+			name: 'Unlimited Gravity',
+			genre: 'hip-hop',
+			price: '300',
+			text: 'Austin Moses (aka Blaize) was born in Corpus Christi, but now resides in San Antonio. Blaize first began his musical career by making Hip Hop music/beats for his friends in high school. You can still hear those influences within his music even to this day. He became greatly inspired after going to a Skrillex show back in 2012, and from there on out, decided to change his production style. This led to a more bass heavy type of sound; With which Blaize has taken a liking to. His production skill knows no bounds, as he has had releases on labels such as Buygore, Firepower, and Super 7. Blaize is now on a countrywide tour, and continues to play'
+		},
+		{
+			image: 'artist-2.jpg',
+			name: 'Very long name of some creative artist',
+			genre: 'electronic',
+			price: '500',
+			text: 'Austin Moses (aka Blaize) was born in Corpus Christi, but now resides in San Antonio'
+		},
+		{
+			image: 'artist-3.jpg',
+			name: 'LEViT∆TE',
+			genre: 'neuro bass',
+			price: '500',
+			text: 'Part of the Phuture Collective family, Diversa showers your ears with a colorful sonic'
+		},
+		{
+			image: 'artist-4.jpg',
+			name: 'ill-esha',
+			genre: 'neue deutsche härte',
+			price: '1300',
+			text: 'Vancouver-born and Colorado-based music producer, artist and DJ ill-esha has crafted'
+		},
+	]
+
+.tiles-in-row.slider.artists
+	each slide in slides
+		.tile-wrapper
+			.tile.slide.event
+				.tile-image(style=`background-image: url(../assets/images/content/${slide.image})`)
+				.tile-content
+					.name-and-genre
+						.name= slide.name
+						.genre= slide.genre
+					.description= slide.text
+					.order
+						.price
+							span.cy $
+							span.num= slide.price
+							span.rate / hour
+						a.ui-btn.secondary.thin(href="#")
+							.btn-caption Request
