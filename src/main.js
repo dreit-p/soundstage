@@ -6,6 +6,7 @@ import objectFitImages from 'object-fit-images';
 
 import './components/header/header.js';
 import './components/tiles-in-row/slider.js';
+import './components/faq/faq.js';
 
 /*=====  End of components  ======*/
 

@@ -23,7 +23,6 @@ i {
 
 * {
 	font-family: var(--font-main);
-	color: white;
 	line-height: 1.2;
 	box-sizing: border-box;
 	transition: none;
@@ -91,6 +90,7 @@ svg {
 	display: flex;
 	align-items: center;
 	margin: -1.5em;
+	color: white;
 	.date-badge {
 		padding: 0.625em;
 		border-radius: 0.75em;
@@ -125,6 +125,7 @@ svg {
 
 .titled-content {
 	padding: 72px 0;
+	color: white;
 	.category {
 		display: inline-block;
 		padding: 4px 8px;
@@ -147,6 +148,9 @@ svg {
 			line-height: 1;
 			letter-spacing: -2px;
 			margin-right: 24px;
+			&.mobile {
+				display: none;
+			}
 		}
 		.ui-btn {
 			flex-shrink: 0;
@@ -160,6 +164,12 @@ svg {
 			.title {
 				font-size: 36px;
 				line-height: -1;
+				&.mobile {
+					display: block;
+				}
+				&.desktop {
+					display: none;
+				}
 			}
 			.ui-btn {
 				.btn-caption {

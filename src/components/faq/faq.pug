@@ -1,0 +1,35 @@
+-
+	var questions = [
+		{
+			question: 'How does a SoundStage performance compare to a live act?',
+			answer: 'A virtual performance is similar to a physical act by an artist except that it employs two-way video-conferencing, making it possible for the artist to conduct the performance remotely.'
+		},
+		{
+			question: 'How does a virtual performance work?',
+			answer: 'A virtual performance is similar to a physical act by an artist except that it employs two-way video-conferencing, making it possible for the artist to conduct the performance remotely.'
+		},
+		{
+			question: 'What hardware do I need for a SoundStage performance?',
+			answer: 'A virtual performance is similar to a physical act by an artist except that it employs two-way video-conferencing, making it possible for the artist to conduct the performance remotely.'
+		},
+		{
+			question: 'What happens after I request a booking?',
+			answer: 'A virtual performance is similar to a physical act by an artist except that it employs two-way video-conferencing, making it possible for the artist to conduct the performance remotely.'
+		},
+		{
+			question: 'What is your cancellation policy?',
+			answer: 'A virtual performance is similar to a physical act by an artist except that it employs two-way video-conferencing, making it possible for the artist to conduct the performance remotely.'
+		},
+	]
+
+section.faq
+	each tile in questions
+		.tile
+			.header
+				.question= tile.question
+				.state-icon
+					svg.plus
+						use(href="#plus")
+					svg.minus
+						use(href="#minus")
+			.answer= tile.answer
