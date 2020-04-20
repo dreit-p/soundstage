@@ -11,6 +11,7 @@
 	@media (max-width: 950px) {
 		font-size: 13px;
 		margin: 0 -20px;
+		margin-bottom: -32px;
 		&:after {
 			content: 'flickity';
 		}
@@ -25,7 +26,8 @@
 		}
 	}
 	@media (max-width: 570px) {
-		margin: 0 -36px;
+		margin: 0 -32px;
+		margin-bottom: 0;
 		.tile-wrapper {
 			width: calc(100% - 16px - 20px - 16px);
 			flex-basis: 100%;
