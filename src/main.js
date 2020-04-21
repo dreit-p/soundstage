@@ -63,11 +63,17 @@ window.setOutsideClickListener = (target, cb)=>{
 	body.addEventListener('mouseup', task, false);
 }
 
-
-
 document.querySelectorAll('a[href="#"], a[href=""], a[href="https://example.com/"]').forEach((elem)=>{
 	elem.addEventListener('click', function (e) {
 		e.preventDefault();
+	}, false);
+});
+
+document.querySelectorAll('.ellipsized .read-more').forEach((btn)=>{
+	let parent = btn.closest('.ellipsized');
+	parent.addEventListener('click', (e)=>{
+		e.preventDefault();
+		parent.classList.remove('ellipsized');
 	}, false);
 });
 

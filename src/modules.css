@@ -18,6 +18,7 @@
 
 @import './components/hero/hero.scss';
 @import './components/faq/faq.scss';
+@import './components/common-info/info.scss';
 
 /*----------  tiles-in-a-row  ----------*/
 
