@@ -13,6 +13,8 @@
 /*----------  UI elements  ----------*/
 
 @import './components/ui-elems/buttons.scss';
+@import './components/ui-elems/inputs.scss';
+@import './components/ui-elems/checkboxes.scss';
 
 /*----------  blocks  ----------*/
 
@@ -25,6 +27,12 @@
 @import './components/tiles-in-row/common.scss';
 @import './components/tiles-in-row/events.scss';
 @import './components/tiles-in-row/artists.scss';
+
+/*----------  Forms  ----------*/
+
+@import './components/forms/fullscreen-form.scss';
+@import './components/forms/forms.scss';
+
 
 
 /*=====  End of components  ======*/

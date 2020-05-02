@@ -57,6 +57,11 @@
 		font-size: 0.875rem;
 		line-height: 1.71;
 	}
+
+	/*===============================
+	=            Primary            =
+	===============================*/
+
 	&.primary {
 		background-color: transparent;
 		box-shadow: 0 8px 8px -4px rgba(156, 66, 245, 0.12), 0 8px 16px 0 rgba(156, 66, 245, 0.24), 0 1px 4px -1px rgba(27, 10, 82, 0.12), 0 0 1px 0 rgba(156, 66, 245, 0.24);
@@ -75,6 +80,7 @@
 
 		&:hover,
 		&:focus {
+			text-decoration: none;
 			transition-duration: .1s;
 			&:after {
 				transition-duration: .1s;
@@ -99,6 +105,14 @@
 			}
 		}
 	}
+
+	/*=====  End of Primary  ======*/
+
+
+	/*=================================
+	=            Secondary            =
+	=================================*/
+
 	&.secondary {
 		background-color: transparent;
 		box-shadow: 0 8px 8px -4px rgba(156, 66, 245, 0.06), 0 16px 24px 0 rgba(156, 66, 245, 0.12), 0 2px 4px -1px rgba(27, 10, 82, 0.06), 0 0 1px 0 rgba(156, 66, 245, 0.12);
@@ -114,6 +128,7 @@
 		}
 
 		&:hover {
+			text-decoration: none;
 			box-shadow: 0 12px 12px -4px rgba(156, 66, 245, 0.06), 0 24px 32px 0 rgba(156, 66, 245, 0.12), 0 4px 4px -1px rgba(27, 10, 82, 0.06), 0 1px 1px 0 rgba(156, 66, 245, 0.12), inset 0 0 8px 0 rgba(156, 66, 245, 0.4);
 		}
 
@@ -146,4 +161,26 @@
 			}
 		}
 	}
+
+	/*=====  End of Secondary  ======*/
+
+	/*============================
+	=            Blue            =
+	============================*/
+
+	&.blue {
+		background-color: #1877f2;
+		color: white;
+		&:hover {
+			text-decoration: none;
+			background-color: hsla(214, 89%, 56%, 1);
+		}
+		&:active {
+			background-color: #1877f2;
+		}
+	}
+
+	/*=====  End of Blue  ======*/
+
+
 }

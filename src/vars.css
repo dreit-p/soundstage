@@ -10,4 +10,7 @@
 
 	--font-main: 'Montserrat', 'PT Sans', 'Segoe UI', arial, sans-serif;
 	--font-second: 'Averta', 'Uni Sans', 'Tahoma', 'Segoe UI', arial, sans-serif;
+
+	--grid-column: 65px;
+	--grid-offset: 30px;
 }

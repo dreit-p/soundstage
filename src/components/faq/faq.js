@@ -1,6 +1,7 @@
 (()=>{
 
 	let list = document.querySelector('section.faq');
+	if (!list) return false;
 	list.querySelectorAll('.tile').forEach(function(tile) {
 		tile.addEventListener('click', function () {
 			let hideElem = tile => {

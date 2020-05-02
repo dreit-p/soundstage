@@ -8,6 +8,8 @@ import './components/header/header.js';
 import './components/tiles-in-row/slider.js';
 import './components/faq/faq.js';
 
+import './components/ui-elems/inputs.js';
+
 /*=====  End of components  ======*/
 
 

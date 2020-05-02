@@ -2,6 +2,8 @@
 
 	var mainHeader = document.querySelector('header.main-header');
 
+	if (!mainHeader) return false;
+
 	window.addEventListener('scroll', function() {
 		// eslint-disable-next-line
 		window.throttling(function() {
