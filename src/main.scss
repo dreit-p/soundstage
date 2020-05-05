@@ -56,6 +56,14 @@ svg {
 	height: 100%;
 	z-index: -1;
 	overflow: hidden;
+	&.hidden {
+		img.desktop {
+			transform: translateX(-50%) translateY(-45%);
+		}
+		img.mobile {
+			display: none;
+		}
+	}
 	img.desktop {
 		--original-size: 1920px;
 		position: absolute;
@@ -122,6 +130,9 @@ svg {
 	}
 }
 
+.main-header + .titled-content {
+	padding-top: 0;
+}
 
 .titled-content {
 	padding: 72px 0;

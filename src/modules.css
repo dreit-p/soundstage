@@ -9,6 +9,8 @@
 
 @import './components/header/header.scss';
 @import './components/footer/footer.scss';
+@import './components/breadcrumbs/breadcrumbs.scss';
+@import './components/search-bar/search-bar.scss';
 
 /*----------  UI elements  ----------*/
 
