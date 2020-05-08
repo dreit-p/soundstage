@@ -1,7 +1,46 @@
-.tiles-in-row.artists {
+.artists-tiles {
 	&:after {
 		content: '';
-		display: none;
+		flex: auto;
+	}
+
+	.tile-wrapper {
+		flex-basis: 25%;
+		width: 25%;
+		min-width: 250px;
+	}
+
+	@media (min-width: 840px) {
+		.tile-wrapper.big .tile {
+			flex-direction: row;
+			align-items: stretch;
+			.tile-image {
+				height: auto;
+				width: auto;
+				flex-grow: 1;
+			}
+			.tile-content {
+				max-width: 48%;
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+				.description {
+					/* flex-grow: 1; */
+					-webkit-line-clamp: 7;
+					line-clamp: 7;
+				}
+			}
+			.player {
+				display: block;
+				margin: auto 16px;
+			}
+		}
+	}
+
+	.tile-content {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
 	}
 
 	.name-and-genre {
@@ -29,15 +68,20 @@
 		}
 	}
 	.description {
-		margin: 1em;
+		margin: 0 1em 1em;
+	}
+	.player {
+		display: none;
 	}
 	.order {
 		margin: 16px;
+		margin-top: auto;
 		display: flex;
 		.price {
 			font-weight: bold;
 			flex-grow: 1;
 			padding-right: 16px;
+			padding-left: 5px;
 			white-space: nowrap;
 			.cy {
 				font-size: 14px;
@@ -62,6 +106,7 @@
 		margin: 0 -20px; */
 		&:after {
 			content: 'flickity';
+			display: none;
 		}
 	}
 	@media (max-width: 840px) {

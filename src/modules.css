@@ -30,7 +30,7 @@
 
 @import './components/tiles-in-row/common.scss';
 @import './components/tiles-in-row/events.scss';
-@import './components/tiles-in-row/artists.scss';
+@import './components/artists/artists.scss';
 
 /*----------  Forms  ----------*/
 
