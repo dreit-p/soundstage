@@ -1,0 +1,136 @@
+-
+	var pages = [
+		{
+			title: 'Personal',
+			caption: 'vino_costa',
+			color: '#9c42f5',
+			class: 'active',
+			icon: 'person'
+		},
+		{
+			title: 'Profile Picture',
+			caption: 'Change photo',
+			color: '#ff00aa',
+			icon: 'layers'
+		},
+		{
+			title: 'Security',
+			caption: 'Change password',
+			color: '#5d2de1',
+			icon: 'shield'
+		},
+		{
+			title: 'Artist Info',
+			caption: 'vino_costa',
+			color: '#c32de1',
+			icon: 'eye'
+		},
+		{
+			title: 'Artist Photo',
+			caption: 'Change photo',
+			color: '#f54562',
+			icon: 'fire'
+		},
+		{
+			title: 'Payment History',
+			caption: '38 transactions',
+			color: '#ffaa00',
+			icon: 'card'
+		},
+	]
+
+doctype html
+html(lang="en")
+	head
+		include /components/head/head.pug
+	body
+		div(style="display: none")
+			include /assets/symbol/svg/sprite.symbol.svg
+		.page-bg.hidden
+			picture
+				source(type="image/webp" srcset="../assets/images/hero-bg.webp")
+				img.desktop.objfit(src="../assets/images/hero-bg.jpg")
+			picture
+				source(type="image/webp" srcset="../assets/images/hero-bg-mobile.webp")
+				img.mobile.objfit(src="../assets/images/hero-bg-mobile.jpg")
+
+		include /components/header/header-with_user.pug
+
+		section.titled-content
+			.limit
+				header
+					include /components/breadcrumbs/breadcrumbs.pug
+					.main-row.with-search
+						.title Profile
+				.content
+					section.settings-page
+						nav.settings-nav
+							ul
+								each page in pages
+									li
+										a.link(href="#" class=page.class)
+											.icon(style=`background-color: ${page.color}`)
+												svg
+													use(href=`#${page.icon}`)
+											.text-wrapper
+												.title!= page.title
+												.caption!= page.caption
+
+						section.settings-page-content
+							header
+								.title Personal
+								.right-elems
+									a.simple-link(href="#") Done
+
+							form.form
+								.inline.evenly
+									label.ui-input-container
+										.label-caption First Name
+										.ui-input-wrapper
+											input.ui-input(type="text")
+									label.ui-input-container
+										.label-caption Last Name
+										.ui-input-wrapper
+											input.ui-input(type="text")
+
+								.inline.evenly
+									label.ui-input-container
+										.label-caption Email
+										.ui-input-wrapper
+											input.ui-input(type="email" required placeholder="email@example.com" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/")
+									label.ui-input-container
+										.label-caption Phone
+										.ui-input-wrapper
+											input.ui-input(type="tel" placeholder="+1 (201) 555-5555" data-mask="+{1} (000) 000-0000" pattern="/([(+]*[0-9]+[()+. -]*)/")
+										.error-msg Error message
+
+								label.ui-input-container
+									.label-caption Country
+									.ui-input-wrapper.selector
+										select.ui-input(name="country")
+											option(selected="" disabled) Select
+											option(value="1") First
+											option(value="2") Second
+											option(value="3") Third
+											option(value="4") Fourth
+
+								label.ui-input-container
+									.label-caption Country
+									.ui-input-wrapper.selector
+										input.ui-input(list="countries" name="countries" placeholder="Select")
+										datalist#countries
+											option(value="USA")
+											option(value="Canada")
+											option(value="China")
+											option(value="Russia")
+											option(value="Austria")
+											option(value="Germany")
+											option(value="France")
+											option(value="Italy")
+											option(value="Japan")
+											option(value="Turkey")
+
+								button.simple-link(style="float: right") Done
+
+		include /components/footer/footer.pug
+	script(src="js/main.js")

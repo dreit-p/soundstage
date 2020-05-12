@@ -11,5 +11,6 @@ import './components/faq/faq.js';
 
 import './components/ui-elems/inputs.js';
 import './components/breadcrumbs/breadcrumbs.js';
+import './components/settings/settings.js';
 
 /*=====  End of components  ======*/

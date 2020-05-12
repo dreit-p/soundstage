@@ -19,6 +19,7 @@
 @import './components/ui-elems/buttons.scss';
 @import './components/ui-elems/inputs.scss';
 @import './components/ui-elems/checkboxes.scss';
+@import './components/ui-elems/selector.scss';
 
 /*----------  blocks  ----------*/
 
@@ -36,6 +37,10 @@
 
 @import './components/forms/fullscreen-form.scss';
 @import './components/forms/forms.scss';
+
+/*----------  settings  ----------*/
+
+@import './components/settings/settings.scss';
 
 
 

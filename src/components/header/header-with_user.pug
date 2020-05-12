@@ -1,0 +1,33 @@
+.header-offset
+header.main-header
+	.veil
+	.limit
+		.base-elements
+			.element
+				a.menu-btn(href="#")
+					svg.hamburger
+						use(href="#hamburger")
+					svg.cross
+						use(href="#cross")
+			.element
+				.logo
+					.image
+						picture
+							source(type="image/webp" srcset="../assets/images/logo.webp")
+							img.objfit(src="../assets/images/logo.png")
+					.brand #[span.bold sound]stage
+			.element
+				a.sign-up(href="#") Sign Up
+		.menu-wrapper
+			nav.links-block
+				ul
+					li #[a.link(href="#" title="Home") Home]
+					li #[a.link(href="#" title="Events") Events]
+					li #[a.link(href="#" title="Artists") Artists]
+					li #[a.link(href="#" title="Work with Us") Work with Us]
+				a.profile(href="#")
+					.profile-image
+						svg
+							use(href="#person")
+
+

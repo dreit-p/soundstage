@@ -1,0 +1,41 @@
+.ui-input-wrapper.selector {
+	position: relative;
+	.ui-input {
+		-moz-appearance: window;
+		-webkit-appearance: none;
+		appearance: none;
+		&::-webkit-calendar-picker-indicator,
+		&::-webkit-list-button {
+			display: none;
+		}
+	}
+	select {
+		cursor: pointer;
+	}
+	option {
+		color: black;
+		&[value=""][disabled] {
+			 display: none;
+		}
+	}
+	&:after {
+		content: "";
+		pointer-events: none;
+		user-select: none;
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 12px;
+		transform: rotate(90deg);
+		height: 24px;
+		width: 24px;
+		margin: auto;
+		color: white;
+		background-image: url(../assets/svg/arrow-right.svg);
+		background-size: 50% 50%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		opacity: .4;
+	}
+}
