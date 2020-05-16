@@ -91,6 +91,12 @@ header.main-header {
 			background-position: center center;
 			background-repeat: no-repeat;
 			opacity: .4;
+			transition: opacity .1s;
+		}
+		@media (min-width: 571px) {
+			&:hover:after {
+				opacity: .8;
+			}
 		}
 		.title,
 		.profile-name {
@@ -162,17 +168,24 @@ header.main-header {
 				display: none;
 			}
 			&.dropdown {
-				display: none;
+				display: block;
+				opacity: 0;
+				user-select: none;
+				pointer-events: none;
+				transition: opacity .2s;
+				position: absolute;
+				min-width: 255px;
+				top: 100%;
+				right: 20px;
+				border-radius: 24px;
+				box-shadow: 0 16px 16px -4px rgba(20, 16, 41, 0.24), 0 4px 8px -1px rgba(20, 16, 41, 0.24), 0 0 1px 0 rgba(20, 16, 41, 0.4);
+				background-color: var(--bg-1);
+				padding: 16px 0;
 				&.active {
-					display: block;
-					min-width: 255px;
-					position: absolute;
-					top: 100%;
-					right: 20px;
-					border-radius: 24px;
-					box-shadow: 0 16px 16px -4px rgba(20, 16, 41, 0.24), 0 4px 8px -1px rgba(20, 16, 41, 0.24), 0 0 1px 0 rgba(20, 16, 41, 0.4);
-					background-color: var(--bg-1);
-					padding: 16px 0;
+					opacity: 1;
+					user-select: auto;
+					pointer-events: all;
+					transition-duration: .1s;
 				}
 				.user-name {
 					padding: 0 16px;
