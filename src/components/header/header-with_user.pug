@@ -4,7 +4,7 @@ header.main-header
 	.limit
 		.base-elements
 			.element
-				a.menu-btn(href="#")
+				a.menu-btn(href="#" data-select-menu="main")
 					svg.hamburger
 						use(href="#hamburger")
 					svg.cross
@@ -17,17 +17,46 @@ header.main-header
 							img.objfit(src="../assets/images/logo.png")
 					.brand #[span.bold sound]stage
 			.element
-				a.sign-up(href="#") Sign Up
-		.menu-wrapper
+				a.profile-mobile-image(href="#" data-select-menu="profile")
+					svg
+						use(href="#person")
+					img.objfit(src="../assets/images/content/artist-4.jpg")
+
+
+		.menu-wrapper.main
 			nav.links-block
 				ul
 					li #[a.link(href="#" title="Home") Home]
 					li #[a.link(href="#" title="Events") Events]
 					li #[a.link(href="#" title="Artists") Artists]
 					li #[a.link(href="#" title="Work with Us") Work with Us]
-				a.profile(href="#")
+				a.profile-menu(href="#" data-select-menu="profile")
 					.profile-image
 						svg
 							use(href="#person")
+						img.objfit(src="../assets/images/content/artist-4.jpg")
+					.title Account
+					.profile-name vino_costa
+
+		.menu-wrapper.on-top.dropdown.profile
+			.user-name.desktop vino_costa
+			.base-elements.mobile
+				.element
+					a.link.inline(href="#" data-select-menu="main")
+						.icon
+							svg.arrow-left
+								use(href="#arrow-corner")
+						| Menu
+				.element
+					.title Account
+				.element
+			a.button(href="#")
+				svg
+					use(href="#person-thin")
+				.caption Profile
+			a.button(href="#")
+				svg
+					use(href="#exit")
+				.caption Sign Out
 
 
