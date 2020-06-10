@@ -3,11 +3,6 @@
 		let threshold = 8;
 		let list = container.querySelector('ul');
 
-		window.onload = ()=>{
-			list.scrollLeft = list.scrollWidth - list.clientWidth;
-			container.classList.add('show');
-		}
-
 		let resizeHandler = ()=>{
 			if (list.scrollLeft >= threshold) {
 				container.classList.add('truncate-left');

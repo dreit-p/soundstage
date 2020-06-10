@@ -3,11 +3,6 @@ section.breadcrumbs {
 	padding: 0;
 	overflow: hidden;
 	position: relative;
-	opacity: .2;
-	transition: opacity .1s;
-	&.show {
-		opacity: 1;
-	}
 	@media (max-width: 570px) {
 		margin: 0;
 	}
