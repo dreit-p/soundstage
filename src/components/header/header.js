@@ -4,16 +4,17 @@
 
 	if (!mainHeader) return false;
 
+	function updateHeaderSticking() {
+		var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+		mainHeader.classList.toggle('unsticked', scrolled > 5);
+	}
+
 	window.addEventListener('scroll', function() {
-		// eslint-disable-next-line
-		window.throttling(function() {
-			var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-			if (scrolled > 5) {
-				mainHeader.classList.add('unsticked');
-			} else {
-				mainHeader.classList.remove('unsticked');
-			}
-		})
+		window.throttling(updateHeaderSticking)
+	}, false);
+
+	window.addEventListener('load', function () {
+		updateHeaderSticking();
 	}, false);
 
 	mainHeader.querySelector('.veil').addEventListener('click', function () {
