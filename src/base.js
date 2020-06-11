@@ -34,7 +34,7 @@ window.lockScroll = (state =true)=>{
 	} else {
 		body.classList.remove('scroll-locked');
 		body.style.overflowX = 'auto';
-		body.style.overflowY = 'scroll';
+		body.style.overflowY = 'auto';
 		body.style.paddingRight = 0;
 	}
 }
