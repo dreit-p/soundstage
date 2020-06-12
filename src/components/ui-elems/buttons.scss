@@ -94,6 +94,7 @@
 				opacity: 0;
 			}
 		}
+		:disabled,
 		&.disabled {
 			pointer-events: none;
 			color: rgba(224, 224, 255, 0.24);
@@ -150,6 +151,7 @@
 				box-shadow: inset 0 3px 12px 0 rgba(156, 66, 245, 0.4);
 			}
 		}
+		&:disabled,
 		&.disabled {
 			pointer-events: none;
 			color: rgba(224, 224, 255, 0.24);
