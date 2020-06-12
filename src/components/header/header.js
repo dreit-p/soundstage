@@ -60,23 +60,18 @@
 			}
 			toggleWrapper(true);
 			setMenuContent(type);
-			document.querySelectorAll(`[data-select-menu="${type}"]`).forEach((link)=>link.classList.toggle('active', true));
+			document.querySelectorAll(`[data-select-menu="${type}"]`)
+				.forEach((link)=>link.classList.toggle('active', true));
 		})(document.querySelector('.menu-wrapper.active'))
 
 	}
 
 
 	document.querySelectorAll('[data-select-menu]').forEach((link)=>{
-		link.addEventListener('click', ()=>{
+		link.addEventListener('click', (e)=>{
+			e.preventDefault();
 			selectMenu(link.dataset.selectMenu);
 		}, false)
-	});
-
-	[].forEach.call(document.querySelectorAll("a.profile-menu"), (menuLink) => {
-		menuLink.addEventListener('click', function (e) {
-			e.preventDefault();
-
-		}, false);
 	});
 
 })()

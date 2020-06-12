@@ -41,14 +41,14 @@ window.lockScroll = (state =true)=>{
 
 window.setOutsideClickListener = (target, cb)=>{
 	let body = document.getElementsByTagName('body')[0];
-	let theTarget = typeof target == 'string' ? body.querySelector(target) : target;
-	body.removeEventListener('mouseup', task, false);
+	let targetElem = typeof target == 'string' ? body.querySelector(target) : target;
 	let task = (e)=>{
-		if (!theTarget.contains(e.target)) {
+		if (!targetElem.contains(e.target)) {
 			cb();
-			e.target.removeEventListener('mouseup', task, false)
+			body.removeEventListener('mouseup', task, false)
 		}
 	}
+	body.removeEventListener('mouseup', task, false)
 	body.addEventListener('mouseup', task, false);
 }
 
