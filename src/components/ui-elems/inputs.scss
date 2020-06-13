@@ -41,8 +41,8 @@
 
 	.ui-input-icon {
 		position: absolute;
-		max-height: 1.5rem;
 		max-width: 22px;
+		max-height: .95em;
 		right: 13px;
 		top: 0;
 		bottom: 0;
@@ -70,13 +70,21 @@
 			}
 		}
 		&~input {
-			padding-right: calc(16px + 13px);
+			padding-right: calc(20px + 13px);
 		}
 		&.clickable {
 			cursor: pointer;
 			pointer-events: all;
 			&:hover {
 				opacity: .6;
+			}
+		}
+		&.left {
+			right: auto;
+			left: 13px;
+			&~input {
+				padding-right: 16px;
+				padding-left: calc(12px + 20px + 12px);
 			}
 		}
 	}

@@ -46,13 +46,19 @@ html(lang="en")
 							label.ui-input-container.disabled
 								.label-caption Disabled
 								.ui-input-wrapper
-									input.ui-input(type="text" placeholder="Placeholder")
+									.ui-input-icon.left
+										svg
+											use(href="#mail")
+									input.ui-input(type="text" placeholder="Left icon")
 							label.ui-input-container.disabled
 								.label-caption
 									| Disabled
 									a.additional-action(href="#") Action
 								.ui-input-wrapper
-									input.ui-input(type="text" value="Last Name")
+									.ui-input-icon
+										svg
+											use(href="#mail")
+									input.ui-input(type="text" value="Right icon")
 
 						label.ui-input-container
 							.label-caption
