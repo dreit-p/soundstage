@@ -94,7 +94,7 @@
 				opacity: 0;
 			}
 		}
-		:disabled,
+		&:disabled,
 		&.disabled {
 			pointer-events: none;
 			color: rgba(224, 224, 255, 0.24);
