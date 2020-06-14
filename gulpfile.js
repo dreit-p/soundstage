@@ -66,7 +66,7 @@ var path = {
 		fonts: 'dist/fonts/'
 	},
 	src: { //Пути откуда брать исходники
-		html: 'src/*.pug', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+		html: 'src/pages/*.pug', //Синтаксис src/*.ext говорит gulp что мы хотим взять все файлы с расширением .ext
 		js: 'src/main.js', //В стилях и скриптах нам понадобятся только main файлы
 		css: 'src/main.scss',
 		img: 'src/assets/images/**/*.{gif,jpeg,jpg,png,svg,webp}', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
