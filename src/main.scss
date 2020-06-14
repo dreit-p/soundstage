@@ -114,6 +114,21 @@ svg {
 	}
 }
 
+.inline {
+	display: flex;
+	width: 100%;
+	.left {
+		flex-grow: 1;
+	}
+	.middle {
+		flex-grow: 999;
+	}
+}
+
+.blured-3 {
+	filter: blur(3px);
+}
+
 .event-info {
 	z-index: 1;
 	display: flex;

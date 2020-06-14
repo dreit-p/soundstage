@@ -42,6 +42,15 @@
 
 @import './components/settings/settings.scss';
 
+/*----------  artist  ----------*/
+
+@import './components/artist/info.scss';
+
+/*----------  chat  ----------*/
+
+@import './components/chat/chat.scss';
+
+
 
 
 /*=====  End of components  ======*/

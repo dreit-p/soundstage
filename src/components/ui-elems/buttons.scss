@@ -2,7 +2,8 @@
 	border: none;
 	border-radius: 0.75em;
 	cursor: pointer;
-	padding: 0.75rem;
+	outline: none;
+	padding: 0.75em;
 	transition: box-shadow .3s;
 	position: relative;
 	overflow: hidden;
@@ -46,7 +47,7 @@
 		padding: 4px;
 		text-align: center;
 		svg {
-			display: inline-block;
+			display: block;
 			max-height: 100%;
 			max-width: 100%;
 		}
@@ -56,6 +57,24 @@
 		font-weight: 500;
 		font-size: 0.875rem;
 		line-height: 1.71;
+		.btn-icon {
+			margin: 0 0.3125rem;
+		}
+		.btn-icon + .btn-caption {
+			padding-left: 0;
+		}
+	}
+	&.circle {
+		border-radius: 50%;
+		overflow: hidden;
+		&.thin {
+			padding: 6px;
+			.btn-icon {
+				margin-left: 0;
+				margin-right: 0;
+				padding: 2px;
+			}
+		}
 	}
 
 	/*===============================
@@ -128,6 +147,24 @@
 			background-image: linear-gradient(114deg, var(--bg-3), var(--bg-1) 50%, var(--bg-2) 100%);
 		}
 
+		&.flat,
+		&.flat:active {
+			box-shadow: none;
+			transition-duration: .1s;
+			&:hover,
+			&:focus {
+				box-shadow: none;
+			}
+			&:after {
+				background-image: linear-gradient(269deg, #33334b 0%, #6e6e7e 200%);
+			}
+			&:before,
+			&:after {
+				transition-duration: .1s;
+				box-shadow: none;
+			}
+		}
+
 		&:hover {
 			text-decoration: none;
 			box-shadow: 0 12px 12px -4px rgba(156, 66, 245, 0.06), 0 24px 32px 0 rgba(156, 66, 245, 0.12), 0 4px 4px -1px rgba(27, 10, 82, 0.06), 0 1px 1px 0 rgba(156, 66, 245, 0.12), inset 0 0 8px 0 rgba(156, 66, 245, 0.4);
@@ -160,6 +197,14 @@
 			&:before,
 			&:after {
 				opacity: 0;
+			}
+		}
+		&.active {
+			.btn-icon {
+				color: #ffd751;
+				box-shadow: 0 0 10px 0 rgba(255, 238, 0, 0.2);
+				border-radius: 50%;
+				background-image: radial-gradient(rgba(255, 215, 81, 0.3) 0, transparent 95%, transparent 100%);
 			}
 		}
 	}
