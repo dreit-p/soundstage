@@ -6,6 +6,7 @@ section.artist-appeal {
 	background-color: #27273e;
 	margin-top: 50px;
 	border-radius: 24px;
+	color: white;
 	@media (max-width: 900px) {
 		justify-content: center;
 		max-width: 605px;
@@ -16,7 +17,7 @@ section.artist-appeal {
 		margin: 40px 50px;
 		flex-grow: 0;
 		flex-shrink: 2;
-		flex-basis: 530px;
+		flex-basis: 515px;
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
@@ -74,71 +75,5 @@ section.artist-appeal {
 			min-height: 0;
 			box-shadow: none;
 		}
-
-		/*=====================================
-		=            benefits list            =
-		=====================================*/
-
-		article.benefits-list {
-			margin: 5px 0 25px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			.caption {
-				font-size: 24px;
-				line-height: 1.67;
-				letter-spacing: -1px;
-				text-align: center;
-				.bold {
-					line-height: 1.5;
-					font-size: 26px;
-					font-weight: 600;
-				}
-			}
-			.list {
-				margin: 10px 0;
-				.item {
-					margin: 0.9375em 0;
-					margin-left: calc(11px + 2.1em);
-					font-size: 22px;
-					line-height: 1.64;
-					letter-spacing: -0.61px;
-					list-style-type: none;
-					position: relative;
-					svg {
-						position: absolute;
-						top: .3em;
-						right: calc(100% + .7em);
-						height: 1em;
-						max-width: 27px;
-						color: #0fa;
-					}
-				}
-			}
-			.ui-btn {
-				align-self: center;
-			}
-			@media (max-width: 540px) {
-				.caption {
-					font-size: 16px;
-					line-height: 1.69;
-					letter-spacing: -0.67px;
-					.bold {
-						font-size: 17px;
-						letter-spacing: -0.71px;
-					}
-				}
-				.list .item {
-					font-size: 15px;
-					line-height: 1.67;
-					letter-spacing: -0.42px;
-				}
-			}
-		}
-
-		/*=====  End of benefits list  ======*/
-
-
-
 	}
 }

@@ -1,0 +1,208 @@
+article.artist-info {
+
+	/*=========================================
+	=            artist-info block            =
+	=========================================*/
+
+	.genres {
+		margin: -5px -12px 0;
+		.genre {
+			text-transform: uppercase;
+			display: inline-block;
+			margin: 5px 12px;
+			font-size: 13px;
+			font-weight: 600;
+			line-height: 1.23;
+			letter-spacing: 1px;
+			color: var(--accent-1);
+			@media (max-width: 900px) {
+				display: none;
+			}
+		}
+	}
+	.artist-name {
+		margin: calc(24px - 5px * 2) 0;
+		@media (max-width: 900px) {
+			margin-bottom: 10px;
+		}
+		.name {
+			font-size: 32px;
+			font-weight: bold;
+			line-height: 1.13;
+			letter-spacing: -0.89px;
+			margin: 5px 0;
+			margin-right: 24px;
+			display: inline-block;
+			@media (max-width: 900px) {
+				margin-bottom: 0;
+				font-size: 26px;
+				line-height: 1.13;
+				letter-spacing: -0.89px;
+			}
+		}
+	}
+	.buttons {
+		margin: 5px -5px;
+		flex-shrink: 1;
+		display: inline-flex;
+		justify-content: flex-end;
+		align-items: baseline;
+		.ui-btn {
+			margin: 5px;
+		}
+		@media (max-width: 900px) {
+			margin: 5px -7px;
+			.ui-btn {
+				margin: 7px;
+			}
+			&.desktop {
+				display: none;
+			}
+		}
+		@media (min-width: 901px) {
+			&.mobile {
+				display: none;
+			}
+		}
+	}
+	.artist-description {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 2;
+		color: rgba(224, 224, 255, 0.6);
+		min-height: 144px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		line-clamp: 4;
+		-webkit-box-orient: vertical;
+		box-orient: vertical;
+		@media (max-width: 900px) {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 1.71;
+			min-height: 0;
+		}
+	}
+
+	/*=====  End of artist-info block  ======*/
+
+	/*====================================
+	=            artist offer            =
+	====================================*/
+
+	.artist-offer {
+		box-shadow: 0 8px 8px 0 rgba(20, 16, 41, 0.24);
+		background-color: #27273e;
+		padding: 18px 24px;
+		border-radius: 24px;
+		margin-top: 35px;
+		.inline {
+			align-items: baseline;
+		}
+		.offer-text {
+			.title {
+				font-size: 26px;
+				font-weight: bold;
+				line-height: 1.38;
+				letter-spacing: -0.72px;
+				white-space: nowrap;
+			}
+			.description {
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 1.88;
+				color: rgba(224, 224, 255, 0.6);
+				margin-top: 7px;
+			}
+		}
+		.order {
+			margin-left: 15px;
+			.price {
+				font-weight: bold;
+				flex-grow: 1;
+				margin-bottom: 16px;
+				white-space: nowrap;
+				.cy {
+					font-size: 19px;
+					font-weight: bold;
+					line-height: 1.16;
+				}
+				.num {
+					font-family: var(--font-second);
+					font-size: 31px;
+					font-weight: bold;
+					line-height: 1;
+					letter-spacing: -1.29px;
+				}
+				.rate {
+					font-size: 18px;
+					font-weight: bold;
+					line-height: 1.17;
+				}
+			}
+		}
+		@media (max-width: 900px) {
+			display: none;
+		}
+		@media (max-width: 570px) {
+			margin: 0 -32px;
+			border-radius: 0;
+			margin-top: 24px;
+			padding: 18px calc(30px);
+			font-size: 2.6vw;
+			.inline {
+				flex-direction: column;
+			}
+			.offer-text {
+				.title {
+					font-size: 18px;
+				}
+				.description {
+					font-size: 14px;
+					font-weight: 500;
+					line-height: 1.71;
+				}
+			}
+			.order {
+				margin-left: 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				margin-top: 10px;
+				.price {
+					margin-bottom: 0;
+					font-weight: bold;
+					flex-grow: 1;
+					padding-right: 16px;
+					padding-left: 5px;
+					white-space: nowrap;
+					.cy {
+						font-size: 14px;
+						line-height: 1.14;
+					}
+					.num {
+						font-family: var(--font-second);
+						font-size: 20px;
+						line-height: 1.2;
+						letter-spacing: -0.4px;
+					}
+					.rate {
+						font-size: 14px;
+						line-height: 1.14;
+					}
+				}
+				.ui-btn {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	/*=====  End of artist offer  ======*/
+
+}

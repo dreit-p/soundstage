@@ -1,0 +1,151 @@
+section.artist-info {
+	display: flex;
+	align-items: stretch;
+	/*==================================
+	=            image-side            =
+	==================================*/
+
+	.image-side {
+		position: relative;
+		display: flex;
+		flex-basis: 605px;
+		border-radius: 1.5em;
+		overflow: hidden;
+		min-height: 395px;
+		min-width: 400px;
+		max-width: 605px;
+		.image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center 35%;
+			z-index: -2;
+		}
+		.info {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			width: 100%;
+			.middle {
+				flex-grow: 1;
+			}
+			.top {
+				padding: 1.5em;
+				margin: 0;
+			}
+			.title {
+				margin: -0.25em -.04em 0;
+				padding-right: 0.625em;
+				font-size: 2em;
+				font-weight: bold;
+				line-height: 1.13;
+				letter-spacing: -0.055625em;
+			}
+			.caption {
+				padding-right: 0.625em;
+				font-size: 1.375em;
+				font-weight: 600;
+				line-height: 1.05;
+				letter-spacing: 0.10125em;
+				margin: 0.3125em -.04em;
+			}
+			.date {
+				margin: 0.3125em 0;
+				padding: 0.3125em 0.8125em;
+				border-radius: 0.875em;
+				display: inline-block;
+				text-transform: uppercase;
+				background-color: var(--accent-1);
+				font-size: 0.9375em;
+				font-weight: 500;
+				line-height: 1.07;
+				letter-spacing: 0.071875em;
+				text-align: center;
+			}
+		}
+		.progress-bar-caption {
+			margin: 0.5em 1em;
+			font-family: Montserrat;
+			font-size: 1.5em;
+			font-weight: 500;
+			line-height: 1.25;
+			letter-spacing: -0.03em;
+			.end {
+				font-family: var(--font-second);
+				font-weight: bold;
+			}
+		}
+		.progress-bar {
+			margin: 0.3125em 1.5em 1.3125em;
+			height: 0.9375em;
+			border-radius: 0.3125em;
+			overflow: hidden;
+			box-shadow: inset 0 0 0 1px rgba(58, 58, 58, 0.57);
+			background-image: linear-gradient(to bottom, rgba(125, 125, 125, 0.35), rgba(180, 0, 255, 0.24));
+			.progress {
+				height: 100%;
+				border-radius: 0.375em;
+				border: solid 1px rgba(156, 66, 245, 0.57);
+				background-image: linear-gradient(to bottom, #ff00e6, #2a2543);
+			}
+		}
+	}
+
+	/*=====  End of image-side  ======*/
+
+	/*=================================
+	=            text side            =
+	=================================*/
+
+	.text-side {
+		margin-left: 30px;
+		flex-grow: 1;
+		flex-basis: 466px;
+		max-width: 605px;
+	}
+
+	/*=====  End of text side  ======*/
+
+	/*================================
+	=            adaptive            =
+	================================*/
+
+	@media (max-width: 900px) {
+		flex-direction: column;
+		align-items: center;
+		.image-side {
+			width: 100%;
+			flex-basis: auto;
+			min-height: 195px;
+			min-width: 0;
+			height: 54vw;
+			max-height: 350px;
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+		.text-side {
+			min-width: 0;
+			margin-left: 0;
+			flex-basis: auto;
+			.text-wrapper {
+				margin: 0 1.5em;
+			}
+		}
+	}
+
+	@media (max-width: 650px) {
+		.image-side,
+		.text-side {
+			font-size: 2.6vw;
+		}
+	}
+
+	/*=====  End of adaptive  ======*/
+
+}

@@ -42,10 +42,16 @@
 
 @import './components/settings/settings.scss';
 
-/*----------  artist  ----------*/
+/*----------  page info blocks  ----------*/
 
-@import './components/artist/info.scss';
-@import './components/artist/appeal.scss';
+@import './components/page-info/common.scss';
+@import './components/page-info/artist.scss';
+@import './components/page-info/become-sponsor.scss';
+
+/*----------  page appeal blocks  ----------*/
+
+@import './components/page-appeal/common.scss';
+@import './components/page-appeal/benefits.scss';
 
 /*----------  chat  ----------*/
 
