@@ -1,0 +1,144 @@
+section.artist-appeal {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	box-shadow: 0 8px 8px 0 rgba(20, 16, 41, 0.24);
+	background-color: #27273e;
+	margin-top: 50px;
+	border-radius: 24px;
+	@media (max-width: 900px) {
+		justify-content: center;
+		max-width: 605px;
+		margin: * auto;
+		margin-top: 20px;
+	}
+	.artist-message {
+		margin: 40px 50px;
+		flex-grow: 0;
+		flex-shrink: 2;
+		flex-basis: 530px;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		@media (max-width: 900px) {
+			display: none;
+		}
+		.title {
+			font-size: 30px;
+			font-weight: 600;
+			font-style: italic;
+			line-height: 1.2;
+			letter-spacing: -0.83px;
+			color: #f5f5f5;
+		}
+		.text {
+			font-size: 22px;
+			line-height: 1.82;
+			letter-spacing: normal;
+			text-align: left;
+			color: rgba(224, 224, 255, 0.6);
+			margin: 20px 0;
+		}
+		.signature {
+			align-self: flex-end;
+			padding: 0 1.4em 0 .7em;
+			font-size: 22px;
+			font-weight: 500;
+			font-style: italic;
+			line-height: 1.64;
+			color: rgba(224, 224, 255, 0.6);
+			position: relative;
+			&:after {
+				content: "-";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	.appeal-interface {
+		box-shadow: 0 8px 8px 0 rgba(20, 16, 41, 0.24);
+		background-color: #202036;
+		margin: 24px;
+		padding: 15px 10px;
+		border-radius: 16px;
+		max-width: 550px;
+		flex-basis: 450px;
+		flex-grow: 99;
+		min-height: 430px;
+		@media (max-width: 900px) {
+			background-color: transparent;
+			margin: 10px;
+			padding: 0;
+			min-height: 0;
+			box-shadow: none;
+		}
+
+		/*=====================================
+		=            benefits list            =
+		=====================================*/
+
+		article.benefits-list {
+			margin: 5px 0 25px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.caption {
+				font-size: 24px;
+				line-height: 1.67;
+				letter-spacing: -1px;
+				text-align: center;
+				.bold {
+					line-height: 1.5;
+					font-size: 26px;
+					font-weight: 600;
+				}
+			}
+			.list {
+				margin: 10px 0;
+				.item {
+					margin: 0.9375em 0;
+					margin-left: calc(11px + 2.1em);
+					font-size: 22px;
+					line-height: 1.64;
+					letter-spacing: -0.61px;
+					list-style-type: none;
+					position: relative;
+					svg {
+						position: absolute;
+						top: .3em;
+						right: calc(100% + .7em);
+						height: 1em;
+						max-width: 27px;
+						color: #0fa;
+					}
+				}
+			}
+			.ui-btn {
+				align-self: center;
+			}
+			@media (max-width: 540px) {
+				.caption {
+					font-size: 16px;
+					line-height: 1.69;
+					letter-spacing: -0.67px;
+					.bold {
+						font-size: 17px;
+						letter-spacing: -0.71px;
+					}
+				}
+				.list .item {
+					font-size: 15px;
+					line-height: 1.67;
+					letter-spacing: -0.42px;
+				}
+			}
+		}
+
+		/*=====  End of benefits list  ======*/
+
+
+
+	}
+}

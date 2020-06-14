@@ -45,6 +45,7 @@
 /*----------  artist  ----------*/
 
 @import './components/artist/info.scss';
+@import './components/artist/appeal.scss';
 
 /*----------  chat  ----------*/
 
