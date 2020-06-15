@@ -243,6 +243,7 @@ svg {
 
 [data-tooltip] {
 	position: relative;
+	z-index: 1;
 	&:after {
 		position: absolute;
 		top: calc(100% + 5px);
@@ -256,7 +257,7 @@ svg {
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 1.71;
-		background-color: rgba(224, 224, 255, 0.1);
+		background-color: rgba(59, 59, 78, 0.9);
 		opacity: 0;
 		transition: opacity .2s, transform .2s;
 		user-select: none;
