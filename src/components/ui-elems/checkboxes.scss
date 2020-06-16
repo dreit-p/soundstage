@@ -45,13 +45,31 @@
 }
 
 .checkbox-label {
-	display: flex;
+	display: inline-flex;
 	margin: 24px 0;
+	cursor: pointer;
+	&.centered {
+		width: fit-content;
+		display: flex;
+		margin: * auto;
+		align-items: center;
+		.caption {
+			margin-left: 10px;
+		}
+	}
 	.caption {
 		margin-left: 16px;
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 1.71;
 		color: rgba(224, 224, 255, 0.6);
+		align-items: baseline;
+		a {
+			color: var(--accent-1);
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }

@@ -19,6 +19,9 @@
 	font-weight: 600;
 	line-height: 1.5;
 	text-align: center;
+	&:hover {
+		background-color: rgba(224, 224, 255, 0.04);
+	}
 	&:before,
 	&:after {
 		z-index: -1;
@@ -226,8 +229,41 @@
 			background-color: #1877f2;
 		}
 	}
+}
 
 	/*=====  End of Blue  ======*/
 
+/*===================================
+=            Transparent            =
+===================================*/
 
+.ui-btn.transparent {
+	border-radius: 12px;
+	color: var(--accent-1);
+	border: solid 1px currentColor;
+	transition: background-color .1s;
+	&:hover {
+		background-color: rgba(100,100,255, .2);
+	}
+	&:before {
+		background-color: currentColor;
+		opacity: .06;
+	}
+	.btn-caption {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.19;
+	}
 }
+
+input:checked + .ui-btn.transparent {
+	.btn-caption {
+		color: white;
+		transition: color .2s;
+	}
+	&:before {
+		opacity: .3;
+	}
+}
+
+/*=====  End of Transparent  ======*/

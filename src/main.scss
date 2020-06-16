@@ -114,6 +114,10 @@ svg {
 	}
 }
 
+.hide-it {
+	display: none;
+}
+
 .inline {
 	display: flex;
 	width: 100%;
@@ -246,7 +250,7 @@ svg {
 	z-index: 1;
 	&:after {
 		position: absolute;
-		top: calc(100% + 5px);
+		top: calc(100% + 12px);
 		left: 50%;
 		transform: translateX(-50%) translateY(-10px);
 		margin: auto;

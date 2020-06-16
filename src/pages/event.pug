@@ -13,7 +13,7 @@ html(lang="en")
 				source(type="image/webp" srcset="../assets/images/hero-bg-mobile.webp")
 				img.mobile.objfit(src="../assets/images/hero-bg-mobile.jpg")
 
-		include /components/header/header.pug
+		include /components/header/header-with_user.pug
 
 		section.titled-content
 			.limit
@@ -32,8 +32,17 @@ html(lang="en")
 											.caption ELEVATED BIRD VOL. 3
 											.date apr 26 @ 12:00 PM
 										.right
-											a.ui-btn.primary
-												.btn-caption View Event
+											.buttons
+												span(data-tooltip="Follow")
+													a.ui-btn.secondary.circle.thin.flat.active(href="#")
+														.btn-icon
+															svg
+																use(href="#star")
+												span(data-tooltip="Share")
+													a.ui-btn.secondary.thin.circle.flat(href="#")
+														.btn-icon
+															svg
+																use(href="#share")
 								.middle
 								.bottom
 									.progress-bar-caption
@@ -44,7 +53,7 @@ html(lang="en")
 										.progress(style="width: 20%")
 
 						.text-side
-							.text-wrapper
+							.text-wrapper.desktop
 								include /components/page-info/become-sponsor.pug
 
 
@@ -57,7 +66,11 @@ html(lang="en")
 								br
 								| Homemade Spaceship
 						.appeal-interface
-							include /components/page-appeal/benefits.pug
+							include /components/page-appeal/buy-ticket.pug
+
+					section.artist-info.mobile
+						.text-side
+							include /components/page-info/become-sponsor.pug
 
 
 
