@@ -42,17 +42,17 @@
 
 @import './components/settings/settings.scss';
 
-/*----------  page info blocks  ----------*/
+/*----------  object info blocks  ----------*/
 
-@import './components/page-info/common.scss';
-@import './components/page-info/artist.scss';
-@import './components/page-info/become-sponsor.scss';
+@import './components/object-info/common.scss';
+@import './components/object-info/artist.scss';
+@import './components/object-info/become-sponsor.scss';
 
-/*----------  page appeal blocks  ----------*/
+/*----------  object appeal blocks  ----------*/
 
-@import './components/page-appeal/common.scss';
-@import './components/page-appeal/benefits.scss';
-@import './components/page-appeal/buy-ticket.scss';
+@import './components/object-appeal/common.scss';
+@import './components/object-appeal/benefits.scss';
+@import './components/object-appeal/buy-ticket.scss';
 
 /*----------  chat  ----------*/
 
