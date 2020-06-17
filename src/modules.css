@@ -1,6 +1,7 @@
 @import './fonts.css';
 @import 'normalize.css';
 @import 'flickity';
+@import 'simplebar';
 
 
 /*==================================
@@ -20,6 +21,7 @@
 @import './components/ui-elems/inputs.scss';
 @import './components/ui-elems/checkboxes.scss';
 @import './components/ui-elems/selector.scss';
+@import './components/ui-elems/scrollbar.scss';
 
 /*----------  blocks  ----------*/
 

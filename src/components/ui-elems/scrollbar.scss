@@ -1,0 +1,23 @@
+.custom-scroll {
+	.simplebar-track {
+		border-radius: 5px;
+		background-color: #27273e;
+		overflow: hidden;
+		width: 9px;
+	}
+	.simplebar-scrollbar {
+		opacity: 0.81;
+		border-radius: 5px;
+		background-color: #632fe3;
+		&:before {
+			display: none;
+		}
+	}
+	.simplebar-hover {
+		opacity: 1;
+	}
+	.simplebar-mask,
+	.simplebar-offset {
+		right: 15px;
+	}
+}
