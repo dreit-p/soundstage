@@ -1,0 +1,10 @@
+[data-hide-by] {
+	.chopped-list .hidden {
+		display: none;
+	}
+	&.completed {
+		.show-more {
+			display: none;
+		}
+	}
+}

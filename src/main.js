@@ -14,4 +14,6 @@ import './components/breadcrumbs/breadcrumbs.js';
 import './components/settings/settings.js';
 
 import './components/ui-elems/scrollbar.js';
+import './components/ui-elems/show-more.js';
+
 /*=====  End of components  ======*/
