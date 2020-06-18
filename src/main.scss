@@ -1,271 +1,69 @@
-@import './modules.css';
-
-span,
-a,
-p,
-b,
-i {
-	color: inherit;
-	font-family: inherit;
-}
-
-.limit {
-	--offset: 20px;
-	max-width: calc(1110px + var(--offset)*2);
-	padding: 0 var(--offset);
-	margin: auto;
-	width: 100%;
-	position: relative;
-	@media (max-width: 570px) {
-		--offset: 32px;
-	}
-}
-
-* {
-	font-family: var(--font-main);
-	line-height: 1.2;
-	box-sizing: border-box;
-	transition: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-body {
-	min-width: 320px;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	background-color: var(--bg-2);
-}
-
-svg {
-	width: 100%;
-}
-
-.objfit {
-	object-fit: cover;
-	&.contain {
-		object-fit: contain;
-	}
-}
-
-.page-bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	width: 100%;
-	height: 100%;
-	z-index: -10;
-	overflow: hidden;
-	padding-right: inherit;
-	picture,
-	img {
-		padding-right: inherit;
-	}
-	&.hidden {
-		img.desktop {
-			transform: translateX(-50%) translateY(-45%);
-		}
-		img.mobile {
-			display: none;
-		}
-	}
-	img.desktop {
-		--original-size: 1920px;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		margin: auto;
-		width: calc(var(--original-size)*1.18 + (100% - var(--original-size)));
-		max-width: var(--original-size);
-	}
-	img.mobile {
-		display: none;
-	}
-	@media (max-width: 570px) {
-		img.desktop {
-			display: none;
-		}
-		img.mobile {
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			width: 100%;
-			margin: auto;
-		}
-	}
-}
-
-@media (max-width: 540px) {
-	.desktop-only {
-		display: none;
-	}
-}
-
-@media (min-width: 541px) {
-	.mobile-only {
-		display: none;
-	}
-}
-
-.inline {
-	display: flex;
-	width: 100%;
-	.left {
-		flex-grow: 1;
-	}
-	.middle {
-		flex-grow: 999;
-	}
-}
-
-.blured-3 {
-	filter: blur(3px);
-}
-
-.event-info {
-	z-index: 1;
-	display: flex;
-	align-items: center;
-	margin: -1.5em;
-	color: white;
-	.date-badge {
-		padding: 0.625em;
-		border-radius: 0.75em;
-		background-color: var(--accent-2);
-		text-align: center;
-		min-width: 4.5em;
-		height: 4.5em;
-		margin: 1.5em;
-		.day {
-			font-family: var(--font-second);
-			font-size: 2.25em;
-			font-weight: bold;
-			letter-spacing: -1px;
-			line-height: 1;
-		}
-		.month {
-			font-size: 0.8125em;
-			font-weight: 600;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-		}
-	}
-	.caption {
-		max-width: 7em;
-		font-size: 1.5em;
-		font-weight: 600;
-		line-height: 1.33;
-		letter-spacing: -1px;
-	}
-}
-
-.main-header + .titled-content {
-	padding-top: 0;
-}
-
-.titled-content {
-	padding: 72px 0;
-	color: white;
-	.category {
-		display: block;
-		padding: 4px 8px;
-		text-transform: uppercase;
-		font-size: 13px;
-		font-weight: 600;
-		line-height: 1.23;
-		letter-spacing: 1px;
-		color: var(--accent-1);
-		margin-bottom: 28px;
-	}
-	.main-row {
-		margin: 28px 0 48px;
-		display: flex;
-		align-items: flex-end;
-		.title {
-			flex-grow: 1;
-			font-size: 48px;
-			font-weight: bold;
-			line-height: 1;
-			letter-spacing: -2px;
-			margin-right: 24px;
-			&.mobile {
-				display: none;
-			}
-		}
-		.ui-btn {
-			flex-shrink: 0;
-		}
-	}
-	@media (max-width: 570px) {
-		padding: 48px 0;
-		.category {
-			margin-bottom: 16px;
-		}
-		.main-row {
-			margin: 0 0 32px;
-			align-items: center;
-			.title {
-				font-size: 36px;
-				line-height: -1;
-				&.mobile {
-					display: block;
-				}
-				&.desktop {
-					display: none;
-				}
-			}
-			.ui-btn {
-				.btn-caption {
-					display: none;
-				}
-				.btn-icon {
-					margin: 0;
-				}
-			}
-			&.with-search {
-				flex-direction: column;
-				align-items: flex-start;
-				.search-bar {
-					margin: 32px 0 0;
-				}
-			}
-		}
-	}
-}
+@import './fonts.css';
+@import 'normalize.css';
+@import './common.scss';
+@import 'flickity';
+@import 'simplebar';
 
 
-[data-tooltip] {
-	position: relative;
-	z-index: 1;
-	&:after {
-		position: absolute;
-		top: calc(100% + 12px);
-		left: 50%;
-		transform: translateX(-50%) translateY(-10px);
-		margin: auto;
-		width: fit-content;
-		content: attr(data-tooltip);
-		border-radius: 12px;
-		padding: 6px 16px;
-		font-size: 14px;
-		font-weight: 500;
-		line-height: 1.71;
-		background-color: rgba(59, 59, 78, 0.9);
-		opacity: 0;
-		transition: opacity .2s, transform .2s;
-		user-select: none;
-		pointer-events: none;
-	}
-	&:hover:after {
-		transform: translateX(-50%) translateY(0px);
-		transition-duration: .1s;
-		opacity: 1;
-	}
-}
+/*==================================
+=            components            =
+==================================*/
+
+@import './components/header/header.scss';
+@import './components/footer/footer.scss';
+@import './components/breadcrumbs/breadcrumbs.scss';
+
+@import './components/search-bar/search-bar.scss';
+@import './components/pagination/pagination.scss';
+
+/*----------  UI elements  ----------*/
+
+@import './components/ui-elems/buttons.scss';
+@import './components/ui-elems/inputs.scss';
+@import './components/ui-elems/checkboxes.scss';
+@import './components/ui-elems/selector.scss';
+@import './components/ui-elems/scrollbar.scss';
+@import './components/ui-elems/show-more.scss';
+
+/*----------  blocks  ----------*/
+
+@import './components/hero/hero.scss';
+@import './components/faq/faq.scss';
+@import './components/common-info/info.scss';
+
+/*----------  tiles-in-a-row  ----------*/
+
+@import './components/tiles-in-row/common.scss';
+@import './components/tiles-in-row/events.scss';
+@import './components/artists/artists.scss';
+
+/*----------  Forms  ----------*/
+
+@import './components/forms/fullscreen-form.scss';
+@import './components/forms/forms.scss';
+
+/*----------  settings  ----------*/
+
+@import './components/settings/settings.scss';
+
+/*----------  object info blocks  ----------*/
+
+@import './components/object-info/common.scss';
+@import './components/object-info/artist.scss';
+@import './components/object-info/become-sponsor.scss';
+@import './components/object-info/messages.scss';
+
+/*----------  object appeal blocks  ----------*/
+
+@import './components/object-appeal/common.scss';
+@import './components/object-appeal/benefits.scss';
+@import './components/object-appeal/buy-ticket.scss';
+
+/*----------  chat  ----------*/
+
+@import './components/chat/chat.scss';
+
+
+
+
+/*=====  End of components  ======*/

@@ -1,5 +1,5 @@
 
-import './base.js';
+import './common.js';
 
 /*==================================
 =            components            =
