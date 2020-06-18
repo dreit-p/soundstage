@@ -33,4 +33,10 @@ article.become-sponsor {
 		display: block;
 		width: fit-content;
 	}
+	.chat-bubble {
+		margin: 25px 0;
+		@media (max-width: 540px) {
+			margin: 15px 0 25px;
+		}
+	}
 }

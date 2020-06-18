@@ -1,8 +1,31 @@
 .chat-bubble {
 	display: flex;
 	margin: 25px 0;
-	@media (max-width: 540px) {
-		margin: 15px 0 25px;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&.compact {
+		@media (max-width: 540px) {
+			margin: 15px 0 25px;
+			.avatar-wrapper {
+				width: 36px;
+				height: 36px;
+				margin-right: 13px;
+			}
+			.message-content {
+				.user-name {
+					font-size: 12px;
+					letter-spacing: -0.33px;
+				}
+				.user-message {
+					font-size: 9px;
+					letter-spacing: -0.25px;
+				}
+			}
+		}
 	}
 	.avatar-wrapper {
 		position: relative;
@@ -11,11 +34,6 @@
 		height: 50px;
 		margin-right: 16px;
 		padding: 3px;
-		@media (max-width: 540px) {
-			width: 36px;
-			height: 36px;
-			margin-right: 13px;
-		}
 		.image {
 			border-radius: 50%;
 			background-position: center center;
@@ -62,16 +80,6 @@
 			font-size: 14px;
 			line-height: 1.71;
 			letter-spacing: -0.39px;
-		}
-		@media (max-width: 540px) {
-			.user-name {
-				font-size: 12px;
-				letter-spacing: -0.33px;
-			}
-			.user-message {
-				font-size: 9px;
-				letter-spacing: -0.25px;
-			}
 		}
 	}
 }

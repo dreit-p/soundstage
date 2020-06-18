@@ -22,6 +22,7 @@
 @import './components/ui-elems/checkboxes.scss';
 @import './components/ui-elems/selector.scss';
 @import './components/ui-elems/scrollbar.scss';
+@import './components/ui-elems/show-more.scss';
 
 /*----------  blocks  ----------*/
 
@@ -49,6 +50,7 @@
 @import './components/object-info/common.scss';
 @import './components/object-info/artist.scss';
 @import './components/object-info/become-sponsor.scss';
+@import './components/object-info/messages.scss';
 
 /*----------  object appeal blocks  ----------*/
 

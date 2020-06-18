@@ -1,0 +1,37 @@
+article.sponsors-messages {
+	width: 100%;
+	.title {
+		margin-bottom: 30px;
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 1.5;
+		letter-spacing: -0.67px;
+		@media (max-width: 900px) {
+			margin-bottom: 30px;
+			font-size: 22px;
+			font-weight: 500;
+			line-height: 1.64;
+			letter-spacing: -0.61px;
+		}
+	}
+	.messages-limit {
+		max-height: 330px;
+		overflow: auto;
+	}
+	.messages {
+		display: flex;
+		flex-direction: column;
+		.show-more {
+			margin: * auto;
+		}
+	}
+	.chat-bubble {
+		margin: 30px 0;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,90 @@
+doctype html
+html(lang="en")
+	head
+		include /components/head/head.pug
+	body
+		div(style="display: none")
+			include /assets/symbol/svg/sprite.symbol.svg
+		.page-bg.hidden
+			picture
+				source(type="image/webp" srcset="../assets/images/hero-bg.webp")
+				img.desktop.objfit(src="../assets/images/hero-bg.jpg")
+			picture
+				source(type="image/webp" srcset="../assets/images/hero-bg-mobile.webp")
+				img.mobile.objfit(src="../assets/images/hero-bg-mobile.jpg")
+
+		include /components/header/header-with_user.pug
+
+		section.titled-content
+			.limit
+				header
+					include /components/breadcrumbs/breadcrumbs.pug
+				.content
+
+					section.artist-info
+						.image-side
+							.image(style="background-image: url(../assets/images/content/artist-example.jpg)")
+							.info
+								.top
+									.inline
+										.left
+											.title Next Live Stream
+											.caption ELEVATED BIRD VOL. 3
+											.date apr 26 @ 12:00 PM
+										.right
+											.buttons
+												span(data-tooltip="Follow")
+													a.ui-btn.secondary.circle.thin.flat.active(href="#")
+														.btn-icon
+															svg
+																use(href="#star")
+												span(data-tooltip="Share")
+													a.ui-btn.secondary.thin.circle.flat(href="#")
+														.btn-icon
+															svg
+																use(href="#share")
+								.middle
+								.bottom
+									.progress-bar-caption
+										.inline
+											.left 20% funded
+											.right.end 3 days to go
+									.progress-bar
+										.progress(style="width: 20%")
+
+						.text-side
+							.text-wrapper.desktop
+								include /components/object-info/messages-scroll.pug
+
+
+					section.artist-appeal
+						.artist-message
+							.title A message from the artist...
+							.text Watching someone’s dreams become their reality is one of the greatest journeys we can go and a lot of times and also this is going to be an amazing stream I really hope to see you guys there!
+							.signature
+								| Jared White
+								br
+								| Homemade Spaceship
+						.appeal-interface
+							include /components/object-appeal/buy-ticket.pug
+
+					section.artist-info.mobile
+						.text-side
+							include /components/object-info/messages-show-more.pug
+
+
+
+		section.titled-content
+			.limit
+				header
+					.category have a question?
+					.main-row
+						.title.desktop Frequently Asked Questions
+						.title.mobile FAQ
+				.content
+					include /components/faq/faq.pug
+
+		include /components/common-info/info.pug
+
+		include /components/footer/footer.pug
+	script(src="js/main.js")
