@@ -6,15 +6,20 @@ article.send-message {
 		align-self: center;
 		font-size: 9px;
 	}
-	.title {
+	.form-title {
 		margin: 4px auto;
 		font-size: 28px;
 		font-weight: 600;
 		line-height: 1.29;
 		letter-spacing: -0.78px;
 		text-align: center;
+		@media (max-width: 540px) {
+			font-size: 20px;
+			line-height: 1.6;
+			letter-spacing: -0.56px;
+		}
 	}
-	.caption {
+	.form-caption {
 		font-size: 13px;
 		line-height: 1.23;
 		text-align: center;
@@ -25,5 +30,6 @@ article.send-message {
 	}
 	.checkbox-label {
 		margin: 0 auto;
+		padding: 0 20px;
 	}
 }

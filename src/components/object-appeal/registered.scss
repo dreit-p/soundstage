@@ -6,25 +6,34 @@ article.registered-for-event {
 		align-self: center;
 		font-size: 9px;
 	}
-	.title {
+	.form-title {
 		margin: 4px auto;
 		font-size: 28px;
 		font-weight: 600;
 		line-height: 1.29;
 		letter-spacing: -0.78px;
 		text-align: center;
+		@media (max-width: 540px) {
+			font-size: 20px;
+			line-height: 1.6;
+			letter-spacing: -0.56px;
+		}
 	}
-	.caption {
+	.form-caption {
 		font-size: 13px;
 		line-height: 1.23;
 		text-align: center;
 	}
-	.date {
+	.start-date {
 		margin: 32px auto;
 		font-size: 22px;
 		line-height: 1.64;
 		letter-spacing: -0.61px;
 		color: #c8c8e6;
+		@media (max-width: 540px) {
+			margin: 26px auto 20px;
+			font-size: 18px;
+		}
 	}
 	.ui-input-container {
 		width: auto;
