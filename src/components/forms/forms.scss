@@ -26,46 +26,6 @@
 		line-height: 1.75;
 		color: rgba(224, 224, 255, 0.6);
 	}
-	.form-state-icon {
-		padding: 32px;
-		border-radius: 50%;
-		position: relative;
-		overflow: hidden;
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		&:before {
-			display: block;
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			width: 100%;
-			height: 100%;
-			background-color: currentColor;
-			opacity: 0.03;
-		}
-		svg {
-			padding: 10px;
-			height: 64px;
-			width: 64px;
-		}
-		&.success {
-			color: #0FA;
-		}
-		&.notice {
-			color: #0BF;
-		}
-		&.failure {
-			color: #F0A;
-		}
-		&.warning {
-			color: #EF0;
-		}
-	}
 	.inline {
 		display: flex;
 		justify-content: space-between;
@@ -116,5 +76,46 @@
 				}
 			}
 		}
+	}
+}
+
+.form-state-icon {
+	padding: 2em;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	&:before {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+		background-color: currentColor;
+		opacity: 0.03;
+	}
+	svg {
+		padding: 0.625em;
+		height: 4em;
+		width: 4em;
+	}
+	&.success {
+		color: #0FA;
+	}
+	&.notice {
+		color: #0BF;
+	}
+	&.failure {
+		color: #F0A;
+	}
+	&.warning {
+		color: #EF0;
 	}
 }

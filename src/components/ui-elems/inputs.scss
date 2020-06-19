@@ -4,6 +4,10 @@
 	position: relative;
 
 	/*----------  Input  ----------*/
+	textarea.ui-input {
+		background-color: rgba(224, 224, 255, 0.03);
+		min-height: calc(12px + 7em);
+	}
 	.ui-input {
 		border-radius: 12px;
 		background-color: rgba(224, 224, 255, 0.02);

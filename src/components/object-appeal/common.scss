@@ -110,5 +110,19 @@ section.artist-appeal {
 			min-height: 0;
 			max-width: none;
 		}
+		.bottom-buttons {
+			margin: 25px 15px 8px;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			@media (min-width: 541px) {
+				.btn-caption {
+					font-size: 16px;
+				}
+				.ui-btn.primary {
+					flex-basis: 130px;
+				}
+			}
+		}
 	}
 }
