@@ -1,0 +1,37 @@
+.countdown-timer.for-forms {
+	display: flex;
+	margin: auto;
+	.cell {
+		display: flex;
+		flex-direction: column;
+		.number-wrapper {
+			border-radius: 12px;
+			padding: 9px 2px;
+			margin: 4px;
+			background-color: rgba(224, 224, 255, 0.02);
+			text-align: center;
+			height: 48px;
+			min-width: 55px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.number {
+				font-family: var(--font-second);
+				font-size: 24px;
+				font-weight: bold;
+				line-height: 1;
+				letter-spacing: -1px;
+			}
+		}
+		.caption {
+			margin: 8px;
+			font-size: 13px;
+			font-weight: 600;
+			line-height: 1.23;
+			letter-spacing: 1px;
+			text-align: center;
+			color: rgba(224, 224, 255, 0.6);
+			text-transform: uppercase;
+		}
+	}
+}

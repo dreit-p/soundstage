@@ -46,14 +46,13 @@
 
 .checkbox-label {
 	display: inline-flex;
-	align-items: center;
+	align-items: baseline;
 	margin: 24px 0;
 	cursor: pointer;
 	&.centered {
 		width: fit-content;
 		display: flex;
 		margin: * auto;
-		align-items: center;
 		.caption {
 			margin-left: 10px;
 		}

@@ -1,0 +1,41 @@
+article.registered-for-event {
+	display: flex;
+	flex-direction: column;
+	.form-state-icon {
+		margin: 10px auto;
+		align-self: center;
+		font-size: 9px;
+	}
+	.title {
+		margin: 4px auto;
+		font-size: 28px;
+		font-weight: 600;
+		line-height: 1.29;
+		letter-spacing: -0.78px;
+		text-align: center;
+	}
+	.caption {
+		font-size: 13px;
+		line-height: 1.23;
+		text-align: center;
+	}
+	.date {
+		margin: 32px auto;
+		font-size: 22px;
+		line-height: 1.64;
+		letter-spacing: -0.61px;
+		color: #c8c8e6;
+	}
+	.ui-input-container {
+		width: auto;
+		margin: 25px 20px 20px;
+	}
+	.checkbox-label {
+		margin: 0 auto;
+	}
+	.ui-btn {
+		margin: 28px auto 17px;
+		max-width: 244px;
+		width: 100%;
+	}
+}
