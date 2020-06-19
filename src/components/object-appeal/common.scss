@@ -30,14 +30,16 @@ section.artist-appeal {
 	.artist-message {
 		margin: 40px 50px;
 		flex-grow: 0;
+		margin-right: 6px;
 		flex-shrink: 2;
-		flex-basis: 515px;
+		flex-basis: 555px;
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
 		@media (max-width: 900px) {
 			flex-basis: auto;
 			margin: 10px 0;
+			width: 100%;
 		}
 		@media (max-width: 540px) {
 			margin: 0;
@@ -57,16 +59,24 @@ section.artist-appeal {
 			}
 		}
 		.text {
-			font-size: 22px;
-			line-height: 1.82;
-			letter-spacing: normal;
-			text-align: left;
-			color: rgba(224, 224, 255, 0.6);
 			margin: 20px 0;
+			max-height: 13em;
+			overflow: auto;
+			&,
+			* {
+				font-size: 22px;
+				line-height: 1.82;
+				letter-spacing: normal;
+				text-align: left;
+				color: rgba(224, 224, 255, 0.6);
+			}
 			@media (max-width: 540px) {
 				margin: 0;
-				font-size: 14px;
-				line-height: 1.86;
+				&,
+				* {
+					font-size: 14px;
+					line-height: 1.86;
+				}
 			}
 		}
 		.signature {

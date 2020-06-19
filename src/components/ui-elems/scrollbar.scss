@@ -1,7 +1,7 @@
 .custom-scroll {
 	.simplebar-track {
 		border-radius: 5px;
-		background-color: #27273e;
+		background-color: hsla(237, 26%, 50%, 0.1);
 		overflow: hidden;
 		width: 9px;
 	}
@@ -18,6 +18,6 @@
 	}
 	.simplebar-mask,
 	.simplebar-offset {
-		right: 15px;
+		right: 20px;
 	}
 }
