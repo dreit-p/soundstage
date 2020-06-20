@@ -154,6 +154,62 @@
 	}
 }
 
+/*====================================================
+=            Num input with Dynamic width            =
+====================================================*/
+
+.dynamic-width-num-wrapper {
+	display: inline-flex;
+	justify-content: center;
+	.inputs {
+		flex-grow: 1;
+		flex-basis: 0;
+		position: relative;
+	}
+	input,
+	.pseudo-input {
+		display: block;
+		font-size: inherit;
+		padding: inherit;
+		border: 1px solid var(--passive-color);
+		margin: 0 1px;
+		display: inline-block;
+		text-align: inherit;
+		color: inherit;
+		line-height: inherit;
+		padding: inherit;
+		background-color: transparent;
+		/* min-width: 45px; */
+		outline: none;
+	}
+
+	input {
+		z-index: 2;
+		width: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		margin: auto;
+		/* margin-bottom: -1em; */
+	}
+	.pseudo-input {
+		position: relative;
+		z-index: -1;
+		color: gray;
+		opacity: 0;
+		white-space: nowrap;
+		pointer-events: none;
+		user-select: none;
+	}
+}
+
+
+/*=====  End of Num input with Dynamic width  ======*/
+
+
 
 .custom-radio-btn {
 	input[type="radio"] {
