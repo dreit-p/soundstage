@@ -72,7 +72,7 @@ objectFitImages(objFitImages);
 (function(document, window) {
 	document.addEventListener("DOMContentLoaded", function() {
 		var baseUrl = window.location.href
-			.replace(window.location.hash, "");
+			.replace(window.location.hash, "").replace("#", '');
 		[].slice.call(document.querySelectorAll("use[*|href]"))
 			.filter(function(element) {
 				return (element.getAttribute("href").indexOf("#") === 0);
