@@ -1,0 +1,44 @@
+article.buy-credits
+	.appeal-title Buy Credits
+	.appeal-caption Amount you would like to purchase.
+	label.custom-tip-qty
+		.cy $
+		input.dynamic-width(type="tel" value="1.00")
+	.buying-options
+		label.custom-radio-btn
+			input(type="radio" name="tickets")
+			.ui-btn.transparent.thin(href="#")
+				.btn-caption $1
+		label.custom-radio-btn
+			input(type="radio" name="tickets" checked)
+			.ui-btn.transparent.thin(href="#")
+				.btn-caption $3
+		label.custom-radio-btn
+			input(type="radio" name="tickets")
+			.ui-btn.transparent.thin(href="#")
+				.btn-caption $5
+		label.custom-radio-btn
+			input(type="radio" name="tickets")
+			.ui-btn.transparent.thin(href="#")
+				.btn-caption $10
+
+	label.ui-input-container
+		.label-caption
+			| Pay with Credit Card:
+			a.additional-action(href="#") New Card
+		.ui-input-wrapper.read-only
+			.ui-input.spaced •••••••••••••••••1234
+
+	label.agreement.checkbox-label.centered
+		label.ui-checkbox
+			input(type="checkbox")
+			span.checkmark
+				svg
+					use(href="#check")
+		span.caption I accept the #[a(href="#") Terms of Service]
+
+	.bottom-buttons
+		a.ui-btn.thin(href="#")
+			.btn-caption Cancel
+		a.ui-btn.primary.thin(href="#")
+			.btn-caption Buy Credits
