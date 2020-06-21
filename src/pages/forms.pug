@@ -41,6 +41,39 @@ html(lang="en")
 								.ui-input-wrapper
 									input.ui-input(type="text" value="Last Name")
 								.error-msg Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, temporibus.
+						.inline.evenly
+							label.ui-input-container
+								.label-caption Selector
+								.ui-input-wrapper.selector
+									select.ui-input(name="country")
+										option(selected="" disabled) Select
+										option(value="1") First
+										option(value="2") Second
+										option(value="3") Third
+										option(value="4") Fourth
+
+							label.ui-input-container
+								.label-caption Search with datalist
+								.ui-input-wrapper.selector
+									input.ui-input(list="countries" name="countries" placeholder="Select")
+									datalist#countries
+										option(value="USA")
+										option(value="Canada")
+										option(value="China")
+										option(value="Russia")
+										option(value="Austria")
+										option(value="Germany")
+										option(value="France")
+										option(value="Italy")
+										option(value="Japan")
+										option(value="Turkey")
+
+						label.ui-input-container
+							.label-caption
+								| Pay with Credit Card:
+								a.additional-action(href="#") New Card
+							.ui-input-wrapper.read-only
+								.ui-input.spaced •••••••••••••••••1234
 
 						.inline.evenly
 							label.ui-input-container.disabled
