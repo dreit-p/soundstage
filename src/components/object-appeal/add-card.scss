@@ -1,0 +1,139 @@
+article.add-card {
+	.appeal-title {
+		text-align: center;
+		font-size: 28px;
+		font-weight: 600;
+		line-height: 1.29;
+		letter-spacing: -0.78px;
+		margin: 5px 0 22px;
+		@media (max-width: 540px) {
+			font-size: 20px;
+			line-height: 1.6;
+			letter-spacing: -0.56px;
+		}
+	}
+	.appeal-caption {
+		text-align: center;
+		font-size: 13px;
+		line-height: 1.23;
+		margin: 8px 0;
+		@media (max-width: 540px) {
+			font-size: 12px;
+			line-height: 1.17;
+		}
+	}
+	.custom-tip-qty {
+		display: flex;
+		width: fit-content;
+		margin: 15px auto;
+		padding: 3px;
+		border-bottom: 1px solid var(--accent-1);
+		.cy {
+			font-size: 30px;
+			font-weight: 500;
+			text-align: left;
+			color: var(--accent-1);
+			margin: 0;
+			margin-right: 3px;
+		}
+		.dynamic-width-num-wrapper {
+			background-color: transparent;
+			padding: 0;
+			font-size: 30px;
+			font-weight: 500;
+			text-align: left;
+			color: var(--accent-1);
+		}
+	}
+	.designation-tickets {
+		text-align: center;
+		font-size: 18px;
+		line-height: 2;
+		letter-spacing: -0.5px;
+		color: #c8c8e6;
+		margin: 20px 0 15px;
+		@media (max-width: 540px) {
+			font-size: 14px;
+			line-height: 2.29;
+			letter-spacing: -0.39px;
+			margin: 14px 0 10px;
+		}
+	}
+	.buying-options {
+		display: flex;
+		justify-content: center;
+		label {
+			margin: 0 13px;
+		}
+		@media (max-width: 410px) {
+			justify-content: space-around;
+			label {
+				margin: 0;
+			}
+		}
+	}
+	.credits-title {
+		text-align: center;
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 1.23;
+		color: #e0e0ff;
+		margin: 25px 0 10px;
+	}
+	.credits {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.qty {
+			margin: 0 7px;
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 1.21;
+			color: var(--accent-1);
+			display: flex;
+		}
+		.ui-btn {
+			margin: 0 7px;
+			height: 27px;
+			flex-basis: 80px;
+		}
+	}
+	.inline,
+	.ui-input-container {
+		margin: 15px *;
+	}
+	.inline {
+		.ui-input-container {
+			margin: 0 *;
+		}
+	}
+	@media (max-width: 540px) {
+		.ui-input-container {
+			margin: 12px * 20px;
+		}
+		.inline {
+			flex-direction: column;
+			align-items: stretch;
+			margin: 12px * 20px;
+			.ui-input-container {
+				margin: 6px * 10px;
+				flex-basis: auto !important;
+				&:first-child {
+					margin-top: 0;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.credits-explanation {
+		font-size: 12px;
+		line-height: 1.83;
+		color: #e0e0ff;
+		margin: 20px 17px;
+	}
+	.agreement {
+		margin: 22px auto;
+	}
+}

@@ -1,0 +1,45 @@
+article.add-card
+	form.compact
+		.appeal-title New Credit Card
+
+		label.ui-input-container
+			.label-caption
+				| Name on Card
+			.ui-input-wrapper
+				input.ui-input(type="text" placeholder="Ronald McDonald")
+
+		.inline
+			label.ui-input-container(style="flex-basis: 211px")
+				.label-caption Card Number
+				.ui-input-wrapper
+					input.ui-input(type="tel" placeholder="4444000022221111")
+			label.ui-input-container(style="flex-basis: 112px")
+				.label-caption Expiration Date
+				.ui-input-wrapper
+					input.ui-input(type="tel" data-mask="00 / 0000" placeholder="MM / YYYY")
+				.error-msg Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, temporibus.
+
+		.inline
+			label.ui-input-container(style="flex-basis: 211px")
+				.label-caption Zip / Postal Code
+				.ui-input-wrapper
+					input.ui-input(type="text" placeholder="91202")
+			label.ui-input-container(style="flex-basis: 112px")
+				.label-caption Security Code
+				.ui-input-wrapper
+					input.ui-input(type="tel" data-mask="0000" placeholder="123")
+				.error-msg Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, temporibus.
+
+		label.agreement.checkbox-label.centered
+			label.ui-checkbox
+				input(type="checkbox")
+				span.checkmark
+					svg
+						use(href="#check")
+			span.caption I accept the #[a(href="#") Terms of Service]
+
+		.bottom-buttons
+			a.ui-btn.thin(href="#")
+				.btn-caption Cancel
+			a.ui-btn.primary.thin(href="#")
+				.btn-caption Buy Credits
