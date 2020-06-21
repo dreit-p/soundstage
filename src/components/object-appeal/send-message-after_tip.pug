@@ -1,0 +1,25 @@
+article.send-message
+	form
+		.form-state-icon.success
+			svg
+				use(href="#success")
+		.form-title Tip Sent!
+		.form-caption Send a personal message to the artist with your tip…
+
+		label.ui-input-container
+			.ui-input-wrapper
+				textarea.ui-input(type="text" placeholder="Write your message here")
+
+		label.checkbox-label.centered
+			label.ui-checkbox
+				input(type="checkbox")
+				span.checkmark
+					svg
+						use(href="#check")
+			span.caption It's ok to display this message in the stream
+
+		.bottom-buttons
+			a.ui-btn.thin(href="#")
+				.btn-caption Skip
+			a.ui-btn.primary.thin(href="#")
+				.btn-caption Send Message

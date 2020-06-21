@@ -137,5 +137,21 @@ section.artist-appeal {
 				}
 			}
 		}
+		.ui-input-container {
+			width: auto;
+			margin: * 15px;
+			flex-grow: 1;
+		}
+		form.compact {
+			.ui-input-container {
+				margin: * 8px;
+				.label-caption {
+					margin: * 4px;
+				}
+				.ui-input {
+					padding: * 12px;
+				}
+			}
+		}
 	}
 }
