@@ -1,6 +1,8 @@
 article.send-message {
-	display: flex;
-	flex-direction: column;
+	form {
+		display: flex;
+		flex-direction: column;
+	}
 	.form-state-icon {
 		margin: 10px auto;
 		align-self: center;

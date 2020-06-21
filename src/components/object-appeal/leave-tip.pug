@@ -1,46 +1,47 @@
 article.leave-tip
-	.appeal-title Leave a Tip
-	.appeal-caption Your support keeps music alive.
-	label.custom-tip-qty
-		.cy $
-		input.dynamic-width(type="tel" value="1.00")
-	.buying-options
-		label.custom-radio-btn
-			input(type="radio" name="tickets")
-			.ui-btn.transparent.thin(href="#")
-				.btn-caption $1
-		label.custom-radio-btn
-			input(type="radio" name="tickets" checked)
-			.ui-btn.transparent.thin(href="#")
-				.btn-caption $3
-		label.custom-radio-btn
-			input(type="radio" name="tickets")
-			.ui-btn.transparent.thin(href="#")
-				.btn-caption $5
-		label.custom-radio-btn
-			input(type="radio" name="tickets")
-			.ui-btn.transparent.thin(href="#")
-				.btn-caption $10
+	form
+		.appeal-title Leave a Tip
+		.appeal-caption Your support keeps music alive.
+		label.custom-tip-qty
+			.cy $
+			input.dynamic-width(type="tel" value="1.00")
+		.buying-options
+			label.custom-radio-btn
+				input(type="radio" name="tickets")
+				.ui-btn.transparent.thin(href="#")
+					.btn-caption $1
+			label.custom-radio-btn
+				input(type="radio" name="tickets" checked)
+				.ui-btn.transparent.thin(href="#")
+					.btn-caption $3
+			label.custom-radio-btn
+				input(type="radio" name="tickets")
+				.ui-btn.transparent.thin(href="#")
+					.btn-caption $5
+			label.custom-radio-btn
+				input(type="radio" name="tickets")
+				.ui-btn.transparent.thin(href="#")
+					.btn-caption $10
 
-	.credits-title Available Sound Credits
-	.credits
-		span.qty
-			span.cy $
-			span.number 0.00
-		a.ui-btn.primary.thin(href="#")
-			.btn-caption Refill
-	.credits-explanation Credits help reduce payment processor fees and ensure artists receive the maximum amount from tips/donations.
+		.credits-title Available Sound Credits
+		.credits
+			span.qty
+				span.cy $
+				span.number 0.00
+			a.ui-btn.primary.thin(href="#")
+				.btn-caption Refill
+		.credits-explanation Credits help reduce payment processor fees and ensure artists receive the maximum amount from tips/donations.
 
-	label.agreement.checkbox-label.centered
-		label.ui-checkbox
-			input(type="checkbox")
-			span.checkmark
-				svg
-					use(href="#check")
-		span.caption I accept the #[a(href="#") Terms of Service]
+		label.agreement.checkbox-label.centered
+			label.ui-checkbox
+				input(type="checkbox")
+				span.checkmark
+					svg
+						use(href="#check")
+			span.caption I accept the #[a(href="#") Terms of Service]
 
-	.bottom-buttons
-		a.ui-btn.thin(href="#")
-			.btn-caption Cancel
-		a.ui-btn.primary.thin(href="#")
-			.btn-caption Leave Tip
+		.bottom-buttons
+			a.ui-btn.thin(href="#")
+				.btn-caption Cancel
+			a.ui-btn.primary.thin(href="#")
+				.btn-caption Leave Tip

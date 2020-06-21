@@ -1,23 +1,24 @@
 article.send-message
-	.form-state-icon.success
-		svg
-			use(href="#success")
-	.form-title Registered for Event
-	.form-caption We invite you to send a personal note to the artist…
+	form
+		.form-state-icon.success
+			svg
+				use(href="#success")
+		.form-title Registered for Event
+		.form-caption We invite you to send a personal note to the artist…
 
-	label.ui-input-container
-		.ui-input-wrapper
-			textarea.ui-input(type="text" placeholder="Write your message here")
+		label.ui-input-container
+			.ui-input-wrapper
+				textarea.ui-input(type="text" placeholder="Write your message here")
 
-	label.checkbox-label.centered
-		label.ui-checkbox
-			input(type="checkbox")
-			span.checkmark
-				svg
-					use(href="#check")
-		span.caption It's ok to display this message in event feed
+		label.checkbox-label.centered
+			label.ui-checkbox
+				input(type="checkbox")
+				span.checkmark
+					svg
+						use(href="#check")
+			span.caption It's ok to display this message in event feed
 
-	.bottom-buttons
-		div
-		a.ui-btn.primary.thin(href="#")
-			.btn-caption Buy Ticket
+		.bottom-buttons
+			div
+			a.ui-btn.primary.thin(href="#")
+				.btn-caption Buy Ticket
