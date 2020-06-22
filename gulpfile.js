@@ -17,17 +17,17 @@ const { src, dest, parallel, series, watch } = require('gulp');
 var sourcemaps = require('gulp-sourcemaps'),
 	svgSprite = require('gulp-svg-sprite'),
 	postHTML = require('gulp-posthtml'),
-	// imagemin = require('gulp-imagemin'), // сжимает изображения
-	// pngquant = require('imagemin-pngquant'), // плагин к верхнему
+	// imagemin = require('gulp-imagemin'), // compresses images
+	// pngquant = require('imagemin-pngquant'), // plugin for above
 	critical = require('critical').stream,
 	webpack = require('webpack-stream'),
 	postcss = require('gulp-postcss'),
-	connect = require('gulp-connect'), // отображение в локалхост
+	connect = require('gulp-connect'), // server
 	plumber = require('gulp-plumber'), // debugger
 	rename = require('gulp-rename'),
 	gulpif = require('gulp-if'),
 	notify = require('gulp-notify'),
-	clean = require('gulp-clean'); // удаляет папочки :)
+	clean = require('gulp-clean'); // removing folders :)
 	// webp = require('gulp-webp'); // webp converter
 
 
@@ -42,21 +42,21 @@ const postHtmlPlugins = [
 const postHtmlOptions = { parser: require('posthtml-pug')({ locals: {}, basedir: './src/' }) };
 
 var autoprefixer = require('autoprefixer'),
-	postCssImport = require('postcss-import'), // import компонентов
+	postCssImport = require('postcss-import'), // import of components
 	modernCSS = require('postcss-preset-env'), // lets you convert modern CSS
 	comments = require('postcss-strip-inline-comments'),
 	flexbugs = require('postcss-flexbugs-fixes'),
 	reporter = require('postcss-reporter'), // errors log
-	cssnano = require('cssnano'), // сжимает css
-	nested = require('postcss-nested'), // вложенность
+	cssnano = require('cssnano'), // minify css
+	nested = require('postcss-nested'), // nesting of styles
 	objfit = require('postcss-object-fit-images'),
-	mixins = require('postcss-mixins'), // миксины
-	color = require('postcss-color-function'), // scss цветовые функции
+	mixins = require('postcss-mixins'),
+	color = require('postcss-color-function'), // scss color functions
 	scss = require('postcss-scss'),
-	short = require('postcss-short'); // позволяет писать сокращенно
+	short = require('postcss-short'); // allows you to write in short form
 
 var path = {
-	dist: { //Тут мы укажем куда складывать готовые после сборки файлы
+	dist: { // Here we define where to put ready files after assembly
 		html: 'dist/',
 		js: 'dist/js/',
 		css: 'dist/css/',
@@ -65,15 +65,15 @@ var path = {
 		svgSprite: 'src/assets/',
 		fonts: 'dist/fonts/'
 	},
-	src: { //Пути откуда брать исходники
-		html: 'src/pages/*.pug', //Синтаксис src/*.ext говорит gulp что мы хотим взять все файлы с расширением .ext
-		js: 'src/main.js', //В стилях и скриптах нам понадобятся только main файлы
+	src: { // Paths to get sources from
+		html: 'src/pages/*.pug', // The src/*.ext syntax tells gulp that we want to take all files with .ext extension
+		js: 'src/main.js', // In styles and scripts we need only main files
 		css: 'src/main.scss',
-		img: 'src/assets/images/**/*.{gif,jpeg,jpg,png,svg,webp}', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+		img: 'src/assets/images/**/*.{gif,jpeg,jpg,png,svg,webp}', // The img/**/*.* syntax means: take all files of all extensions from a folder and from subdirectories
 		svg: 'src/assets/svg/**/*.svg',
 		fonts: 'src/assets/fonts/**/*.*'
 	},
-	watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+	watch: { // Here we indicate the change in which files we want to be updated.
 		html: 'src/**/*.pug',
 		js: 'src/**/*.js',
 		css: 'src/**/*.{css,scss}',
@@ -129,7 +129,7 @@ function css() {
 }
 
 function html() {
-	let stream = src(path.src.html) //Выберем файлы по нужному пути
+	let stream = src(path.src.html) // Get files
 
 	stream
 		.pipe(plumber({
@@ -139,7 +139,7 @@ function html() {
 	stream
 		.pipe(postHTML(postHtmlPlugins, postHtmlOptions))
 		.pipe(rename({ extname: ".html" }))
-		.pipe(dest(path.dist.html)) //Выплюнем их в папку dist
+		.pipe(dest(path.dist.html)) // Put them in the dist folder
 		.pipe(connect.reload());
 
 
@@ -148,15 +148,15 @@ function html() {
 
 function js() {
 	console.log(process.env.NODE_ENV);
-	return src(path.src.js) // Найдем наш main файл
+	return src(path.src.js) // Find our main file
 		.pipe(plumber({
 			errorHandler: notifyTemplate
 		}))
-		.pipe( gulpif(process.env.NODE_ENV == 'development', sourcemaps.init() ) ) // Инициализируем sourcemap
+		.pipe( gulpif(process.env.NODE_ENV == 'development', sourcemaps.init() ) ) // init sourcemaps
 		.pipe(webpack(require('./webpack.config.js')))
 		// .pipe(rename({ extname: ".js" }))
-		.pipe( gulpif(process.env.NODE_ENV == 'development', sourcemaps.write() ) ) // Пропишем карты
-		.pipe(dest(path.dist.js)) // Выплюнем готовый файл в dist
+		.pipe( gulpif(process.env.NODE_ENV == 'development', sourcemaps.write() ) ) // set sourcemaps
+		.pipe(dest(path.dist.js)) // Put the ccompleted file in the dist folder
 		.pipe(connect.reload());
 }
 

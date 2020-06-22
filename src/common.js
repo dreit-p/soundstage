@@ -17,7 +17,7 @@ window.throttling = (()=>{
 				throttled = false;
 			}, delay);
 		}
-		// last exec on resize end
+		// last exec on event end
 		clearTimeout(forLastExec);
 		forLastExec = setTimeout(cb, delay);
 	}
