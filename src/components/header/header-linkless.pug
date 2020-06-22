@@ -1,0 +1,46 @@
+.header-offset
+header.main-header.linkless
+	.veil
+	.limit.wide
+		.base-elements
+			.element
+				.logo
+					.image
+						picture
+							source(type="image/webp" srcset="../assets/images/logo.webp")
+							img.objfit(src="../assets/images/logo.png")
+					.brand #[span.bold sound]stage
+			.element
+				a.profile-mobile-image(href="#" data-select-menu="profile")
+					svg
+						use(href="#person")
+					img.objfit(src="../assets/images/content/artist-4.jpg")
+
+
+		.menu-wrapper.main
+			nav.links-block
+				a.profile-menu(href="#" data-select-menu="profile")
+					.profile-image
+						svg
+							use(href="#person")
+						img.objfit(src="../assets/images/content/artist-4.jpg")
+					.title Account
+					.profile-name vino_costa
+
+		.menu-wrapper.on-top.dropdown.profile
+			.user-name.desktop vino_costa
+			.base-elements.mobile
+				.element
+				.element
+					.title Account
+				.element
+			a.button(href="#")
+				svg
+					use(href="#person-thin")
+				.caption Profile
+			a.button(href="#")
+				svg
+					use(href="#exit")
+				.caption Sign Out
+
+

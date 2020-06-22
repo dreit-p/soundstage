@@ -60,12 +60,30 @@ header.main-header {
 			.bold {
 				font-weight: 700;
 			}
+		}
+	}
+	&:not(.linkless) {
+		.logo .brand {
 			@media (max-width: 850px) {
 				font-size: 2.8vw;
 				margin: 1.5vw;
 			}
 			@media (max-width: 710px) {
 				display: none;
+			}
+		}
+	}
+	&.linkless .base-elements {
+		.logo {
+			@media (max-width: 570px) {
+				.image {
+					margin: 0;
+					margin-right: 10px;
+				}
+				.brand {
+					margin: 0;
+					font-size: 18px;
+				}
 			}
 		}
 	}
