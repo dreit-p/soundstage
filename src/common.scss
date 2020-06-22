@@ -115,6 +115,10 @@ svg {
 .inline {
 	display: flex;
 	width: 100%;
+	align-items: flex-start;
+	&.down {
+		align-items: flex-end;
+	}
 	.left {
 		flex-grow: 1;
 	}
