@@ -38,6 +38,36 @@ section.artist-info {
 			.top {
 				padding: 1.5em;
 				margin: 0;
+				position: relative;
+				&:before {
+					display: block;
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: -20%;
+					margin: auto;
+					background-image: linear-gradient(to bottom, var(--bg-1) -20%, transparent);
+					mix-blend-mode: darken;
+					z-index: -1;
+				}
+			}
+			.bottom {
+				position: relative;
+				&:before {
+					display: block;
+					content: "";
+					position: absolute;
+					top: -20%;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					background-image: linear-gradient(to top, var(--bg-1) -10%, transparent);
+					mix-blend-mode: darken;
+					z-index: -1;
+				}
 			}
 			.title {
 				margin: -0.25em -.04em 0;
