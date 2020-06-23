@@ -1,0 +1,76 @@
+-
+	var messages = [
+		{
+			image: "user-1.jpg",
+			color: "#ff00aa",
+			name: "anabanana",
+			text: "user-message so excited fo this event my bf and I are  huge fans and haven't been able to enjoy a live show yet!"
+		},
+		{
+			image: "user-2.jpg",
+			color: "#9c42f5",
+			name: "majorlzrfan",
+			text: "Watching someone’s dreams become their reality is one of the greatest journeys we can go and a lot of times and also this is going to be an amazing stream I really hope to see you guys there!"
+		},
+		{
+			image: "user-3.jpg",
+			color: "#5d2de1",
+			name: "killerbeats181",
+			text: "oh hell yea cannot wait for this one going to be a heater!"
+		},
+		{
+			image: "user-2.jpg",
+			color: "#9c42f5",
+			name: "anabanana",
+			text: "user-message so excited fo this event my bf and I are  huge fans and haven't been able to enjoy a live show yet!"
+		},
+		{
+			image: "user-1.jpg",
+			color: "#ff00aa",
+			name: "majorlzrfan",
+			text: "proud to support my friend on a new chapter with this amazing  project."
+		},
+		{
+			image: "user-3.jpg",
+			color: "#5d2de1",
+			name: "killerbeats181",
+			text: "oh hell yea cannot wait for this one going to be a heater!"
+		},
+		{
+			image: "user-2.jpg",
+			color: "#9c42f5",
+			name: "anabanana",
+			text: "user-message so excited fo this event my bf and I are  huge fans and haven't been able to enjoy a live show yet!"
+		},
+		{
+			image: "user-1.jpg",
+			color: "#ff00aa",
+			name: "majorlzrfan",
+			text: "proud to support my friend on a new chapter with this amazing  project."
+		},
+		{
+			image: "user-1.jpg",
+			color: "#5d2de1",
+			name: "anabanana",
+			text: "user-message so excited fo this event my bf and I are  huge fans and haven't been able to enjoy a live show yet!"
+		},
+		{
+			image: "user-3.jpg",
+			color: "#9c42f5",
+			name: "killerbeats181",
+			text: "user-message so excited fo this event my bf and I are  huge fans and haven't been able to enjoy a live show yet!"
+		}
+	]
+
+section.chat-block
+	.messages-container.custom-scroll
+		each message, index in messages
+			.chat-bubble
+				.avatar-wrapper
+					.image(style!= `background-image: url(../assets/images/content/${message.image})`)
+					.label.top.right(style!= `background-color: ${message.color}`)
+						svg
+							use(href="#star")
+				.message-content
+					.user-name!= message.name +" "+ index
+					.user-message!= message.text
