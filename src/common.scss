@@ -17,6 +17,9 @@ i {
 	@media (max-width: 570px) {
 		--offset: 32px;
 	}
+	&.wide {
+		max-width: calc(1660px + var(--offset)*2);
+	}
 }
 
 * {

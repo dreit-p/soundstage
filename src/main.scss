@@ -11,10 +11,11 @@
 
 @import './components/header/header.scss';
 @import './components/footer/footer.scss';
-@import './components/breadcrumbs/breadcrumbs.scss';
 
+@import './components/breadcrumbs/breadcrumbs.scss';
 @import './components/search-bar/search-bar.scss';
 @import './components/pagination/pagination.scss';
+
 @import './components/timer/timer.scss';
 
 /*----------  UI elements  ----------*/
@@ -68,6 +69,10 @@
 /*----------  chat  ----------*/
 
 @import './components/chat/chat.scss';
+
+/*----------  virtual stage  ----------*/
+
+@import './components/virtual-stage/structure.scss';
 
 
 
