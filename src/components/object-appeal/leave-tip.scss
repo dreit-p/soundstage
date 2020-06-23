@@ -108,3 +108,19 @@ article.leave-tip {
 		margin: 5px auto;
 	}
 }
+
+
+article.leave-tip-activator {
+	.appeal-title {
+		font-size: 22px;
+		font-weight: 600;
+		line-height: 1.64;
+		letter-spacing: -0.61px;
+		margin: 5px auto 15px;
+		text-align: center;
+	}
+	.ui-btn {
+		display: block;
+		margin: 15px 20px;
+	}
+}
