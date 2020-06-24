@@ -26,7 +26,7 @@
 		},
 		{
 			image: "user-1.jpg",
-			color: "#ff00aa",
+			color: "#009476",
 			name: "majorlzrfan",
 			text: "proud to support my friend on a new chapter with this amazing  project."
 		},
@@ -38,7 +38,7 @@
 		},
 		{
 			image: "user-2.jpg",
-			color: "#9c42f5",
+			color: "#f3cb00",
 			name: "anabanana",
 			text: "user-message so excited fo this event my bf and I are  huge fans and haven't been able to enjoy a live show yet!"
 		},
@@ -56,7 +56,7 @@
 		},
 		{
 			image: "user-3.jpg",
-			color: "#9c42f5",
+			color: "#00bddb",
 			name: "killerbeats181",
 			text: "user-message so excited fo this event my bf and I are  huge fans and haven't been able to enjoy a live show yet!"
 		}
@@ -72,5 +72,9 @@ section.chat-block
 						svg
 							use(href="#star")
 				.message-content
-					.user-name!= message.name +" "+ index
+					.user-name(style=`color: ${message.color}`)!= message.name +" "+ index
 					.user-message!= message.text
+
+	.ui-input-wrapper.write-message
+		input.ui-input(type="text" placeholder="Type here...")
+		.smiles-btn

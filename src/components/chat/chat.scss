@@ -1,8 +1,39 @@
 section.chat-block {
 	height: 100%;
+	display: flex;
+	flex-direction: column;
 	.messages-container {
-		margin: 5px;
-		height: 100%;
+		height: 0;
+		flex-grow: 1;
+		margin: 0 3px;
+	}
+	.write-message {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #212035;
+		margin: 3px;
+		margin-top: 14px;
+		border-radius: 12px;
+		.ui-input {
+			background-color: transparent;
+			box-shadow: none;
+			flex-grow: 1;
+			font-size: 14px;
+		}
+		.smiles-btn {
+			cursor: pointer;
+			background-image: url(../assets/images/smile.png);
+			background-size: 16px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: #cecece;
+			border-radius: 50%;
+			width: 26px;
+			height: 26px;
+			margin: 7px 11px;
+			margin-left: 0;
+		}
 	}
 }
 
@@ -90,6 +121,10 @@ section.chat-block {
 			font-size: 14px;
 			line-height: 1.71;
 			letter-spacing: -0.39px;
+		}
+		.simplebar-mask {
+			border-radius: 12px;
+			overflow: hidden;
 		}
 	}
 }
