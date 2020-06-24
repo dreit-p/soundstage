@@ -10,7 +10,7 @@ section.chat-block {
 	.write-message {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-end;
 		background-color: #212035;
 		margin: 3px;
 		margin-top: 14px;
@@ -20,6 +20,7 @@ section.chat-block {
 			box-shadow: none;
 			flex-grow: 1;
 			font-size: 14px;
+			width: 160px;
 		}
 		.smiles-btn {
 			cursor: pointer;
@@ -31,8 +32,9 @@ section.chat-block {
 			border-radius: 50%;
 			width: 26px;
 			height: 26px;
-			margin: 7px 11px;
+			margin: 9px 11px;
 			margin-left: 0;
+			flex-shrink: 0;
 		}
 	}
 }

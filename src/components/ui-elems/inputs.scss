@@ -217,7 +217,7 @@
 		z-index: -1;
 		color: gray;
 		opacity: 0;
-		white-space: nowrap;
+		white-space: pre;
 		pointer-events: none;
 		user-select: none;
 	}
@@ -225,6 +225,71 @@
 
 
 /*=====  End of Num input with Dynamic width  ======*/
+
+
+/*==============================================
+=            Dynamic lines Textarea            =
+==============================================*/
+
+
+.dynamic-lines-textarea {
+	display: inline-flex;
+	justify-content: center;
+	.inputs {
+		flex-grow: 1;
+		flex-basis: 0;
+		position: relative;
+		max-width: 100%;
+		max-height: 5em;
+	}
+	textarea,
+	.measurer {
+		display: block;
+		font-size: inherit;
+		padding: inherit;
+		border: 1px solid var(--passive-color);
+		margin: 0 1px;
+		display: inline-block;
+		text-align: inherit;
+		color: inherit;
+		line-height: inherit;
+		word-spacing: inherit;
+		padding: inherit;
+		background-color: transparent;
+		outline: none;
+		white-space: break-spaces;
+		word-wrap: break-word;
+		min-height: 1em;
+		max-height: 5em;
+		max-width: 100%;
+	}
+
+	textarea {
+		z-index: 2;
+		width: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		margin: auto;
+		resize: none;
+		/* margin-bottom: -1em; */
+	}
+	.measurer {
+		position: relative;
+		z-index: -1;
+		color: gray;
+		opacity: 0;
+		pointer-events: none;
+		user-select: none;
+		max-width: 100%;
+	}
+}
+
+/*=====  End of Dynamic lines Textarea  ======*/
+
 
 
 

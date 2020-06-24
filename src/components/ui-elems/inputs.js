@@ -51,7 +51,7 @@ import IMask from 'imask'
 	function getInputInstance(targetInput) {
 		let inputElems = document.createElement('div');
 		inputElems.classList = 'dynamic-width-num-wrapper';
-		inputElems.innerHTML = '<div class="inputs"><div class="pseudo-input"></div></div>';
+		inputElems.innerHTML = '<label class="inputs"><div class="pseudo-input"></div></label>';
 
 		let numElement = targetInput.cloneNode();
 		numElement.classList = "";
@@ -87,7 +87,54 @@ import IMask from 'imask'
 
 		targetInput.parentElement.replaceChild(newInput, targetInput)
 	})
-})()
+})();
 
 /*=====  End of Dynamic width  ======*/
+
+
+/*=================================================
+=            Dynamic lines of textarea            =
+=================================================*/
+
+(()=>{
+	function getInputInstance(targetInput) {
+		let inputElems = document.createElement('div');
+		inputElems.classList = 'dynamic-lines-textarea';
+		inputElems.innerHTML = '<label class="inputs"><div class="measurer"></div></label>';
+
+		let textareaElem = targetInput.cloneNode();
+		textareaElem.classList = "";
+		let measurer = inputElems.getElementsByClassName('measurer')[0];
+		measurer.innerHTML = textareaElem.value.replace(/[\n]/g, "<br>&#8203;");
+
+		textareaElem.addEventListener('blur', function (e) {
+			measurer.innerHTML = e.target.value.replace(/[\n]/g, "<br>&#8203;");
+		}, false);
+
+		textareaElem.addEventListener('input', function (e) {
+			measurer.innerHTML = e.target.value.replace(/[\n]/g, "<br>&#8203;");
+		}, false);
+
+		inputElems.querySelector('.inputs').append(textareaElem);
+		return inputElems;
+	}
+
+
+	let targetInputs = document.querySelectorAll('textarea.dynamic-lines');
+	[].forEach.call(targetInputs, (targetInput) => {
+
+		let newInput = getInputInstance(targetInput);
+		newInput.classList = newInput.classList +" "+ targetInput.classList;
+
+		targetInput.parentElement.replaceChild(newInput, targetInput);
+	});
+
+	// ToDo: Create right version with textEditable as telegram input
+
+})();
+
+
+
+/*=====  End of Dynamic lines of textarea  ======*/
+
 
