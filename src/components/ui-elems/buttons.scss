@@ -56,16 +56,19 @@
 		}
 	}
 	&.thin {
-		padding: 0.375rem 0.25rem;
+		padding: 0.375em 0.25em;
 		font-weight: 500;
-		font-size: 0.875rem;
+		font-size: 0.875em;
 		line-height: 1.71;
 		.btn-icon {
-			margin: 0 0.3125rem;
+			margin: 0 0.3125em;
 		}
 		.btn-icon + .btn-caption {
 			padding-left: 0;
 		}
+	}
+	&.big-caption .btn-caption {
+		font-size: 1.625em;
 	}
 	&.circle {
 		border-radius: 50%;
