@@ -63,6 +63,7 @@
 	},
 	"dependencies": {
 		"countdown": "^2.6.0",
+		"css-element-queries": "^1.2.3",
 		"flickity": "^2.2.1",
 		"imask": "^6.0.3",
 		"normalize.css": "^8.0.1",

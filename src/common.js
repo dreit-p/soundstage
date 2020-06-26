@@ -1,4 +1,9 @@
 import objectFitImages from 'object-fit-images';
+import 'css-element-queries/src/ResizeSensor';
+import ElementQueries from 'css-element-queries/src/ElementQueries';
+
+ElementQueries.listen();
+ElementQueries.init();
 
 window.throttling = (()=>{
 	let forLastExec,

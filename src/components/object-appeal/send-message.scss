@@ -15,11 +15,6 @@ article.send-message {
 		line-height: 1.29;
 		letter-spacing: -0.78px;
 		text-align: center;
-		@media (max-width: 540px) {
-			font-size: 20px;
-			line-height: 1.6;
-			letter-spacing: -0.56px;
-		}
 	}
 	.form-caption {
 		font-size: 13px;
@@ -34,3 +29,17 @@ article.send-message {
 		padding: 0 20px;
 	}
 }
+
+/*=====================================
+=            Compact state            =
+=====================================*/
+
+article.send-message[max-width~="350px"] {
+	.form-title {
+		font-size: 20px;
+		line-height: 1.6;
+		letter-spacing: -0.56px;
+	}
+}
+
+/*=====  End of Compact state  ======*/

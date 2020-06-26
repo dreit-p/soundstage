@@ -13,11 +13,6 @@ article.registered-for-event {
 		line-height: 1.29;
 		letter-spacing: -0.78px;
 		text-align: center;
-		@media (max-width: 540px) {
-			font-size: 20px;
-			line-height: 1.6;
-			letter-spacing: -0.56px;
-		}
 	}
 	.form-caption {
 		font-size: 13px;
@@ -30,10 +25,6 @@ article.registered-for-event {
 		line-height: 1.64;
 		letter-spacing: -0.61px;
 		color: #c8c8e6;
-		@media (max-width: 540px) {
-			margin: 26px auto 20px;
-			font-size: 18px;
-		}
 	}
 	.ui-btn {
 		margin: 28px auto 17px;
@@ -57,11 +48,6 @@ article.registered-for-event_type-2 {
 		line-height: 1.29;
 		letter-spacing: -0.78px;
 		text-align: center;
-		@media (max-width: 540px) {
-			font-size: 20px;
-			line-height: 1.6;
-			letter-spacing: -0.56px;
-		}
 	}
 	.start-date {
 		margin: 10px auto;
@@ -69,10 +55,6 @@ article.registered-for-event_type-2 {
 		line-height: 1.64;
 		letter-spacing: -0.61px;
 		color: #c8c8e6;
-		@media (max-width: 540px) {
-			margin: 6px auto 8px;
-			font-size: 18px;
-		}
 	}
 	.teaser {
 		margin: 34px auto 0;
@@ -81,12 +63,6 @@ article.registered-for-event_type-2 {
 		line-height: 1.5;
 		letter-spacing: -0.67px;
 		text-align: center;
-		@media (max-width: 540px) {
-			margin: 24px auto 0;
-			font-size: 18px;
-			line-height: 1.6;
-			letter-spacing: -0.56px;
-		}
 	}
 	.ui-btn {
 		margin: 23px auto 17px;
@@ -94,3 +70,40 @@ article.registered-for-event_type-2 {
 		width: 100%;
 	}
 }
+
+
+/*=====================================
+=            Compact state            =
+=====================================*/
+
+article.registered-for-event[max-width~="350px"] {
+	.form-title {
+		font-size: 20px;
+		line-height: 1.6;
+		letter-spacing: -0.56px;
+	}
+	.start-date {
+		margin: 26px auto 20px;
+		font-size: 18px;
+	}
+}
+
+article.registered-for-event_type-2[max-width~="350px"] {
+	.form-title {
+		font-size: 20px;
+		line-height: 1.6;
+		letter-spacing: -0.56px;
+	}
+	.start-date {
+		margin: 6px auto 8px;
+		font-size: 18px;
+	}
+	.teaser {
+		margin: 24px auto 0;
+		font-size: 18px;
+		line-height: 1.6;
+		letter-spacing: -0.56px;
+	}
+}
+
+/*=====  End of Compact state  ======*/

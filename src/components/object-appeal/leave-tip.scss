@@ -6,21 +6,12 @@ article.leave-tip {
 		line-height: 1.29;
 		letter-spacing: -0.78px;
 		margin: 5px 0;
-		@media (max-width: 540px) {
-			font-size: 20px;
-			line-height: 1.6;
-			letter-spacing: -0.56px;
-		}
 	}
 	.appeal-caption {
 		text-align: center;
 		font-size: 13px;
 		line-height: 1.23;
 		margin: 8px 0;
-		@media (max-width: 540px) {
-			font-size: 12px;
-			line-height: 1.17;
-		}
 	}
 	.custom-tip-qty {
 		display: flex;
@@ -52,24 +43,12 @@ article.leave-tip {
 		letter-spacing: -0.5px;
 		color: #c8c8e6;
 		margin: 20px 0 15px;
-		@media (max-width: 540px) {
-			font-size: 14px;
-			line-height: 2.29;
-			letter-spacing: -0.39px;
-			margin: 14px 0 10px;
-		}
 	}
 	.buying-options {
 		display: flex;
 		justify-content: center;
 		label {
 			margin: 0 13px;
-		}
-		@media (max-width: 410px) {
-			justify-content: space-around;
-			label {
-				margin: 0;
-			}
 		}
 	}
 	.credits-title {
@@ -124,3 +103,34 @@ article.leave-tip-activator {
 		margin: 15px 20px;
 	}
 }
+
+
+/*=====================================
+=            Compact state            =
+=====================================*/
+
+article.leave-tip[max-width~="350px"] {
+	.appeal-title {
+		font-size: 20px;
+		line-height: 1.6;
+		letter-spacing: -0.56px;
+	}
+	.appeal-caption {
+		font-size: 12px;
+		line-height: 1.17;
+	}
+	.designation-tickets {
+		font-size: 14px;
+		line-height: 2.29;
+		letter-spacing: -0.39px;
+		margin: 14px 0 10px;
+	}
+	.buying-options {
+		justify-content: space-around;
+		label {
+			margin: 0;
+		}
+	}
+}
+
+/*=====  End of Compact state  ======*/
