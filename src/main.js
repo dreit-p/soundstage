@@ -17,6 +17,7 @@ import './components/ui-elems/inputs.js';
 import './components/ui-elems/scrollbar.js';
 import './components/ui-elems/show-more.js';
 
+import './components/ui-elems/close.js';
 import './components/chat/chat.js';
 
 /*=====  End of components  ======*/

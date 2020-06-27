@@ -1,0 +1,43 @@
+.closeable {
+	position: relative;
+	--padding: 20px;
+	&.closed {
+		display: none !important;
+	}
+	.cross {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: calc(18px + var(--padding));
+		width: calc(18px + var(--padding));
+		cursor: pointer;
+		color: #e0e0ff;
+		&:before,
+		&:after {
+			width: 18px;
+			height: 2px;
+			background-color: currentColor;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			content: "";
+			display: block;
+			border-radius: 1px;
+			transform-origin: center;
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.closeable[max-height~="70px"] {
+	.cross {
+		bottom: 0;
+		margin: auto;
+	}
+}
