@@ -1,7 +1,11 @@
 .closeable {
 	position: relative;
 	--padding: 20px;
-	&.closed {
+	&.invisible {
+		opacity: 0;
+		transition: opacity .3s;
+	}
+	&.removed {
 		display: none !important;
 	}
 	.cross {
