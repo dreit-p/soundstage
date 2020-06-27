@@ -76,12 +76,13 @@ svg {
 	}
 	img.desktop {
 		--original-size: 1920px;
+		--multiplier: 1.18;
 		position: absolute;
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
 		margin: auto;
-		width: calc(var(--original-size)*1.18 + (100% - var(--original-size)));
+		width: calc(var(--original-size) * var(--multiplier) + (100% - var(--original-size)));
 		max-width: var(--original-size);
 	}
 	img.mobile {
@@ -105,13 +106,13 @@ svg {
 
 @media (max-width: 540px) {
 	.desktop-only {
-		display: none;
+		display: none !important;
 	}
 }
 
 @media (min-width: 541px) {
 	.mobile-only {
-		display: none;
+		display: none !important;
 	}
 }
 
@@ -121,6 +122,9 @@ svg {
 	align-items: flex-start;
 	&.down {
 		align-items: flex-end;
+	}
+	&.center {
+		align-items: center;
 	}
 	.left {
 		flex-grow: 1;
@@ -249,10 +253,12 @@ svg {
 [data-tooltip] {
 	position: relative;
 	z-index: 1;
+	color: currentColor;
 	&:after {
 		position: absolute;
 		top: calc(100% + 12px);
 		left: 50%;
+		color: inherit;
 		transform: translateX(-50%) translateY(-10px);
 		margin: auto;
 		width: fit-content;

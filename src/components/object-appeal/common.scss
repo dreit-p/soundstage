@@ -18,13 +18,13 @@ section.artist-appeal {
 		box-shadow: none;
 		.desktop,
 		&.desktop {
-			display: none !important;
+			display: none;
 		}
 	}
 	@media (min-width: 901px) {
 		.mobile,
 		&.mobile {
-			display: none !important;
+			display: none;
 		}
 	}
 	.artist-message {

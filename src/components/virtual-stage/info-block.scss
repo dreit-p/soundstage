@@ -1,0 +1,162 @@
+section.current-playing-info {
+	position: relative;
+	border-radius: 24px;
+	overflow: hidden;
+	.page-bg {
+		img.desktop {
+			margin-top: -90px;
+			margin-left: calc(-190px + 40%);
+			--multiplier: 1.58;
+			opacity: .8;
+		}
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(to right, #27273e, #27273e 30%, transparent 60%, transparent);
+		}
+		@media (max-width: 1150px) {
+			img.desktop {
+				margin-top: calc(-20% + 190px);
+				top: 0;
+			}
+			&:after {
+				background-image: linear-gradient(to bottom, #27273e, #27273e 10%, transparent 60%, transparent);
+			}
+		}
+		@media (max-width: 540px) {
+			display: none;
+		}
+	}
+	.content {
+		display: flex;
+		align-items: center;
+		min-height: 120px;
+		color: white;
+		padding: 20px 32px;
+		@media (max-width: 1150px) {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: * 24px;
+		}
+		@media (max-width: 540px) {
+			padding: 0;
+			min-height: 0;
+		}
+		.current-song-info {
+			flex-grow: 1;
+			width: 100%;
+			@media (max-width: 540px) {
+				display: none;
+			}
+			.title {
+				font-size: 30px;
+				font-weight: 600;
+				font-stretch: normal;
+				font-style: normal;
+				margin: 5px 0;
+			}
+			.artist {
+				.name {
+					font-size: 26px;
+					line-height: 1.2;
+					margin: 20px 0 10px;
+				}
+				.buttons {
+					display: none;
+					.ui-btn {
+						margin: 4px *;
+						margin-left: 20px;
+						@media (max-width: 1300px) {
+							margin-left: 12px;
+						}
+					}
+					@media (min-width: 1051px) and (max-width: 1150px) {
+						&.desktop {
+							display: flex;
+						}
+					}
+					@media (max-width: 1050px) {
+						&.mobile {
+							display: flex;
+						}
+					}
+				}
+				@media (max-width: 1150px) {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					.name {
+						align-self: baseline;
+						margin: 0 0 20px;
+						margin-right: 8px;
+					}
+				}
+			}
+			.title-and-buttons {
+				@media (max-width: 1150px) {
+					display: none;
+				}
+				.title {
+					margin-right: 18px;
+				}
+				.buttons {
+					display: flex;
+					align-self: flex-start;
+					.ui-btn {
+						margin: 4px 10px;
+						margin-top: 10px;
+						@media (max-width: 1300px) {
+							margin: * 6px;
+							margin-top: 10px;
+							.btn-caption {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+		.appeal {
+			align-self: center;
+			.appeal-title {
+				font-size: 22px;
+				font-weight: 600;
+				line-height: 1.64;
+				letter-spacing: -0.61px;
+				margin-bottom: 12px;
+				text-align: center;
+			}
+			.ui-btn {
+				margin: 0 16px;
+				margin-bottom: 9px;
+			}
+			@media (max-width: 1150px) {
+				margin-top: 12px;
+			}
+			@media (max-width: 540px) {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				justify-content: space-around;
+				.appeal-title {
+					font-size: 14px;
+					font-weight: 600;
+					margin: 6px;
+					letter-spacing: -0.39px;
+				}
+				.ui-btn {
+					flex-basis: 128px;
+					margin: 0 6px;
+				}
+			}
+		}
+	}
+}

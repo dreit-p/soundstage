@@ -213,6 +213,11 @@
 				background-image: radial-gradient(rgba(255, 215, 81, 0.3) 0, transparent 95%, transparent 100%);
 			}
 		}
+		&.active-red .btn-icon {
+			color: #fc03ad;
+			box-shadow: 0 0 10px 0 hsla(319, 100%, 50%, 0.2);
+			background-image: radial-gradient(hsla(319, 100%, 66%, 0.3) 0,transparent 95%,transparent 100%);
+		}
 	}
 
 	/*=====  End of Secondary  ======*/

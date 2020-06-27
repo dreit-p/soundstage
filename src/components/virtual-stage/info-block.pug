@@ -1,0 +1,60 @@
+section.current-playing-info
+	.page-bg
+		picture
+			source(type="image/webp" srcset="../assets/images/hero-bg.webp")
+			img.desktop.objfit(src="../assets/images/hero-bg.jpg")
+		picture
+			source(type="image/webp" srcset="../assets/images/hero-bg-mobile.webp")
+			img.mobile.objfit(src="../assets/images/hero-bg-mobile.jpg")
+
+	.content
+		.current-song-info
+			.title-and-buttons
+				.inline.down
+					.title Currently Playing
+					.buttons.desktop
+						span
+							a.ui-btn.secondary.thin.flat.active-red(href="#")
+								.btn-icon
+									svg
+										use(href="#heart")
+								.btn-caption Like
+						span
+							a.ui-btn.secondary.thin.flat(href="#")
+								.btn-icon
+									svg
+										use(href="#hamburger")
+								.btn-caption Set List
+			.artist
+				.name Ill-esha - Imaginary Friends
+				.buttons.desktop
+					span
+						a.ui-btn.secondary.thin.flat.active-red(href="#")
+							.btn-icon
+								svg
+									use(href="#heart")
+							.btn-caption Like
+					span
+						a.ui-btn.secondary.thin.flat(href="#")
+							.btn-icon
+								svg
+									use(href="#hamburger")
+							.btn-caption Set List
+				.buttons.mobile
+					span(data-tooltip="Like")
+						a.ui-btn.secondary.thin.flat.active-red(href="#")
+							.btn-icon
+								svg
+									use(href="#heart")
+					span(data-tooltip="Set List")
+						a.ui-btn.secondary.thin.flat(href="#")
+							.btn-icon
+								svg
+									use(href="#hamburger")
+		.appeal
+			.appeal-title Planning a special event?
+
+			a.ui-btn.primary.thin.big-caption.desktop-only(href="#")
+				.btn-caption Book a VIP Performance
+			a.ui-btn.primary.thin.mobile-only(href="#")
+				.btn-caption Book a VIP

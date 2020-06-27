@@ -90,6 +90,7 @@ article.leave-tip {
 
 
 article.leave-tip-activator {
+	width: 100%;
 	.appeal-title {
 		font-size: 22px;
 		font-weight: 600;
@@ -101,6 +102,30 @@ article.leave-tip-activator {
 	.ui-btn {
 		display: block;
 		margin: 15px 20px;
+		&.mobile {
+			display: none;
+		}
+	}
+	@media (max-width: 540px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.appeal-title {
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: -0.39px;
+			margin: 0 6px;
+		}
+		.ui-btn {
+			margin: 0 6px;
+			&.mobile {
+				display: block;
+				flex-basis: 130px;
+			}
+			&.desktop {
+				display: none;
+			}
+		}
 	}
 }
 

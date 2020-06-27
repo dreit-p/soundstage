@@ -18,6 +18,9 @@ html(lang="en")
 		section.virtual-stage
 			.limit.wide
 				.grid
+
+					include /components/virtual-stage/mobile-video-info.pug
+
 					article.video-block
 						.video-wrapper
 							div(style="padding:56.25% 0 0 0;position:relative;")
@@ -26,7 +29,7 @@ html(lang="en")
 
 
 					section.video-information
-						p Info
+						include /components/virtual-stage/info-block.pug
 
 
 					section.another-blocks

@@ -1,0 +1,26 @@
+section.mobile-video-information {
+	color: white;
+	width: 100%;
+	overflow: hidden;
+	.text-side {
+		flex-grow: 1;
+		margin-right: 12px;
+		overflow: hidden;
+		flex-basis: 100%;
+		.caption {
+			font-size: 10px;
+			font-weight: 500;
+			color: #cecece;
+			margin-bottom: 5px;
+		}
+		.title {
+			white-space: nowrap;
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	.buttons {
+		flex-shrink: 0;
+	}
+}
