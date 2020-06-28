@@ -160,7 +160,7 @@ section.chat-block {
 			}
 		}
 	}
-	&[max-width~="400px"] {
+	&[max-width~="350px"] {
 		padding: * 8px;
 		padding-right: 10px;
 		--scroll-bar-offset: .4em;
@@ -170,6 +170,21 @@ section.chat-block {
 		.chat-bubble {
 			.avatar-wrapper {
 				margin-right: 11px;
+			}
+		}
+	}
+	&[min-width~="450px"] {
+		padding: 16px 16px;
+		--scroll-bar-offset: .5em;
+		.write-message {
+			margin-top: 16px;
+		}
+		.chat-bubble {
+			.avatar-wrapper {
+				margin-right: 16px;
+			}
+			.user-message {
+				font-size: 15px;
 			}
 		}
 	}
