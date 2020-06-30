@@ -1,0 +1,13 @@
+.popper {
+	z-index: 5;
+	transition: opacity .2s;
+	&:not(.visible) {
+		opacity: 0;
+		overflow: hidden;
+		pointer-events: none;
+		user-select: none;
+		position: absolute;
+		top: -1000px;
+		left: -1000px;
+	}
+}

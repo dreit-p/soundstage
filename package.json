@@ -62,12 +62,14 @@
 		"webpack-stream": "^5.2.1"
 	},
 	"dependencies": {
+		"@popperjs/core": "^2.4.2",
 		"countdown": "^2.6.0",
 		"css-element-queries": "^1.2.3",
 		"flickity": "^2.2.1",
 		"imask": "^6.0.3",
 		"normalize.css": "^8.0.1",
 		"object-fit-images": "^3.2.4",
+		"popper-max-size-modifier": "^0.2.0",
 		"simplebar": "^5.2.0",
 		"stickyfilljs": "^2.1.0"
 	}

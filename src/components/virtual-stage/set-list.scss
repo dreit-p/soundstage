@@ -1,0 +1,114 @@
+.set-list.popper {
+	width: 100%;
+
+	&[data-popper-placement~="top-start"] section.set-list {
+		border-bottom-right-radius: 7px;
+	}
+
+	&[data-popper-placement~="bottom"] section.set-list {
+		border-top-right-radius: 7px;
+	}
+}
+section.set-list {
+	padding: 20px 18px 20px 32px;
+	position: relative;
+	border-radius: 24px;
+	background-color: #27273e;
+	z-index: 5;
+	box-shadow: 0 32px 32px -4px rgba(20, 16, 41, 0.24), 0 64px 96px 0 rgba(20, 16, 41, 0.4), 0 8px 16px -1px rgba(20, 16, 41, 0.24), 0 0 1px 0 rgba(20, 16, 41, 0.4);
+	.block-title {
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1.4;
+		letter-spacing: -0.4px;
+		text-align: left;
+		color: #ffffff;
+	}
+	.list {
+		max-height: 200px;
+		padding: 0;
+		margin: 0;
+		margin-top: 11px;
+		.song {
+			display: flex;
+			align-items: center;
+			max-width: 100%;
+			overflow: hidden;
+			color: white;
+			&:not(:first-child):not(:last-child) {
+				margin: 22px 0;
+			}
+			.duration {
+				width: 40px;
+				flex-basis: 40px;
+				flex-shrink: 0;
+				margin-right: 20px;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 1.71;
+			}
+			.song-title {
+				flex-grow: 1;
+				font-size: 14px;
+				letter-spacing: normal;
+				text-align: left;
+			}
+			.buttons {
+				.ui-btn {
+					color: #676781;
+				}
+			}
+		}
+	}
+	.close-btn {
+		background-color: transparent;
+		border: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 5px;
+		outline: none;
+		@media (max-width: 540px) {
+			padding: 0;
+		}
+		.cross {
+			--padding: 20px;
+			height: calc(18px + var(--padding));
+			width: calc(18px + var(--padding));
+			cursor: pointer;
+			color: #e0e0ff;
+			&:before,
+			&:after {
+				width: 18px;
+				height: 2px;
+				background-color: currentColor;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				content: "";
+				display: block;
+				border-radius: 1px;
+				transform-origin: center;
+				transform: rotate(45deg);
+			}
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+
+/*=====================================
+=            compact state            =
+=====================================*/
+
+section.set-list[max-width~="400px"] {
+	border-radius: 12px;
+	padding: 10px 14px;
+}
+
+/*=====  End of compact state  ======*/

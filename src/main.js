@@ -19,5 +19,8 @@ import './components/ui-elems/show-more.js';
 
 import './components/ui-elems/close.js';
 import './components/chat/chat.js';
+import './components/ui-elems/popper.js';
+
+import './components/virtual-stage/temp.js';
 
 /*=====  End of components  ======*/

@@ -31,10 +31,18 @@ section.virtual-stage {
 					"another-blocks"
 					"video-info";
 		}
-		@media (max-width: 540px) {
-			grid-row-gap: 14px;
+		@media (max-width: 650px) {
 			grid-template-areas:
 					"mobile-video-info"
+					"video-block"
+					"another-blocks"
+					"video-info";
+		}
+		@media (max-width: 540px) {
+			grid-row-gap: 14px;
+		}
+		@media (max-width: 650px) and (max-height: 620px) {
+			grid-template-areas:
 					"video-block"
 					"another-blocks"
 					"video-info";
@@ -51,7 +59,7 @@ section.virtual-stage {
 		grid-area: mobile-video-info;
 		overflow: hidden;
 		width: 100%;
-		@media (min-width: 541px) {
+		@media (min-width: 651px) {
 			display: none;
 		}
 	}
@@ -71,6 +79,34 @@ section.virtual-stage {
 			width: 100%;
 			color: white;
 		}
+		.cancel-cross {
+			display: none;
+		}
+		@media (max-width: 650px) {
+			position: relative;
+			section.artist-appeal,
+			section.chat {
+				transition: opacity .3s;
+			}
+			&:not(.show-appeal) section.artist-appeal {
+				opacity: 0;
+				transition-duration: 0s;
+				pointer-events: none;
+				user-select: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			&.show-appeal section.chat {
+				opacity: 0;
+				transition-duration: 0s;
+				pointer-events: none;
+				user-select: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
 	}
 
 	section.artist-appeal {
@@ -85,6 +121,53 @@ section.virtual-stage {
 		}
 		@media (max-width: 540px) {
 			margin-bottom: 14px;
+			&.closeable .cross {
+				display: none;
+			}
+
+			/*----------  Cancel Cross  ----------*/
+
+			& {
+				position: relative;
+				--padding: 20px;
+				.cancel-cross {
+					display: block;
+					position: absolute;
+					top: 0;
+					right: 0;
+					height: calc(18px + var(--padding));
+					width: calc(18px + var(--padding));
+					cursor: pointer;
+					color: #e0e0ff;
+					&:before,
+					&:after {
+						width: 18px;
+						height: 2px;
+						background-color: currentColor;
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						margin: auto;
+						content: "";
+						display: block;
+						border-radius: 1px;
+						transform-origin: center;
+						transform: rotate(45deg);
+					}
+					&:after {
+						transform: rotate(-45deg);
+					}
+				}
+			}
+
+			&[max-height~="70px"] {
+				.cancel-cross {
+					bottom: 0;
+					margin: auto;
+				}
+			}
 		}
 	}
 	section.chat {

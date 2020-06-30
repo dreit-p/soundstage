@@ -1,0 +1,74 @@
+-
+	songs = [
+		{
+			duration: '10:30',
+			artist: 'Ill-esha',
+			song: 'Imaginary Friends',
+			isLiked: 'true'
+		},
+		{
+			duration: '10:26',
+			artist: 'Ill-esha',
+			song: 'Heartpocalypse',
+			isLiked: ''
+		},
+		{
+			duration: '9:40',
+			artist: 'Ill-esha x ProbCause',
+			song: 'Let Me See',
+			isLiked: ''
+		},
+		{
+			duration: '10:30',
+			artist: 'Ill-esha',
+			song: 'Imaginary Friends',
+			isLiked: 'true'
+		},
+		{
+			duration: '10:26',
+			artist: 'Ill-esha',
+			song: 'Heartpocalypse',
+			isLiked: ''
+		},
+		{
+			duration: '9:40',
+			artist: 'Ill-esha x ProbCause',
+			song: 'Let Me See',
+			isLiked: ''
+		},
+		{
+			duration: '10:30',
+			artist: 'Ill-esha',
+			song: 'Imaginary Friends',
+			isLiked: 'true'
+		},
+		{
+			duration: '10:26',
+			artist: 'Ill-esha',
+			song: 'Heartpocalypse',
+			isLiked: ''
+		},
+		{
+			duration: '9:40',
+			artist: 'Ill-esha x ProbCause',
+			song: 'Let Me See',
+			isLiked: ''
+		},
+	]
+
+#popper-set_list.popper.set-list
+	section.set-list
+		button.close-btn
+			.cross
+		.block-title Set List
+		ul.list.custom-scroll
+			each song in songs
+				li.song
+					.duration!= song.duration
+					.song-title #[span.artist-name!= song.artist] – #[span.song-name!= song.song]
+					.buttons
+						span(data-tooltip="Like")
+							a.ui-btn.secondary.thin.flat(href="#" class=`${song.isLiked ? 'active-red' : ''}`)
+								.btn-icon
+									svg
+										use(href="#heart")
