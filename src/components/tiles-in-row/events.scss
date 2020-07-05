@@ -9,19 +9,24 @@
 		padding-right: 16px;
 	}
 	&:after {
+		flex: auto;
 		content: '';
 		display: none;
 	}
 
 	@media (max-width: 950px) {
 		font-size: 13px;
-		margin: 0 -20px;
-		margin-bottom: -32px;
 		&:after {
 			content: 'flickity';
 		}
 		.event-info .date-badge {
 			margin-right: 16px;
+		}
+	}
+	@media (min-width: 751px) and (max-width: 950px) {
+		&.slider {
+			margin: 0 -20px;
+			margin-bottom: -32px;
 		}
 	}
 	@media (max-width: 750px) {

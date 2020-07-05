@@ -17,20 +17,9 @@
 		.tile {
 			min-height: 100%;
 		}
-		&:after {
-			content: "";
-			flex: auto;
-			display: block;
-			flex-basis: 25%;
-			width: 25%;
-			min-width: 250px;
-			max-width: 100%;
-			flex-grow: 1;
-		}
 		@media (max-width: 570px) {
 			margin: -15px -20px 25px;
-			.tile-wrapper,
-			&:after {
+			.tile-wrapper {
 				max-width: none;
 			}
 		}
@@ -52,6 +41,9 @@
 			flex-grow: 2;
 			min-width: 300px;
 			max-width: none;
+		}
+		&.pseudo {
+			padding: 0 !important;
 		}
 	}
 	.tile {
