@@ -36,11 +36,13 @@ window.lockScroll = (state =true)=>{
 		body.style.overflowX = 'hidden';
 		body.style.overflowY = 'hidden';
 		body.style.paddingRight = scrollWidth + 'px';
+		body.style.right = scrollWidth + 'px';
 	} else {
 		body.classList.remove('scroll-locked');
 		body.style.overflowX = 'auto';
 		body.style.overflowY = 'unset';
 		body.style.paddingRight = 0;
+		body.style.right = 0;
 	}
 }
 

@@ -1,0 +1,93 @@
+article.modal {
+	pointer-events: none;
+	user-select: none;
+	opacity: 0;
+	transition: opacity .4s;
+	position: fixed;
+	overflow: auto;
+	min-height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: inherit;
+	bottom: 0;
+	margin: auto;
+	padding: 0;
+	padding-right: inherit;
+	z-index: 15;
+	&.showed {
+		opacity: 1;
+		pointer-events: all;
+		user-select: auto;
+		transition-duration: .2s;
+	}
+	.modal-veil {
+		cursor: pointer;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: inherit;
+		bottom: -20%;
+		margin: auto;
+		min-height: 100%;
+		width: 100%;
+		background-color: rgba(32, 32, 54, 0.9);
+		svg {
+			height: 20px;
+			width: 20px;
+			margin: 35px;
+			color: white;
+			position: absolute;
+			top: 0;
+			right: inherit;
+			@media (max-width: 768px) {
+				margin: 26px;
+			}
+			@media (max-width: 540px) {
+				margin: 15px;
+			}
+		}
+	}
+	.limiter {
+		max-width: 862px;
+		margin: 14vh auto;
+		padding: 15px 10px;
+		z-index: 1;
+		flex-basis: 500px;
+		position: relative;
+	}
+	.content-wrapper {
+		margin: 0 20px;
+		min-height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		.limiter {
+			box-shadow: 0 32px 32px -4px rgba(20, 16, 41, 0.24), 0 64px 96px 0 rgba(20, 16, 41, 0.4), 0 8px 16px -1px rgba(20, 16, 41, 0.24), 0 0 1px 0 rgba(20, 16, 41, 0.4);
+			background-color: var(--bg-1);
+			border-radius: 24px;
+			min-height: 300px;
+		}
+		form {
+			max-width: 500px;
+			margin: 20px auto;
+		}
+	}
+	.content-wrapper.hidden {
+		display: none !important;
+	}
+	@media (max-width: 540px) {
+		margin-top: 70px;
+		height: calc(100vh - 70px);
+		overflow-y: scroll;
+		min-height: 0;
+		.limiter {
+			margin: 20px auto;
+			padding: 10px;
+		}
+		.tile {
+			margin: 20px 0;
+		}
+	}
+}

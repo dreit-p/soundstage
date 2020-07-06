@@ -22,5 +22,6 @@ import './components/chat/chat.js';
 import './components/ui-elems/popper.js';
 
 import './components/virtual-stage/temp.js';
+import './components/modals/modals.js';
 
 /*=====  End of components  ======*/
