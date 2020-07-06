@@ -33,13 +33,13 @@ var sourcemaps = require('gulp-sourcemaps'),
 
 const postHtmlPlugins = [
 	// require('posthtml-webp')({replaceExtension: true}),
-	require('posthtml-beautify')({rules: {
-		indent: 2,
-		blankLines: false,
-	}}),
+	// require('posthtml-beautify')({rules: {
+	// 	indent: 2,
+	// 	blankLines: false
+	// }}),
 ];
 
-const postHtmlOptions = { parser: require('posthtml-pug')({ locals: {}, basedir: './src/' }) };
+const postHtmlOptions = { parser: require('posthtml-pug')({ pretty: true, locals: {}, basedir: './src/' }) };
 
 var autoprefixer = require('autoprefixer'),
 	postCssImport = require('postcss-import'), // import of components
