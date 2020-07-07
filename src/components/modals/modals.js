@@ -35,6 +35,7 @@
 		modalWrapper.querySelectorAll('.active').forEach(contentWrapper => {
 			contentWrapper.classList.remove('active');
 			contentWrapper.classList.add('hidden');
+			window.stopMedia(contentWrapper);
 		});
 	}
 

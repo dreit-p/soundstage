@@ -5,7 +5,7 @@ import ElementQueries from 'css-element-queries/src/ElementQueries';
 ElementQueries.listen();
 ElementQueries.init();
 
-window.throttling = (()=>{
+window.throttling = (() => {
 	let forLastExec,
 		delay = 100, // delay between calls
 		throttled = false;
@@ -28,7 +28,7 @@ window.throttling = (()=>{
 	}
 })()
 
-window.lockScroll = (state =true)=>{
+window.lockScroll = (state = true) => {
 	let body = document.getElementsByTagName('body')[0];
 	if (state) {
 		let scrollWidth = window.innerWidth - document.documentElement.clientWidth;
@@ -46,10 +46,10 @@ window.lockScroll = (state =true)=>{
 	}
 }
 
-window.setOutsideClickListener = (target, cb)=>{
+window.setOutsideClickListener = (target, cb) => {
 	let body = document.getElementsByTagName('body')[0];
 	let targetElem = typeof target == 'string' ? body.querySelector(target) : target;
-	let task = (e)=>{
+	let task = (e) => {
 		if (!targetElem.contains(e.target)) {
 			cb();
 			body.removeEventListener('mouseup', task, false)
@@ -59,15 +59,35 @@ window.setOutsideClickListener = (target, cb)=>{
 	body.addEventListener('mouseup', task, false);
 }
 
-document.querySelectorAll('a[href="#"], a[href=""], a[href="https://example.com/"]').forEach((elem)=>{
-	elem.addEventListener('click', function (e) {
+/**
+ * Stop an iframe or HTML5 <video, audio> from playing
+ * @param  {Element} element The element that contains the video
+ */
+window.stopMedia = element => {
+	element.querySelectorAll('iframe').forEach(function(iframe) {
+		try {
+			let iframeContent = iframe.contentWindow.document;
+			window.stopMedia(iframeContent);
+			return;
+		} catch (e) {
+			/* Cross Domain, resetting src is all we can do */
+			let iframeSrc = iframe.src;
+			iframe.src = iframeSrc;
+		}
+	});
+	element.querySelectorAll('video').forEach(item => item.pause());
+	element.querySelectorAll('audio').forEach(item => item.pause());
+};
+
+document.querySelectorAll('a[href="#"], a[href=""], a[href="https://example.com/"]').forEach((elem) => {
+	elem.addEventListener('click', function(e) {
 		e.preventDefault();
 	}, false);
 });
 
-document.querySelectorAll('.ellipsized .read-more').forEach((btn)=>{
+document.querySelectorAll('.ellipsized .read-more').forEach((btn) => {
 	let parent = btn.closest('.ellipsized');
-	parent.addEventListener('click', (e)=>{
+	parent.addEventListener('click', (e) => {
 		e.preventDefault();
 		parent.classList.remove('ellipsized');
 	}, false);
