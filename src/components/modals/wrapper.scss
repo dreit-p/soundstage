@@ -53,7 +53,6 @@ article.modal {
 		margin: 14vh auto;
 		padding: 15px 10px;
 		z-index: 1;
-		flex-basis: 500px;
 		position: relative;
 	}
 	.content-wrapper {
@@ -78,8 +77,9 @@ article.modal {
 		display: none !important;
 	}
 	@media (max-width: 540px) {
-		margin-top: 70px;
-		height: calc(100vh - 70px);
+		margin-top: 48px;
+		height: calc(100vh - 48px);
+		height: calc(var(--vh) * 100 - 48px);
 		overflow-y: scroll;
 		min-height: 0;
 		.limiter {
