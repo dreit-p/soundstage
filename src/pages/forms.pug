@@ -136,78 +136,7 @@ html(lang="en")
 						source(type="image/webp" srcset="../assets/images/forms-bg.webp")
 						img.desktop.objfit(src="../assets/images/forms-bg.jpg")
 				.form-wrapper
-					form.form
-						.title Sign Up
-
-						.inline.evenly
-							a.ui-btn.blue(href="#")
-								span.btn-icon
-									svg
-										use(href="#fb")
-								.btn-caption.desktop Sign Up with FB
-								.btn-caption.mobile FB
-							a.ui-btn.blue(href="#")
-								span.btn-icon
-									svg
-										use(href="#google")
-								.btn-caption.desktop Google Sign Up
-								.btn-caption.mobile Google
-
-						.inline.evenly
-							label.ui-input-container
-								.label-caption First Name
-								.ui-input-wrapper
-									input.ui-input(type="text" placeholder="Placeholder")
-							label.ui-input-container
-								.label-caption Last Name
-								.ui-input-wrapper
-									input.ui-input(type="text" value="Last Name")
-								.error-msg  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, temporibus.
-
-						.inline.evenly
-							label.ui-input-container
-								.label-caption Email
-								.ui-input-wrapper
-									input.ui-input(type="email" required placeholder="email@example.com" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/")
-							label.ui-input-container
-								.label-caption Phone
-								.ui-input-wrapper
-									input.ui-input(type="tel" placeholder="+1 (201) 555-5555" data-mask="+{1} (000) 000-0000" pattern="/([(+]*[0-9]+[()+. -]*)/")
-								.error-msg Error message
-
-						label.ui-input-container
-							.label-caption Password
-							.ui-input-wrapper
-								a.ui-input-icon.clickable(href="#")
-									svg.show
-										use(href="#eye")
-									svg.hide
-										use(href="#eye-crossed")
-								input.ui-input(type="password" required placeholder="6+ characters" min="6")
-
-						label.ui-input-container
-							.label-caption Confirm password
-							.ui-input-wrapper
-								a.ui-input-icon.clickable(href="#")
-									svg.show
-										use(href="#eye")
-									svg.hide
-										use(href="#eye-crossed")
-								input.ui-input(type="password" required min="6")
-
-						label.checkbox-label
-							label.ui-checkbox
-								input(type="checkbox")
-								span.checkmark
-									svg
-										use(href="#check")
-							span.caption By checking this checkbox I confirm that I agree to the #[a(href="#") Terms of Service], #[a(href="#") Privacy Policy] and #[a(href="#") Legal].
-
-						.inline
-							p Already a member? #[a(href="#") Sign&nbsp;In]
-							button.ui-btn.primary
-								.btn-caption.desktop Create Account
-								.btn-caption.mobile Sign Up
+					include /components/forms/sign-up.pug
 
 
 
@@ -218,40 +147,7 @@ html(lang="en")
 						source(type="image/webp" srcset="../assets/images/forms-bg.webp")
 						img.desktop.objfit(src="../assets/images/forms-bg.jpg")
 				.form-wrapper
-					form.form
-						.title Sign In
-
-						.inline.evenly
-							a.ui-btn.blue(href="#")
-								span.btn-icon
-									svg
-										use(href="#fb")
-								.btn-caption.desktop Sign In with FB
-								.btn-caption.mobile FB
-							a.ui-btn.blue(href="#")
-								span.btn-icon
-									svg
-										use(href="#google")
-								.btn-caption.desktop Google Sign In
-								.btn-caption.mobile Google
-
-
-						label.ui-input-container
-							.label-caption Email
-							.ui-input-wrapper
-								input.ui-input(type="email" required placeholder="email@example.com" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/")
-
-						label.ui-input-container
-							.label-caption
-								| Password
-								a.additional-action(href="#") Forgot password?
-							.ui-input-wrapper
-								input.ui-input(type="password" required placeholder="6+ characters" min="6")
-
-						.inline
-							p Not a member? #[a(href="#") Sign&nbsp;Up&nbsp;Now]
-							button.ui-btn.primary
-								.btn-caption Sign In
+					include /components/forms/sign-in.pug
 
 
 
@@ -262,21 +158,7 @@ html(lang="en")
 						source(type="image/webp" srcset="../assets/images/forms-bg.webp")
 						img.desktop.objfit(src="../assets/images/forms-bg.jpg")
 				.form-wrapper
-					form.form
-						.title Forgot Password?
-
-						p Enter the email address you used and we’ll send you instructions to reset your password.
-
-						label.ui-input-container
-							.label-caption Email
-							.ui-input-wrapper
-								input.ui-input(type="email" required placeholder="email@example.com" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/")
-
-						.inline
-							p Not a member? #[a(href="#") Sign&nbsp;Up&nbsp;Now]
-							button.ui-btn.primary
-								.btn-caption.desktop Send Instructions
-								.btn-caption.mobile Send
+					include /components/forms/password-recovery.pug
 
 
 
@@ -287,32 +169,6 @@ html(lang="en")
 						source(type="image/webp" srcset="../assets/images/forms-bg.webp")
 						img.desktop.objfit(src="../assets/images/forms-bg.jpg")
 				.form-wrapper
-					form.form
-
-						// choose needed
-
-						.form-state-icon.success
-							svg
-								use(href="#success")
-
-						.form-state-icon.notice
-							svg
-								use(href="#notice")
-
-						.form-state-icon.failure
-							svg
-								use(href="#failure")
-
-						.form-state-icon.warning
-							svg
-								use(href="#warning")
-
-						.title Congrats!
-
-						p You have successfully reset your password. Now you can easily sign in to your account.
-
-						.inline
-							button.ui-btn.primary
-								.btn-caption Got it
+					include /components/forms/notification.pug
 
 	script(src="js/main.js")

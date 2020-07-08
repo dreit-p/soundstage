@@ -1,0 +1,72 @@
+form.form
+	.title Sign Up
+
+	.inline.evenly
+		a.ui-btn.blue(href="#")
+			span.btn-icon
+				svg
+					use(href="#fb")
+			.btn-caption.desktop Sign Up with FB
+			.btn-caption.mobile FB
+		a.ui-btn.blue(href="#")
+			span.btn-icon
+				svg
+					use(href="#google")
+			.btn-caption.desktop Google Sign Up
+			.btn-caption.mobile Google
+
+	.inline.evenly
+		label.ui-input-container
+			.label-caption First Name
+			.ui-input-wrapper
+				input.ui-input(type="text" placeholder="Placeholder")
+		label.ui-input-container
+			.label-caption Last Name
+			.ui-input-wrapper
+				input.ui-input(type="text" value="Last Name")
+			.error-msg  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, temporibus.
+
+	.inline.evenly
+		label.ui-input-container
+			.label-caption Email
+			.ui-input-wrapper
+				input.ui-input(type="email" required placeholder="email@example.com" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/")
+		label.ui-input-container
+			.label-caption Phone
+			.ui-input-wrapper
+				input.ui-input(type="tel" placeholder="+1 (201) 555-5555" data-mask="+{1} (000) 000-0000" pattern="/([(+]*[0-9]+[()+. -]*)/")
+			.error-msg Error message
+
+	label.ui-input-container
+		.label-caption Password
+		.ui-input-wrapper
+			a.ui-input-icon.clickable(href="#")
+				svg.show
+					use(href="#eye")
+				svg.hide
+					use(href="#eye-crossed")
+			input.ui-input(type="password" required placeholder="6+ characters" min="6")
+
+	label.ui-input-container
+		.label-caption Confirm password
+		.ui-input-wrapper
+			a.ui-input-icon.clickable(href="#")
+				svg.show
+					use(href="#eye")
+				svg.hide
+					use(href="#eye-crossed")
+			input.ui-input(type="password" required min="6")
+
+	label.checkbox-label
+		label.ui-checkbox
+			input(type="checkbox")
+			span.checkmark
+				svg
+					use(href="#check")
+		span.caption By checking this checkbox I confirm that I agree to the #[a(href="#") Terms of Service], #[a(href="#") Privacy Policy] and #[a(href="#") Legal].
+
+	.inline
+		p Already a member? #[a(href="#" data-open-modal="sign_in-modal") Sign&nbsp;In]
+		button.ui-btn.primary
+			.btn-caption.desktop Create Account
+			.btn-caption.mobile Sign Up

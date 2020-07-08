@@ -51,9 +51,11 @@
 		body.classList.add('show-modal');
 		body.classList.remove('show-menu');
 		window.lockScroll(true);
-		(input=>{
-			if (input) input.focus();
-		})(document.getElementById(modalType).querySelector('input'))
+		if (modalWrapper.classList.contains('autofocus')) {
+			(input=>{
+				if (input) input.focus();
+			})(document.getElementById(modalType).querySelector('input'))
+		}
 	}
 
 	[

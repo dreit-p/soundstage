@@ -23,10 +23,10 @@ section.pagination {
 		color: rgba(224, 224, 255, 0.6);
 		&:hover,
 		&.active {
-			background-color: rgba(224, 224, 255, 0.02);
+			background-color: rgba(224, 224, 255, 0.05);
 		}
 		&.active:hover {
-			background-color: rgba(224, 224, 255, 0.04);
+			background-color: rgba(224, 224, 255, 0.1);
 		}
 		&.prev,
 		&.next {

@@ -1,6 +1,7 @@
 .form {
 	display: block;
 	width: 100%;
+	padding: * 20px;
 	.title {
 		margin: 40px 0 32px;
 		line-height: 1;
@@ -51,28 +52,29 @@
 				}
 			}
 		}
-		@media (max-width: 520px) {
-			&.evenly {
-				flex-wrap: wrap;
-				margin: 24px -12px;
-				.ui-input-container {
+	}
+	&[max-width~="440px"] {
+		padding: * 10px;
+		.inline.evenly {
+			flex-wrap: wrap;
+			margin: 24px -12px;
+			.ui-input-container {
+				width: 100%;
+				&:not(:first-child) {
+					margin-top: 24px;
+				}
+				.ui-input {
 					width: 100%;
-					&:not(:first-child) {
-						margin-top: 24px;
-					}
-					.ui-input {
-						width: 100%;
-					}
 				}
 			}
-			.ui-btn {
-				.btn-caption {
-					&.desktop {
-						display: none;
-					}
-					&.mobile {
-						display: inline-flex;
-					}
+		}
+		.ui-btn {
+			.btn-caption {
+				&.desktop {
+					display: none;
+				}
+				&.mobile {
+					display: inline-flex;
 				}
 			}
 		}

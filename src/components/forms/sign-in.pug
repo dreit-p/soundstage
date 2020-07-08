@@ -1,0 +1,34 @@
+form.form
+	.title Sign In
+
+	.inline.evenly
+		a.ui-btn.blue(href="#")
+			span.btn-icon
+				svg
+					use(href="#fb")
+			.btn-caption.desktop Sign In with FB
+			.btn-caption.mobile FB
+		a.ui-btn.blue(href="#")
+			span.btn-icon
+				svg
+					use(href="#google")
+			.btn-caption.desktop Google Sign In
+			.btn-caption.mobile Google
+
+
+	label.ui-input-container
+		.label-caption Email
+		.ui-input-wrapper
+			input.ui-input(type="email" required placeholder="email@example.com" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$/")
+
+	label.ui-input-container
+		.label-caption
+			| Password
+			a.additional-action(href="#" data-open-modal="password_recovery-modal") Forgot password?
+		.ui-input-wrapper
+			input.ui-input(type="password" required placeholder="6+ characters" min="6")
+
+	.inline
+		p Not a member? #[a(href="#" data-open-modal="sign_up-modal") Sign&nbsp;Up&nbsp;Now]
+		button.ui-btn.primary
+			.btn-caption Sign In
