@@ -1,0 +1,46 @@
+#book_vip_confirmation-modal {
+	text-align: center;
+	.form-state-icon {
+		margin: 50px 20px 15px;
+		@media (max-width: 768px) {
+			margin: 7vw 3vw 2vw;
+		}
+	}
+	.title {
+		margin: 50px;
+		font-size: 2.125em;
+		font-weight: bold;
+		line-height: 1.62;
+		letter-spacing: -0.08875em;
+		text-align: center;
+		color: #ffffff;
+		@media (max-width: 768px) {
+			margin: 7vw;
+		}
+	}
+	.caption {
+		margin: 0 30px;
+		font-size: 1.875em;
+		font-weight: 500;
+		line-height: 1.6;
+		letter-spacing: -0.078125em;
+		text-align: center;
+		@media (max-width: 768px) {
+			margin: 0 4vw;
+		}
+	}
+	.ui-btn {
+		margin: 65px auto 80px;
+		@media (max-width: 768px) {
+			margin: 8vw auto 10vw;
+		}
+	}
+	@media (max-width: 768px) {
+		font-size: 2vw;
+	}
+	@media (max-width: 540px) {
+		.ui-btn {
+			font-size: 14px;
+		}
+	}
+}
