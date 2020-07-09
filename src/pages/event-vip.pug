@@ -28,13 +28,13 @@ html(lang="en")
 								.top
 									.inline
 										.left
-											.title Next Live Stream
-											.caption ELEVATED BIRD VOL. 3
+											.title Kill Paris
+											.caption SoundStage PREMIERE
 											.date apr 26 @ 12:00 PM
 										.right
 											.buttons
 												span(data-tooltip="Follow")
-													a.ui-btn.secondary.circle.thin.flat.active(href="#")
+													a.ui-btn.secondary.circle.thin.flat(href="#")
 														.btn-icon
 															svg
 																use(href="#star")
@@ -45,32 +45,30 @@ html(lang="en")
 																use(href="#share")
 								.middle
 								.bottom
-									.progress-bar-caption
-										.inline
-											.left 20% funded
-											.right.end 3 days to go
-									.progress-bar
-										.progress(style="width: 20%")
+									//- .progress-bar-caption
+									//- 	.inline
+									//- 		.left 20% funded
+									//- 		.right.end 3 days to go
+									//- .progress-bar
+									//- 	.progress(style="width: 20%")
 
 						.text-side
 							.text-wrapper.desktop
-								include /components/object-info/become-sponsor.pug
+								include /components/object-info/win-vip.pug
 
 
 					section.artist-appeal
 						.artist-message
 							.title A message from the artist...
-							.text.custom-scroll Watching someone’s dreams become their reality is one of the greatest journeys we can go and a lot of times and also this is going to be an amazing stream I really hope to see you guys there!
-							.signature
-								| Jared White
-								br
-								| Homemade Spaceship
+							.text.custom-scroll Hey friends! It's with great pleasure that I invite you to my SoundStage debut. #[br]#[br] I'm planning a very special live stream where I'll be bringing a dash of summer sizzle and some new tracks I hope you'll like. Hope to see you all there!
+							.signature Corey Baker #[br] Kill Paris
+
 						.appeal-interface
-							include /components/object-appeal/buy-ticket.pug
+							include /components/object-appeal/registered-win-vip.pug
 
 					section.artist-info.mobile
 						.text-side
-							include /components/object-info/become-sponsor.pug
+							include /components/object-info/win-vip.pug
 
 
 

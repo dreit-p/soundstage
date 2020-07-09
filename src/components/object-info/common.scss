@@ -75,7 +75,7 @@ section.artist-info {
 				font-size: 2em;
 				font-weight: bold;
 				line-height: 1.13;
-				letter-spacing: -0.055625em;
+				letter-spacing: -0.055625rem;
 			}
 			.caption {
 				padding-right: 0.625em;
@@ -84,6 +84,7 @@ section.artist-info {
 				line-height: 1.05;
 				letter-spacing: 0.10125em;
 				margin: 0.3125em -.04em;
+				text-transform: uppercase;
 			}
 			.date {
 				margin: 0.3125em 0;
@@ -100,9 +101,18 @@ section.artist-info {
 			}
 			.buttons {
 				white-space: nowrap;
+				>* {
+					margin: 0 7px;
+					&:first-child {
+						margin-left: 0;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+				}
 			}
 			.ui-btn {
-				margin: 0 0px;
+				margin: 0;
 			}
 		}
 		.progress-bar-caption {

@@ -44,6 +44,14 @@ svg {
 	width: 100%;
 }
 
+.golden-text {
+	text-shadow: 0 0 0.214375em rgba(255, 231, 72, 0.62);
+	background-image: linear-gradient(to bottom, #ffdd00, #fff29f 51%, #fff9cc 55%, #ffdd00);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+}
+
 .objfit {
 	object-fit: cover;
 	&.contain {

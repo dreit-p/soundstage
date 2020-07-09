@@ -71,6 +71,20 @@ article.registered-for-event_type-2 {
 	}
 }
 
+article.registered-for-event.win-vip {
+	.form-title {
+		margin-top: 8px;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 1.5;
+		letter-spacing: -0.67px;
+		text-align: center;
+	}
+	.agreement.checkbox-label {
+		margin: 30px * 5px;
+	}
+}
+
 
 /*=====================================
 =            Compact state            =
