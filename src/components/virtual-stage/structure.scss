@@ -47,6 +47,10 @@ section.virtual-stage {
 					"another-blocks"
 					"video-info";
 		}
+		@media (min-height: 800px) {
+			max-width: 162vh;
+			margin: auto;
+		}
 	}
 	.video-block {
 		grid-area: video-block;
