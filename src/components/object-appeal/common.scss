@@ -20,6 +20,9 @@ section.artist-appeal {
 		&.desktop {
 			display: none;
 		}
+		&.mobile-column-reverse {
+			flex-direction: column-reverse;
+		}
 	}
 	@media (min-width: 901px) {
 		.mobile,
@@ -40,6 +43,8 @@ section.artist-appeal {
 			flex-basis: auto;
 			margin: 10px 0;
 			width: 100%;
+			padding: 0 1.5em;
+			font-size: 2.6vw;
 		}
 		@media (max-width: 540px) {
 			margin: 0;

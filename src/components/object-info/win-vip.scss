@@ -1,5 +1,10 @@
 article.win-vip {
+	font-size: 16px;
+	@media (max-width: 540px) {
+		text-align: center;
+	}
 	.appeal-title {
+		text-align: left;
 		font-size: 28px;
 		font-weight: 600;
 		line-height: 1.29;
@@ -23,11 +28,14 @@ article.win-vip {
 		}
 	}
 	.list {
-		margin: 15px 0 24px;
+		margin: 0.9375em 0 1.5em;
+		@media (max-width: 540px) {
+			font-size: 12px;
+		}
 		.item {
-			margin: 1.0625em 0;
+			margin: 17px 0;
 			margin-left: calc(11px + 2em);
-			font-size: 20px;
+			font-size: 1.25em;
 			line-height: 1.65;
 			letter-spacing: -0.56px;
 			text-align: left;
@@ -47,6 +55,9 @@ article.win-vip {
 				height: 1em;
 				max-width: 27px;
 				color: #0fa;
+			}
+			@media (max-width: 540px) {
+				margin: 12px *;
 			}
 		}
 	}
