@@ -1,4 +1,5 @@
 #book_vip-modal {
+	font-size: 14px;
 	.limiter {
 		text-align: center;
 	}
@@ -14,20 +15,26 @@
 		}
 	}
 	.video-wrapper {
-		margin: 40px 25px;
+		margin: 40px auto;
+		padding: * 25px;
+		max-width: 620px;
 		@media (max-width: 768px) {
-			margin: 5vw 3vw;
+			margin: 5vw auto;
+			padding: * 3vw;
 		}
 	}
 	.description {
-		margin: 35px 10px;
-		font-size: 1.875em;
+		margin: 35px auto;
+		padding: * 25px;
+		max-width: 700px;
+		font-size: 1.69em;
 		line-height: 1.6;
 		letter-spacing: -0.078125em;
 		text-align: center;
 		color: #e0e0ff;
 		@media (max-width: 768px) {
-			margin: 5vw 10px;
+			margin: 5vw auto;
+			padding: * 10px;
 		}
 	}
 	.order-charge {
@@ -46,7 +53,7 @@
 		display: block;
 		width: min-content;
 		margin: 25px auto;
-		font-size: 22px;
+		font-size: 20px;
 	}
 	@media (max-width: 768px) {
 		font-size: 2vw;
