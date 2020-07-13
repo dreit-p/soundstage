@@ -76,7 +76,7 @@ import maxSize from 'popper-max-size-modifier';
 				listPopper = createPopper(parent, popperWrapper, setlistOptions);
 				window.addEventListener('resize', resizeHandler, false);
 				popperWrapper.querySelector('.close-btn').addEventListener('click', hidePopper, false);
-				window.setOutsideClickListener(popperWrapper, hidePopper);
+				window.setOutsideClickListener([popperWrapper, activator], hidePopper);
 				listPopper.forceUpdate();
 			}
 

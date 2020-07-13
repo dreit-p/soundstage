@@ -46,16 +46,26 @@ window.lockScroll = (state = true) => {
 	}
 }
 
-window.setOutsideClickListener = (target, cb) => {
+window.setOutsideClickListener = (targetData, cb = ()=>{}) => {
 	let body = document.getElementsByTagName('body')[0];
-	let targetElem = typeof target == 'string' ? body.querySelector(target) : target;
+	let targets = [];
+	switch(typeof targetData) {
+	case 'string':
+		targets = [body.querySelector(targetData)];
+		break;
+	case 'object':
+		targets = targetData;
+		break;
+	default:
+		targets = [targetData];
+	}
 	let task = (e) => {
-		if (!targetElem.contains(e.target)) {
-			cb();
-			body.removeEventListener('mouseup', task, false)
+		if (!targets.some(target=>target.contains(e.target))) {
+			cb(e);
+			body.removeEventListener('mouseup', task, false);
 		}
 	}
-	body.removeEventListener('mouseup', task, false)
+	body.removeEventListener('mouseup', task, false);
 	body.addEventListener('mouseup', task, false);
 }
 
