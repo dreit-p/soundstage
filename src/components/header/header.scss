@@ -248,6 +248,7 @@ header.main-header {
 			color: white;
 			transition: color .2s;
 			transition-timing-function: ease-out;
+		  	font-weight: 500;
 			&:after {
 				content: attr(title);
 				position: absolute;
