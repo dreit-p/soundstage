@@ -50,10 +50,15 @@ article.modal {
 	}
 	.limiter {
 		max-width: 862px;
+		min-width: 400px;
 		margin: 8vh auto;
 		padding: 15px 10px;
 		z-index: 1;
 		position: relative;
+		@media (max-width: 440px) {
+			min-width: 0;
+			flex-basis: 400px;
+		}
 	}
 	.content-wrapper {
 		margin: 0 20px;

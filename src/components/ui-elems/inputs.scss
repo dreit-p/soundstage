@@ -300,3 +300,16 @@
 		display: none;
 	}
 }
+
+
+form.compact {
+	.ui-input-container {
+		margin: * 8px;
+		.label-caption {
+			margin: * 4px;
+		}
+		.ui-input {
+			padding: * 12px;
+		}
+	}
+}
