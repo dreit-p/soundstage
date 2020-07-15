@@ -35,8 +35,12 @@ section.set-list {
 			max-width: 100%;
 			overflow: hidden;
 			color: white;
-			&:not(:first-child):not(:last-child) {
-				margin: 22px 0;
+			margin: 22px 0;
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
 			}
 			.duration {
 				width: 40px;
