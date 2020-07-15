@@ -69,4 +69,8 @@
 		}, false);
 	});
 
+
+	window.closeModals = hideModal;
+	window.openModal = showModal;
+
 })()
