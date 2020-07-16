@@ -66,6 +66,9 @@
 		position: relative;
 		display: flex;
 		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
 		.image {
 			position: absolute;
 			top: 0;

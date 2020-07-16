@@ -9,7 +9,6 @@
 		border-radius: 0.75em;
 		background-color: var(--accent-2);
 		text-align: center;
-		align-self: flex-end;
 		min-width: 4.5em;
 		height: 4.5em;
 		margin: 1.5em;
@@ -73,7 +72,7 @@
 		margin: 1.5em;
 		/* padding-right: 16px; */
 		.caption-wrapper {
-			margin-left: 1em;
+			margin-left: 24px;
 		}
 		.event-title {
 			max-width: none;
@@ -103,6 +102,9 @@
 						height: 100%;
 						min-height: 250px;
 						.event-info {
+							.date-badge {
+								align-self: flex-end;
+							}
 							.caption-wrapper {
 								display: block;
 								margin: 1.2em 0;
@@ -294,7 +296,7 @@
 			content: 'flickity';
 		}
 		.event-info .date-badge {
-			margin-right: 16px;
+			/* margin-right: 16px; */
 		}
 	}
 	@media (min-width: 801px) and (max-width: 950px) {
