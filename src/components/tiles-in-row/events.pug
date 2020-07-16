@@ -33,5 +33,6 @@
 						.date-badge(style=`background-color: #${slide.color}`)
 							.day= slide.date[0]
 							.month= slide.date[1]
-						.caption= slide.caption
+						.caption-wrapper
+							.event-title= slide.caption
 					.description= slide.text

@@ -3,52 +3,97 @@
 		{
 			image: 'guy.jpg',
 			color: 'ff00aa',
+			class:'big',
+			sponsorship: 100,
 			date: ['26', 'apr'],
-			caption: 'Headphone Activist',
+			artistName: 'Headphone Activist',
+			eventName: 'Lorem ipsum dolor sit.',
 			text: 'Watching someone’s dreams become their reality is one of the greatest journeys we can go on. Here is a lot of extra text for example.'
 		},
 		{
 			image: 'cyber-gag.jpg',
 			color: '9c42f5',
+			class:'',
+			sponsorship: 60,
 			date: ['1', 'may'],
-			caption: 'Together Festival 2020',
+			artistName: 'Virtual Riot',
+			eventName: 'Together Festival 2020',
 			text: 'Together Festival returns in 2020 for its 9th installment. The 2-day electronic dance music festival.'
 		},
 		{
 			image: 'cyber-gag.jpg',
 			color: '9c42f5',
+			class:'',
+			sponsorship: 20,
 			date: ['1', 'may'],
-			caption: 'Together Festival 2020',
+			artistName: 'Headphone Activist',
+			eventName: 'Together Festival 2020',
 			text: 'Together Festival returns in 2020 for its 9th installment. The 2-day electronic dance music festival.'
 		},
 		{
 			image: 'cyber-gag-2.jpg',
 			color: '5d2de1',
+			class:'',
+			sponsorship: 100,
 			date: ['8', 'jun'],
-			caption: 'Paradise Amnesia 2020',
+			artistName: 'Else',
+			eventName: 'Lorem ipsum dolor sit.',
 			text: 'As the name suggests, Paradise is heaven for electronic music. You will find excellent underground DJs.'
 		},
 		{
 			image: 'cyber-gag-2.jpg',
 			color: '5d2de1',
+			class:'',
+			sponsorship: 90,
 			date: ['8', 'jun'],
-			caption: 'Paradise Amnesia 2020',
+			artistName: 'Virtual Riot',
+			eventName: 'Lorem ipsum dolor sit.',
 			text: 'As the name suggests, Paradise is heaven for electronic music. You will find excellent underground DJs.'
 		},
 	]
 
-.tiles-in-row.events
+.tiles-in-row.events.extended
 	each item in items
-		.tile-wrapper
-			.tile.event
-				.tile-image(style=`background-image: url(../assets/images/content/${item.image})`)
+		.tile-wrapper(class=item.class)
+			.tile.event(class=`${item.sponsorship == 100 ? 'fees-completed' : ''}`)
+				.tile-image
+					.image(style=`background-image: url(../assets/images/content/${item.image})`)
+					.info
+						.top
+						.middle
+						.bottom
+							.inline.down
+								.left
+									.event-info
+										.date-badge(style=`background-color: #${item.color}`)
+											.day= item.date[0]
+											.month= item.date[1]
+										.caption-wrapper
+											.event-title= item.artistName
+											.event-caption= item.eventName
+								.right
+									.buttons
+										a.ui-btn.secondary
+											.btn-caption= item.sponsorship == 100 ? 'Buy Ticket' : 'Sponsor Event'
 				.tile-content
 					.event-info
-						.date-badge(style=`background-color: #${item.color}`)
-							.day= item.date[0]
-							.month= item.date[1]
-						.caption= item.caption
+						.caption-wrapper
+							.event-title= item.artistName
+							.event-caption= item.eventName
 					.description= item.text
+					.progress-bar
+						.progress(style=`width: ${item.sponsorship}%`)
+					.event-footer
+						.inline.stretch
+							.left
+								.event-progress-state
+									.progress-info #[span=`${item.sponsorship}%`] remaining #[br]3 days to go
+									.progress-completed Fully Funded
+							.right
+								.buttons
+									a.ui-btn.thin.secondary
+										.btn-caption= item.sponsorship == 100 ? 'Buy Ticket' : 'Sponsor Event'
+
 
 	.tile-wrapper.pseudo
 	.tile-wrapper.pseudo

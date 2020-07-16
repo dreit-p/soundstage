@@ -52,6 +52,9 @@ section.artist-info {
 					mix-blend-mode: darken;
 					z-index: -1;
 				}
+				&:empty:before {
+					display: none;
+				}
 			}
 			.bottom {
 				position: relative;
@@ -67,6 +70,9 @@ section.artist-info {
 					background-image: linear-gradient(to top, var(--bg-1) -10%, transparent);
 					mix-blend-mode: darken;
 					z-index: -1;
+				}
+				&:empty:before {
+					display: none;
 				}
 			}
 			.title {

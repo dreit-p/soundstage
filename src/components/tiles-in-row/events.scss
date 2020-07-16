@@ -1,3 +1,67 @@
+.event-info {
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	margin: -1.5em;
+	color: white;
+	.date-badge {
+		padding: 0.625em;
+		border-radius: 0.75em;
+		background-color: var(--accent-2);
+		text-align: center;
+		align-self: flex-end;
+		min-width: 4.5em;
+		height: 4.5em;
+		margin: 1.5em;
+		.day {
+			font-family: var(--font-second);
+			font-size: 2.25em;
+			font-weight: bold;
+			letter-spacing: -1px;
+			line-height: 1;
+		}
+		.month {
+			font-size: 0.8125em;
+			font-weight: 600;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+	}
+	.event-title {
+		max-width: 7em;
+		font-size: 1.5em;
+		font-weight: 600;
+		line-height: 1.33;
+		letter-spacing: -1px;
+	}
+	.caption-wrapper {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		.event-title {
+			flex-grow: 1;
+			width: 100%;
+			padding-right: 16px;
+			font-size: 20px;
+			line-height: 1.4;
+			letter-spacing: -0.4px;
+			font-weight: 600;
+		}
+		.event-caption {
+			text-transform: uppercase;
+			font-size: 13px;
+			margin: 4px 0;
+			font-weight: 600;
+			line-height: 1.23;
+			letter-spacing: 1px;
+			color: var(--accent-1);
+		}
+		@media (max-width: 570px) {
+		}
+	}
+}
+
 .tiles-in-row.events {
 	.tile-wrapper {
 		flex-basis: 33%;
@@ -5,13 +69,223 @@
 		min-width: 250px;
 	}
 	.event-info {
-		margin: 0 0 * 0;
-		padding-right: 16px;
+		flex-grow: 1;
+		margin: 1.5em;
+		/* padding-right: 16px; */
+		.caption-wrapper {
+			margin-left: 1em;
+		}
+		.event-title {
+			max-width: none;
+		}
+	}
+	.tile-content {
+		.date-badge {
+			margin: 0;
+		}
 	}
 	&:after {
 		flex: auto;
 		content: '';
 		display: none;
+	}
+
+	&.extended {
+		.tile-wrapper {
+			@media (min-width: 570px) {
+				&.big {
+					flex-basis: 66%;
+					width: 66%;
+					flex-grow: 2;
+					min-width: 300px;
+					max-width: none;
+					.tile-image {
+						height: 100%;
+						min-height: 250px;
+						.event-info {
+							.caption-wrapper {
+								display: block;
+								margin: 1.2em 0;
+							}
+							.event-title {
+								font-size: 36px;
+								font-weight: 600;
+								line-height: 1;
+								margin-left: -0.05em;
+								letter-spacing: -1.5px;
+							}
+							.event-caption {
+								font-size: 16px;
+								font-weight: 600;
+								line-height: 1.25;
+								letter-spacing: 1.23px;
+								color: white;
+							}
+						}
+						.buttons {
+							display: block;
+							padding: 1.5em;
+						}
+					}
+					.tile-content {
+						display: none;
+					}
+					.top {
+						padding: 1.5em;
+						margin: 0;
+						position: relative;
+						&:before {
+							display: block;
+							content: "";
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: -20%;
+							margin: auto;
+							background-image: linear-gradient(to bottom, var(--bg-1) -20%, transparent);
+							mix-blend-mode: darken;
+							z-index: -1;
+						}
+						&:empty:before {
+							display: none;
+						}
+					}
+					.bottom {
+						position: relative;
+						&:before {
+							display: block;
+							content: "";
+							position: absolute;
+							top: -20%;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							margin: auto;
+							background-image: linear-gradient(to top, var(--bg-1) -10%, transparent);
+							mix-blend-mode: darken;
+							z-index: -1;
+						}
+						&:empty:before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		.tile-image {
+			.event-info {
+				margin: 0;
+				>*:not(.date-badge) {
+					display: none;
+				}
+			}
+			.buttons {
+				display: none;
+			}
+		}
+		.tile-content {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			.event-info {
+				margin-bottom: 0;
+				flex-grow: 0;
+				.caption-wrapper {
+					margin: 0;
+				}
+			}
+			.description {
+				margin: 7px *;
+			}
+			.progress-bar {
+				position: relative;
+				border-radius: 5px;
+				overflow: hidden;
+				height: 10px;
+				width: auto;
+				margin: 4px 1.5em 3px;
+				&:before {
+					display: block;
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					width: 100%;
+					height: 100%;
+					opacity: 0.75;
+					border-radius: 5px;
+					box-shadow: inset 0 0 0 1px rgba(58, 58, 58, .6);
+					background-image: linear-gradient(to left, rgba(125, 125, 125, 0.35), rgba(180, 0, 255, 0));
+				}
+				.progress {
+					position: absolute;
+					z-index: 1;
+					height: 100%;
+					border-radius: 5px;
+					box-shadow: inset 0 0 0 1px rgba(156, 66, 245, 0.57);
+					background-image: linear-gradient(to right, rgba(180, 0, 255, 0), #ff00e6 120%);
+				}
+			}
+			.event-footer {
+				margin: 14px 1.5em 17px;
+				flex-grow: 1;
+				.inline {
+					min-height: 100%;
+					.left {
+						align-self: center;
+					}
+					.right {
+						display: flex;
+						align-items: center;
+					}
+				}
+				.buttons {
+					max-height: 50px;
+					min-height: 36px;
+					height: 100%;
+					align-self: center;
+					.ui-btn {
+						height: inherit;
+					}
+				}
+			}
+			.event-progress-state {
+				.progress-info {
+					font-size: 14px;
+					font-weight: 500;
+					line-height: 1.43;
+					letter-spacing: -0.28px;
+					text-align: left;
+				}
+				.progress-completed {
+					display: none;
+					font-size: 20px;
+					font-weight: bold;
+					line-height: 1.2;
+					letter-spacing: -0.4px;
+					text-align: left;
+				}
+			}
+		}
+	}
+	.tile.fees-completed {
+		.tile-content {
+			.progress-bar .progress {
+				background-image: linear-gradient(to left, #ff00aa, #5d2de1);
+			}
+			.event-progress-state {
+				.progress-info {
+					display: none;
+				}
+				.progress-completed {
+					display: block;
+				}
+			}
+		}
 	}
 
 	@media (max-width: 950px) {
@@ -23,13 +297,13 @@
 			margin-right: 16px;
 		}
 	}
-	@media (min-width: 751px) and (max-width: 950px) {
+	@media (min-width: 801px) and (max-width: 950px) {
 		&.slider {
 			margin: 0 -20px;
 			margin-bottom: -32px;
 		}
 	}
-	@media (max-width: 750px) {
+	@media (max-width: 800px) {
 		.tile-wrapper {
 			width: calc(50% - 16px - 20px - 16px);
 			flex-basis: 50%;
