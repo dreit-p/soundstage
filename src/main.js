@@ -23,5 +23,6 @@ import './components/ui-elems/popper.js';
 
 import './components/virtual-stage/temp.js';
 import './components/modals/modals.js';
+import './components/notifications/notifications.js';
 
 /*=====  End of components  ======*/

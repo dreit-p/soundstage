@@ -32,6 +32,29 @@ html(lang="en")
 								.btn-caption.mobile Google
 
 						.inline.evenly
+							a.ui-btn.secondary.flat(href="#" onclick="new Notification({icon: 'failure', title: 'Failure', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, deleniti!'})")
+								span.btn-icon
+									svg
+										use(href="#failure")
+								.btn-caption Failure
+							a.ui-btn.secondary.flat(href="#" onclick="new Notification({icon: 'success', title: 'Success', message: 'Lorem ipsum dolor sit.'})")
+								span.btn-icon
+									svg
+										use(href="#success")
+								.btn-caption Success
+						.inline.evenly
+							a.ui-btn.secondary.flat(href="#" onclick="new Notification({icon: 'notice', title: 'Notice!', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'})")
+								span.btn-icon
+									svg
+										use(href="#notice")
+								.btn-caption Notice
+							a.ui-btn.secondary.flat(href="#" onclick="new Notification({icon: 'warning', title: 'Warning', message: 'Lorem ipsum dolor sit amet.'})")
+								span.btn-icon
+									svg
+										use(href="#warning")
+								.btn-caption Warning
+
+						.inline.evenly
 							label.ui-input-container
 								.label-caption Placeholder
 								.ui-input-wrapper
