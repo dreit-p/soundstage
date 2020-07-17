@@ -1,0 +1,45 @@
+.avatar-editor {
+	display: block;
+	border-radius: 50%;
+	height: 120px;
+	width: 120px;
+	background-color: #777;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	.image {
+		height: 100%;
+		width: 100%;
+		border-radius: 50px;
+		overflow: hidden;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.photo-icon {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 40%;
+		width: 100%;
+		background-image: linear-gradient(to bottom, transparent, rgba(0,0,0, .5), rgba(0,0,0, .5));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transition: .1s opacity ease-out;
+		svg {
+			height: 24px;
+			width: 24px;
+			color: rgba(240,240,240, 1);
+		}
+	}
+	&:hover {
+		.photo-icon {
+			opacity: 1;
+			transition-duration: 0;
+			transition-timing-function: ease-in;
+		}
+	}
+}

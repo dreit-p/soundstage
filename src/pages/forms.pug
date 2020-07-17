@@ -159,6 +159,40 @@ html(lang="en")
 						source(type="image/webp" srcset="../assets/images/forms-bg.webp")
 						img.desktop.objfit(src="../assets/images/forms-bg.jpg")
 				.form-wrapper
+					form.form
+						.title Change avatar
+
+						.inline
+							.left
+								label.avatar-editor
+									.image(style="background-image: url(../assets/images/content/user-1.jpg)")
+									.photo-icon
+										svg
+											use(href="#photo")
+									input(type="file" style="display: none;")
+							.right
+								label.ui-input-container
+									.ui-input-wrapper
+										input.ui-input(type="text" placeholder="First Name")
+								label.ui-input-container
+									.ui-input-wrapper
+										input.ui-input(type="text" placeholder="Last Name")
+
+						label.ui-input-container
+							.label-caption
+								| Email
+							.ui-input-wrapper
+								input.ui-input(type="text" placeholder="email@example.com")
+
+
+
+		section.fullscreen-form
+			.limit
+				.bg-image
+					picture
+						source(type="image/webp" srcset="../assets/images/forms-bg.webp")
+						img.desktop.objfit(src="../assets/images/forms-bg.jpg")
+				.form-wrapper
 					include /components/forms/sign-up.pug
 
 

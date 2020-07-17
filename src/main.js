@@ -25,4 +25,6 @@ import './components/virtual-stage/temp.js';
 import './components/modals/modals.js';
 import './components/notifications/notifications.js';
 
+import './components/ui-elems/avatar.js';
+
 /*=====  End of components  ======*/
