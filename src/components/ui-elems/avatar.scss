@@ -42,4 +42,7 @@
 			transition-timing-function: ease-in;
 		}
 	}
+	input[type="file"] {
+		display: none;
+	}
 }
