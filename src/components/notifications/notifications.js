@@ -91,4 +91,4 @@ class Notification {
 	}
 }
 
-window.Notification = Notification
+window.Notify = Notification
