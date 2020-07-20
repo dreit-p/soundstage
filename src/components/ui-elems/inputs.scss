@@ -12,12 +12,12 @@
 
 	/*----------  Input  ----------*/
 	textarea.ui-input {
-		background-color: rgba(224, 224, 255, 0.03);
+		background-color: rgba(224, 224, 255, 0.04);
 		min-height: calc(12px + 7em);
 	}
 	.ui-input {
 		border-radius: 12px;
-		background-color: rgba(224, 224, 255, 0.02);
+		background-color: rgba(224, 224, 255, 0.04);
 		padding: 12px 16px;
 		font-size: 16px;
 		max-width: 100%;
@@ -47,7 +47,7 @@
 		}
 	}
 	&:hover .ui-input {
-		background-color: rgba(224, 224, 255, 0.04);
+		background-color: rgba(224, 224, 255, 0.08);
 	}
 
 	.ui-input-icon {
@@ -121,6 +121,7 @@
 			}
 		}
 		.ui-input {
+			opacity: .6;
 			color: rgba(224, 224, 255, 0.24);
 			&::placeholder {
 				color: rgba(224, 224, 255, 0.24);
