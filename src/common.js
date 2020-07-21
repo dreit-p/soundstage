@@ -1,5 +1,6 @@
 import objectFitImages from 'object-fit-images';
 import 'css-element-queries/src/ResizeSensor';
+import 'focus-visible';
 import ElementQueries from 'css-element-queries/src/ElementQueries';
 
 ElementQueries.listen();
