@@ -54,7 +54,8 @@ window.setOutsideClickListener = (targetData, cb = ()=>{}) => {
 		targets = [body.querySelector(targetData)];
 		break;
 	case 'object':
-		if (Array.isArray.call(targetData)) {
+		window.test = targetData;
+		if (Array.isArray(targetData)) {
 			targets = targetData;
 		} else {
 			targets = [targetData];
