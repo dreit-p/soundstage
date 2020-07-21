@@ -10,12 +10,13 @@ header.main-header
 					svg.cross
 						use(href="#cross")
 			.element
-				.logo
+				a.logo(href="../")
 					.image
-						picture
-							source(type="image/webp" srcset="../assets/images/logo.webp")
-							img.objfit(src="../assets/images/logo.png")
-					.brand #[span.bold sound]stage
+						svg
+							use(href="#logo")
+					.brand
+						svg
+							use(href="#logo-text")
 			.element
 				a.sign-up(href="#" data-open-modal="sign_up-modal") Sign Up
 		.menu-wrapper.main

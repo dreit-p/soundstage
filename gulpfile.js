@@ -194,8 +194,16 @@ function svg() {
 		.pipe(svgSprite({
 			mode: {
 				symbol: true
+			},
+			shape: {
+				dimension: {
+					attributes: true
+				}
 			}
 		}))
+		.on('error', function(error) {
+			console.log('error: ', error);
+		})
 		.pipe(dest(path.dist.svgSprite));
 }
 

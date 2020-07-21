@@ -6,10 +6,11 @@ header.main-header.linkless
 			.element
 				.logo
 					.image
-						picture
-							source(type="image/webp" srcset="../assets/images/logo.webp")
-							img.objfit(src="../assets/images/logo.png")
-					.brand #[span.bold sound]stage
+						svg
+							use(href="#logo")
+					.brand
+						svg
+							use(href="#logo-text")
 			.element
 				a.profile-mobile-image(href="#" data-select-menu="profile")
 					svg

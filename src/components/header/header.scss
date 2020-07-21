@@ -46,13 +46,15 @@ header.main-header {
 			width: 40px;
 			height: 44px;
 			margin: 14px 0;
+			flex-shrink: 0;
 		}
-		img {
+		svg {
 			max-width: 100%;
 			max-height: 100%;
 			margin: auto;
 		}
 		.brand {
+			height: 18px;
 			font-size: 24px;
 			font-weight: 600;
 			font-stretch: normal;
@@ -73,6 +75,7 @@ header.main-header {
 		.logo .brand {
 			@media (max-width: 850px) {
 				font-size: 2.8vw;
+				height: 2.11vw;
 				margin: 1.5vw;
 			}
 			@media (max-width: 710px) {

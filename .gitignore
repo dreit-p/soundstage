@@ -26,6 +26,6 @@ yarn-error.log*
 *.sw*
 
 # generated
-/**/sprite.symbol.svg
+/**/sprite.*.svg
 assets/symbol/
 critical
