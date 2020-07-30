@@ -199,7 +199,7 @@ svg {
 			margin: 0 0 32px;
 			align-items: center;
 			.title {
-				font-size: 36px;
+				font-size: 31px;
 				line-height: -1;
 				&.mobile {
 					display: block;
@@ -225,6 +225,16 @@ svg {
 			}
 		}
 	}
+}
+
+@media (max-width: 400px) {
+  .titled-content {
+	.main-row {
+	  .title {
+		font-size: 23px;
+	  }
+	}
+  }
 }
 
 
