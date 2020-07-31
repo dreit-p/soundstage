@@ -56,8 +56,6 @@
 			letter-spacing: 1px;
 			color: var(--accent-1);
 		}
-		@media (max-width: 570px) {
-		}
 	}
 }
 
@@ -70,7 +68,6 @@
 	.event-info {
 		flex-grow: 1;
 		margin: 1.5em;
-		/* padding-right: 16px; */
 		.caption-wrapper {
 			margin-left: 24px;
 		}
@@ -78,7 +75,7 @@
 			max-width: none;
 			overflow: hidden;
 			display: -webkit-box;
-			-webkit-line-clamp:2;
+			-webkit-line-clamp: 2;
 			-moz-line-clamp: 2;
 			-ms-line-clamp: 2;
 			line-clamp: 2;
