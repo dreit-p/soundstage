@@ -73,4 +73,10 @@
 	window.closeModals = hideModal;
 	window.openModal = showModal;
 
+	document.addEventListener('keyup', function (e) {
+		if (e.key === "Escape" && body.classList.contains('show-modal')) {
+			hideModal();
+		}
+	}, false);
+
 })()
