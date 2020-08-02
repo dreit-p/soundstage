@@ -29,6 +29,7 @@
 	});
 
 	function hideModal() {
+		modalWrapper.dispatchEvent(new CustomEvent('hideModal', {bubbles: true}));
 		body.classList.remove('show-modal');
 		modalWrapper.classList.remove('showed');
 		window.lockScroll(false);
@@ -40,6 +41,7 @@
 	}
 
 	function showModal(modalType) {
+		modalWrapper.dispatchEvent(new CustomEvent('showModal', {bubbles: true}));
 		let contentWrapper = document.getElementById(modalType);
 		if (!contentWrapper) {
 			console.warn('Needed modal is not found');
